@@ -1,0 +1,229 @@
+// switch
+// =====================================================================================================================
+$_switch-lighten: 35%;
+
+$_switch-width: 32px;
+$_switch-height: ($_switch-width / 1.777);
+$_switch-space: ($_switch-height / 4.5);
+
+$switch-hover-background: var(--magic-switch-hover-border, var(--magic-field-border, $_primary));
+$switch-focus-background: var(--magic-switch-focus-border, var(--magic-field-border, $_primary));
+$switch-checked-background: var(--magic-switch-checked-background, $_success);
+$switch-background: var(--magic-switch-background, lighten($_medium, $_switch-lighten));
+$switch-disabled-label: var(--magic-switch-disabled-label, lighten($_medium, $_switch-lighten));
+$switch-disabled-background: var(--magic-switch-disabled-background, lighten($_medium, $_switch-lighten));
+
+$switch-width: var(--magic-switch-width, $_switch-width);
+$switch-height: var(--magic-switch-height, $_switch-height);
+$switch-space: var(--magic-switch-space, $_switch-space);
+
+// switch
+// ---------------------------------------------------------------------------------------------------------------------
+.switch {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 0 $space--xx-small;
+    padding: 0 0 0 calc(#{$switch-width} + #{$space});
+    max-width: 100%;
+
+    // spacer
+    // -----------------------------------------------------------------------------------------------------------------
+    &:after {
+        content: "\A";
+        display: block;
+        width: 1000px;
+    }
+
+    // variant right
+    // -----------------------------------------------------------------------------------------------------------------
+    &--right {
+        padding: 0 $switch-width 0 0;
+
+        // input
+        // -------------------------------------------------------------------------------------------------------------
+        .input {
+            right: 0;
+            left: auto;
+        }
+
+        // label
+        // -------------------------------------------------------------------------------------------------------------
+        .label {
+            width: 100%;
+
+            // background, circle
+            // ---------------------------------------------------------------------------------------------------------
+            &:before,
+            &:after {
+                left: auto;
+            }
+
+            // background
+            // ---------------------------------------------------------------------------------------------------------
+            &:before {
+                right: 0;
+            }
+
+            // circle
+            // ---------------------------------------------------------------------------------------------------------
+            &:after {
+                right: calc(#{$switch-width} - #{$switch-height} + #{$switch-space});
+            }
+
+            //
+            // ---------------------------------------------------------------------------------------------------------
+            @include desktop() {
+                width: auto;
+            }
+        }
+
+        // inner
+        // -------------------------------------------------------------------------------------------------------------
+        .inner {
+
+            // clickable area
+            // ---------------------------------------------------------------------------------------------------------
+            &:before {
+                content: " ";
+                display: block;
+                position: absolute;
+                top: calc(#{$space} * -1);
+                bottom: calc(#{$space} * -1);
+                left: calc(#{$space} * -1);
+                right: calc(#{$space} * -1);
+                cursor: pointer;
+
+                //
+                // -----------------------------------------------------------------------------------------------------
+                @include desktop() {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+// input
+// ---------------------------------------------------------------------------------------------------------------------
+.input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: $switch-width;
+    height: $switch-height;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+// label
+// ---------------------------------------------------------------------------------------------------------------------
+.label {
+    @include set-font-size(14px);
+    padding: 0;
+    min-height: $switch-height;
+    line-height: $switch-height;
+    cursor: pointer;
+
+    // background, circle
+    // -----------------------------------------------------------------------------------------------------------------
+    &:before,
+    &:after {
+        content: " ";
+        position: absolute;
+        pointer-events: none;
+    }
+
+    // background
+    // -----------------------------------------------------------------------------------------------------------------
+    &:before {
+        top: 0;
+        left: 0;
+        border-radius: $switch-width;
+        width: $switch-width;
+        height: $switch-height;
+        background-color: $switch-background;
+        transition: background-color $duration ease;
+        will-change: background-color;
+    }
+
+    // circle
+    // -----------------------------------------------------------------------------------------------------------------
+    &:after {
+        top: $switch-space;
+        left: $switch-space;
+        border-radius: 50%;
+        box-shadow: $shadow-2;
+        width: calc(#{$switch-height} - (#{$switch-space} * 2));
+        height: calc(#{$switch-height} - (#{$switch-space} * 2));
+        background-color: $light;
+        transform: translate3d(0, 0, 0);
+        transition: transform $duration ease;
+        will-change: transform;
+    }
+}
+
+// state hover, hover & checked (background)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:hover ~ .label:before,
+.input:hover:checked ~ .label:before {
+
+    //
+    // -----------------------------------------------------------------------------------------------------------------
+    @include desktop() {
+        background-color: $switch-hover-background;
+    }
+}
+
+// state focus, focus & checked (background)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:focus ~ .label:before,
+.input:focus:checked ~ .label:before {
+
+    //
+    // -----------------------------------------------------------------------------------------------------------------
+    @include desktop() {
+        background-color: $switch-focus-background;
+    }
+}
+
+// state checked (background)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:checked + .label:before {
+    background-color: $switch-checked-background;
+}
+
+// state checked (circle)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:checked + .label:after {
+    transform: translate3d(calc(#{$switch-width} - #{$switch-height}), 0, 0);
+}
+
+// state disabled (input)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:disabled {
+    cursor: default;
+}
+
+// state disabled (label)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:disabled + .label {
+    color: $switch-disabled-label;
+    cursor: default;
+}
+
+// state disabled (background)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:disabled + .label:before {
+    background-color: $switch-disabled-background;
+}
+
+// state disabled (circle)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:disabled + .label:after {
+    background-color: $switch-disabled-background;
+}

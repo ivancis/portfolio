@@ -1,0 +1,58 @@
+// search
+// =====================================================================================================================
+
+// search field
+// ---------------------------------------------------------------------------------------------------------------------
+.search-field {
+    position: relative;
+    color: $text-dark;
+}
+
+// button
+// ---------------------------------------------------------------------------------------------------------------------
+.button {
+    @include transition-fade-in;
+    position: absolute;
+    top: calc(#{$space--small} + #{$space--xx-small});
+    right: $space--small;
+    transition: opacity $duration ease;
+    will-change: opacity;
+    z-index: 1;
+
+    // state hover, focus
+    // -----------------------------------------------------------------------------------------------------------------
+    &:hover,
+    &:focus {
+        opacity: .65;
+    }
+}
+
+// icon
+// ---------------------------------------------------------------------------------------------------------------------
+.icon {
+    width: $icon-size;
+    height: $icon-size;
+
+    // variant search
+    // -----------------------------------------------------------------------------------------------------------------
+    &--search {
+        position: absolute;
+        top: calc(#{$space--small} + #{$space--xx-small});
+        right: $space--small;
+        opacity: 0;
+        animation: fade-in-animation $duration $delay 1 forwards;
+        will-change: opacity;
+        pointer-events: none;
+    }
+}
+
+// fade in animation
+// ---------------------------------------------------------------------------------------------------------------------
+@keyframes fade-in-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

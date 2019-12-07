@@ -1,0 +1,58 @@
+import '.';
+import {
+    Meta,
+    Story,
+    Preview,
+} from '@gig/magic-wand-spellbook/dist/storybook/helpers';
+import ReadMe from './README.md';
+
+<Meta title="UI Kit|Menu Item" />
+
+<ReadMe.parameters.docs.page />
+
+## Stories
+
+The `magic-ui-menu-item` component displays a menu list item. It accepts a default slot element
+that contains the link text.
+
+<Preview>
+    <Story name="Default">
+        <magic-ui-menu-item>My menu item</magic-ui-menu-item>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-menu-item>My menu item</magic-ui-menu-item>
+```
+
+### Active State
+
+Using the `is-active` attribute you can apply the active state to the menu item.
+
+<Preview>
+    <Story name="Active">
+        <magic-ui-menu-item is-active>My menu item</magic-ui-menu-item>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-menu-item is-active>My menu item</magic-ui-menu-item>
+```
+
+### With Badge
+
+Sometimes you'll want to display a badge to denote a user action needs to be taken on this
+item. You can use the `badge` attribute with a number to display the badge inline at the
+end of the menu item.
+
+<Preview>
+    <Story name="With Badge">
+        <magic-ui-menu-item badge="1">
+            My menu item with badge
+        </magic-ui-menu-item>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-menu-item badge="1">My menu item with badge</magic-ui-menu-item>
+```

@@ -1,0 +1,71 @@
+// sticky tooltip
+// =====================================================================================================================
+
+// sticky tooltip
+// ---------------------------------------------------------------------------------------------------------------------
+.sticky-tooltip {
+    position: relative;
+}
+
+// clickable
+// ---------------------------------------------------------------------------------------------------------------------
+.clickable {
+    width: 100%;
+}
+
+// content
+// ---------------------------------------------------------------------------------------------------------------------
+.content {
+    $_triangle-size: $space--small;
+
+    @include bg($tertiary);
+    @include set-font-size(12px);
+    @include transition-fade-in;
+    display: flex;
+    position: absolute;
+    top: calc(100% + (#{$_triangle-size} * 1.25));
+    left: 0;
+    margin: calc((#{$_triangle-size} / 2) * -1) auto 0;
+    border-radius: $space--x-small;
+    padding: $space;
+    width: 100%;
+    box-shadow: $shadow-1;
+    opacity: 1;
+    color: $tertiary-contrast;
+    will-change: opacity;
+    z-index: 1;
+
+    //
+    // -----------------------------------------------------------------------------------------------------------------
+    @include tablet() {
+        left: calc(#{$space--small} * -1);
+        width: calc(100% + #{$space});
+    }
+
+    // triangle
+    // -----------------------------------------------------------------------------------------------------------------
+    &:before {
+        content: " ";
+        position: absolute;
+        top: calc(#{$_triangle-size} * -1);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border-width: 0 calc(#{$_triangle-size} / 2) $_triangle-size calc(#{$_triangle-size} / 2);
+        border-color: transparent transparent $tertiary transparent;
+        border-style: solid;
+        width: 0;
+        height: 0;
+    }
+}
+
+// icon
+// ---------------------------------------------------------------------------------------------------------------------
+.icon {
+    position: absolute;
+    top: $space--x-small;
+    right: $space--x-small;
+    width: $icon-size-small;
+    height: $icon-size-small;
+    cursor: pointer;
+}

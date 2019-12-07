@@ -1,0 +1,496 @@
+// button
+// =====================================================================================================================
+
+// button
+// ---------------------------------------------------------------------------------------------------------------------
+.button {
+    $_button: &;
+    $_button-darken: 6.25%;
+    $_button-transparency: .125;
+
+    $_button-line-height: 20px;
+
+    $button-medium-darker: var(--magic-button-medium-darker, darken($_medium, $_button-darken));
+    $button-primary-darker: var(--magic-button-primary-darker, darken($_primary, $_button-darken));
+    $button-success-darker: var(--magic-button-success-darker, darken($_success, $_button-darken));
+    $button-alert-darker: var(--magic-button-alert-darker, darken($_alert, $_button-darken));
+    $button-error-darker: var(--magic-button-error-darker, darken($_error, $_button-darken));
+    $button-light-darker: var(--magic-button-light-darker, darken($_light, ($_button-darken * 2)));
+    $button-disabled-darker: var(--magic-button-disabled-darker, darken($_disabled, ($_button-darken * 3)));
+
+    $button-medium-transparent: var(--magic-button-medium-transparent, rgba($_medium, $_button-transparency));
+    $button-primary-transparent: var(--magic-button-primary-transparent, rgba($_primary, $_button-transparency));
+    $button-success-transparent: var(--magic-button-success-transparent, rgba($_success, $_button-transparency));
+    $button-alert-transparent: var(--magic-button-alert-transparent, rgba($_alert, $_button-transparency));
+    $button-error-transparent: var(--magic-button-error-transparent, rgba($_error, $_button-transparency));
+    $button-light-transparent: var(--magic-button-light-transparent, rgba($_light, $_button-transparency));
+    $button-disabled-transparent: var(--magic-button-disabled-transparent, rgba($_disabled, ($_button-transparency * 3)));
+
+    $button-border-radius: var(--magic-button-border-radius, $_border-radius);
+    $button-line-height: var(--magic-button-line-height, $_button-line-height);
+
+    @include set-font-size(14px);
+    display: inline-block;
+    flex: 0 0 auto;
+    position: relative;
+    padding: calc(#{$space} - calc(#{$space--x-small} / 2)) $space--small;
+    border: none;
+    border-radius: $button-border-radius;
+    outline: none;
+    width: auto;
+    background-color: $medium;
+    text-align: center;
+    text-decoration: none;
+    color: $medium-contrast;
+    line-height: $button-line-height;
+    transition: transform calc(#{$duration} / 2) ease, background-color $duration ease, color $duration ease;
+    will-change: transform, background-color, color;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    // button reset firefox
+    // -----------------------------------------------------------------------------------------------------------------
+    &::-moz-focus-inner {
+        border: none;
+        padding: 0;
+    }
+
+    // state hover, focus
+    // -----------------------------------------------------------------------------------------------------------------
+    &:hover,
+    &:focus {
+        background-color: $button-medium-darker;
+    }
+
+    // state active
+    // -----------------------------------------------------------------------------------------------------------------
+    &:active {
+        transform: translate(0, 1   px);
+    }
+
+    // variant primary
+    // -----------------------------------------------------------------------------------------------------------------
+    &--primary {
+        background-color: $primary;
+        color: $primary-contrast;
+
+        // state hover, focus
+        // -------------------------------------------------------------------------------------------------------------
+        &:hover,
+        &:focus {
+            background-color: $button-primary-darker;
+        }
+    }
+
+    // variant light
+    // -----------------------------------------------------------------------------------------------------------------
+    &--light {
+        background-color: $light;
+        color: $light-contrast;
+
+        // state hover, focus
+        // -------------------------------------------------------------------------------------------------------------
+        &:hover,
+        &:focus {
+            background-color: $button-light-darker;
+        }
+    }
+
+    // variant success
+    // -----------------------------------------------------------------------------------------------------------------
+    &--success {
+        background-color: $success;
+        color: $success-contrast;
+
+        // state hover, focus
+        // -------------------------------------------------------------------------------------------------------------
+        &:hover,
+        &:focus {
+            background-color: $button-success-darker;
+        }
+    }
+
+    // variant alert
+    // -----------------------------------------------------------------------------------------------------------------
+    &--alert {
+        background-color: $alert;
+        color: $alert-contrast;
+
+        // state hover, focus
+        // -------------------------------------------------------------------------------------------------------------
+        &:hover,
+        &:focus {
+            background-color: $button-alert-darker;
+        }
+    }
+
+    // variant error
+    // -----------------------------------------------------------------------------------------------------------------
+    &--error {
+        background-color: $error;
+        color: $error-contrast;
+
+        // state hover, focus
+        // -------------------------------------------------------------------------------------------------------------
+        &:hover,
+        &:focus {
+            background-color: $button-error-darker;
+        }
+    }
+
+    // variant transparent
+    // -----------------------------------------------------------------------------------------------------------------
+    &--transparent {
+        background-color: transparent;
+        color: $light;
+        opacity: 1;
+        transition: opacity calc(#{$duration} / 2) ease;
+        will-change: opacity;
+
+        // state hover, focus
+        // -------------------------------------------------------------------------------------------------------------
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            opacity: .75;
+        }
+    }
+
+    // state disabled, is disabled
+    // -----------------------------------------------------------------------------------------------------------------
+    &:disabled,
+    &.is-disabled {
+        background-color: $disabled;
+        color: $button-disabled-darker;
+        pointer-events: none;
+    }
+
+    // variant hollow
+    // -----------------------------------------------------------------------------------------------------------------
+    &--hollow {
+        background-color: transparent;
+        box-shadow: inset 0 0 0 1px $medium;
+        color: $text-medium;
+
+        // state hover, focus
+        // -------------------------------------------------------------------------------------------------------------
+        &:hover,
+        &:focus {
+            background-color: $button-medium-transparent;
+        }
+
+        // variant hollow primary
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}--primary {
+            box-shadow: inset 0 0 0 1px $primary;
+            color: $text-primary;
+
+            // state hover, focus
+            // ---------------------------------------------------------------------------------------------------------
+            &:hover,
+            &:focus {
+                background-color: $button-primary-transparent;
+            }
+        }
+
+        // variant hollow light
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}--light {
+            box-shadow: inset 0 0 0 1px $button-light-darker;
+            color: $button-light-darker;
+
+            // state hover, focus
+            // ---------------------------------------------------------------------------------------------------------
+            &:hover,
+            &:focus {
+                background-color: $button-light-transparent;
+            }
+        }
+
+        // variant hollow success
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}--success {
+            box-shadow: inset 0 0 0 1px $success;
+            color: $text-success;
+
+            // state hover, focus
+            // ---------------------------------------------------------------------------------------------------------
+            &:hover,
+            &:focus {
+                background-color: $button-success-transparent;
+            }
+        }
+
+        // variant hollow alert
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}--alert {
+            box-shadow: inset 0 0 0 1px $alert;
+            color: $text-alert;
+
+            // state hover, focus
+            // ---------------------------------------------------------------------------------------------------------
+            &:hover,
+            &:focus {
+                background-color: $button-alert-transparent;
+            }
+        }
+
+        // variant hollow error
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}--error {
+            box-shadow: inset 0 0 0 1px $error;
+            color: $text-error;
+
+            // state hover, focus
+            // ---------------------------------------------------------------------------------------------------------
+            &:hover,
+            &:focus {
+                background-color: $button-error-transparent;
+            }
+        }
+
+        // variant transparent
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}--transparent {
+            box-shadow: inset 0 0 0 1px transparent;
+            color: $light;
+
+            // state hover, focus
+            // ---------------------------------------------------------------------------------------------------------
+            &:hover,
+            &:focus {
+                background-color: transparent;
+            }
+        }
+
+        // state hollow disabled
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}:disabled,
+        &#{$_button}.is-disabled {
+            background-color: $button-disabled-transparent;
+            box-shadow: inset 0 0 0 1px $button-disabled-darker;
+            color: $button-disabled-darker;
+        }
+    }
+
+    // variant icon
+    // -----------------------------------------------------------------------------------------------------------------
+    &--icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: calc(#{$space} - #{$space--x-small});
+        width: auto;
+        fill: currentColor;
+
+        // variant icon round
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}--round {
+            border-radius: 50%;
+        }
+
+        // variant icon left, icon right
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}--left,
+        &#{$_button}--right {
+            padding: calc(#{$space} - calc(#{$space--x-small} / 2));
+
+            // button text
+            // ---------------------------------------------------------------------------------------------------------
+            ::slotted(.button-text),
+            .button-text {
+                display: inline-block;
+            }
+        }
+
+        // variant icon left
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}--left {
+            padding-left: calc(#{$space} - #{$space--x-small});
+            text-align: left;
+
+            // button text
+            // ---------------------------------------------------------------------------------------------------------
+            ::slotted(.button-text),
+            .button-text {
+                margin-left: $space--small !important;
+            }
+        }
+
+        // variant icon right
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}--right {
+            padding-right: calc(#{$space} - #{$space--x-small});
+            text-align: right;
+
+            // button text
+            // ---------------------------------------------------------------------------------------------------------
+            ::slotted(.button-text) {
+                margin-right: $space--small !important;
+            }
+        }
+    }
+
+    // variant small
+    // -----------------------------------------------------------------------------------------------------------------
+    &--small {
+        @include set-font-size(12px);
+        padding: $space--small $space;
+        line-height: 16px;
+
+        // variant small icon
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}--icon {
+            padding: $space--small;
+        }
+    }
+
+    // variant tiny
+    // -----------------------------------------------------------------------------------------------------------------
+    &--tiny {
+        @include set-font-size(10px);
+        padding: $space--x-small $space--small;
+        line-height: 14px;
+
+        // variant tiny icon
+        // -------------------------------------------------------------------------------------------------------------
+        &#{$_button}--icon {
+            padding: $space--x-small;
+        }
+    }
+
+    // variant wide
+    // -----------------------------------------------------------------------------------------------------------------
+    &--wide {
+        width: 100%;
+    }
+
+    // variant centered
+    // -----------------------------------------------------------------------------------------------------------------
+    &--centered {
+        margin: 0 auto $space;
+        align-self: center;
+    }
+
+    // variant no margin
+    // -----------------------------------------------------------------------------------------------------------------
+    &--no-margin {
+        margin: 0;
+    }
+
+    // variant less margin
+    // -----------------------------------------------------------------------------------------------------------------
+    &--less-margin {
+        margin: 0 0 $space--small;
+    }
+
+    // variant no padding
+    // -----------------------------------------------------------------------------------------------------------------
+    &--no-padding {
+        padding: 0;
+    }
+
+    // variant less padding
+    // -----------------------------------------------------------------------------------------------------------------
+    &--less-padding {
+        padding: $space--small;
+    }
+
+    // variant add space
+    // -----------------------------------------------------------------------------------------------------------------
+    &--add-space {
+        margin-left: calc(#{$space--x-small} / 2);
+        margin-right: calc(#{$space--x-small} / 2);
+    }
+
+    // state is loading
+    // -----------------------------------------------------------------------------------------------------------------
+    &.is-loading {
+        pointer-events: none;
+
+        // icon
+        // -------------------------------------------------------------------------------------------------------------
+        &:before {
+            // @include bg("/img/icons/loading.svg", no-repeat 50% 50%);
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: $icon-size;
+            height: $icon-size;
+            opacity: 0;
+            transform: translate3d(-50%, -50%, 0);
+            animation: fade-in-animation $duration 0s 1 ease forwards, spin-animation calc(#{$duration} * 2.5) calc(#{$delay} / 2) infinite ease forwards;
+            will-change: opacity, transform;
+        }
+    }
+
+    // state is loading [edge hack]
+    // -----------------------------------------------------------------------------------------------------------------
+    _:-ms-lang(x), &.is-loading {
+
+        // icon
+        // -------------------------------------------------------------------------------------------------------------
+        &:before {
+            animation: fade-in-animation $duration 0s 1 ease forwards, spin-animation .75s .15s infinite ease forwards;
+        }
+    }
+
+    // fade in animation
+    // -----------------------------------------------------------------------------------------------------------------
+    @keyframes fade-in-animation {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    // spin animation
+    // -----------------------------------------------------------------------------------------------------------------
+    @keyframes spin-animation {
+        from {
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        to {
+            transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// nb
+// =====================================================================================================================
+
+.button {
+
+    // variant linko
+    // -----------------------------------------------------------------------------------------------------------------
+    &--linko {
+        padding: $space--small;
+        border-radius: 0;
+    }
+}

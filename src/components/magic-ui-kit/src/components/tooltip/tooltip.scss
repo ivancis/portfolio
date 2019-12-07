@@ -1,0 +1,67 @@
+// tooltip
+// =====================================================================================================================
+
+// tooltip
+// ---------------------------------------------------------------------------------------------------------------------
+.tooltip {
+    position: relative;
+}
+
+$_triangle-size: $space--small;
+
+// content
+// ---------------------------------------------------------------------------------------------------------------------
+.content {
+    @include bg($light);
+    @include transition-fade-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + (#{$_triangle-size} * 1.25));
+    padding: $space--small;
+    border-radius: $space--x-small;
+    box-shadow: $shadow-1;
+    opacity: 1;
+    transform: translate3d(0, -50%, 0);
+    will-change: opacity;
+    z-index: 1;
+
+    // triangle
+    // -----------------------------------------------------------------------------------------------------------------
+    &:before {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: calc(#{$_triangle-size} * -1);
+        margin: calc((#{$_triangle-size} / 2) * -1) 0 0;
+        border-width: calc(#{$_triangle-size} / 2) $_triangle-size calc(#{$_triangle-size} / 2) 0;
+        border-color: transparent $light transparent transparent;
+        border-style: solid;
+        width: 0;
+        height: 0;
+    }
+}
+
+// content [edge hack]
+// ---------------------------------------------------------------------------------------------------------------------
+_:-ms-lang(x), .content {
+
+    // triangle
+    // -----------------------------------------------------------------------------------------------------------------
+    &:before {
+        left: calc((#{$_triangle-size} - 1px) * -1);
+    }
+}
+
+// label
+// ---------------------------------------------------------------------------------------------------------------------
+.label {
+    @include set-font-size(12px);
+    position: relative;
+    margin: 0;
+    color: $dark;
+    white-space: nowrap;
+    line-height: 1;
+}

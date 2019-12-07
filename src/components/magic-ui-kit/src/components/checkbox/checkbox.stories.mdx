@@ -1,0 +1,127 @@
+import '.';
+import {
+    Meta,
+    Story,
+    Preview,
+    boolean,
+} from '@gig/magic-wand-spellbook/dist/storybook/helpers';
+import ReadMe from './README.md';
+
+<Meta title="UI Kit|Checkbox" />
+
+<ReadMe.parameters.docs.page />
+
+## Stories
+
+The checkbox component is a common form control element, it's default slot defines the label for the control.
+
+<Preview>
+    <Story name="Default">
+        <magic-ui-checkbox>I am a checkbox.</magic-ui-checkbox>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-checkbox>I am a checkbox.</magic-ui-checkbox>
+```
+
+## Indeterminate
+
+The `indeterminate` attribute is when a checkbox is neither checked nor unchecked.
+
+<Preview>
+    <Story name="Indeterminate">
+        <ul>
+            <li>
+                <magic-ui-checkbox indeterminate>
+                    I agree to all
+                </magic-ui-checkbox>
+            </li>
+            <li>
+                <ul style={{ marginLeft: '16px' }}>
+                    <li>
+                        <magic-ui-checkbox value="true">
+                            I agree to this
+                        </magic-ui-checkbox>
+                    </li>
+                    <li>
+                        <magic-ui-checkbox>I agree to that</magic-ui-checkbox>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-checkbox indeterminate>I am a checkbox.</magic-ui-checkbox>
+```
+
+## Value attribute
+
+The `value` attribute is used to give the current checked status of the checkbox.
+
+<Preview>
+    <Story name="With Value">
+        <magic-ui-checkbox value={boolean('Checked?', true)}>
+            I am a checkbox.
+        </magic-ui-checkbox>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-checkbox value="true">I am a checkbox.</magic-ui-checkbox>
+```
+
+## Inline
+
+By default a checkbox is a block element that takes the full width of the container, by setting the `inline` attribute more than one checkbox can be shown on a line if the container permits.
+
+<Preview>
+    <Story name="Inline">
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <magic-ui-checkbox inline>Checkbox one</magic-ui-checkbox>
+            <magic-ui-checkbox inline>Checkbox two</magic-ui-checkbox>
+            <magic-ui-checkbox inline>Checkbox three</magic-ui-checkbox>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<div style="display: flex; justify-content: space-between;">
+    <magic-ui-checkbox inline>Checkbox one</magic-ui-checkbox>
+    <magic-ui-checkbox inline>Checkbox two</magic-ui-checkbox>
+</div>
+```
+
+## No Labels
+
+Sometimes a checkbox needs no label, for whatever reason the `no-label` attribute removes the label and sets a fixed width and height for the element.
+
+<Preview>
+    <Story name="No label">
+        <div>
+            <magic-ui-checkbox no-label />
+            <magic-ui-checkbox no-label />
+            <magic-ui-checkbox no-label />
+        </div>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-checkbox no-label></magic-ui-checkbox>
+```
+
+## Bold
+
+The `bold` attribute makes the label bold.
+
+<Preview>
+    <Story name="Bold">
+        <magic-ui-checkbox bold>Bold label text</magic-ui-checkbox>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-checkbox bold>The checkbox label</magic-ui-checkbox>
+```

@@ -1,0 +1,117 @@
+.page{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 1fr auto;
+	align-items: center;
+	min-height: 100vh;
+	opacity: 0;
+	animation: fade-in-animation $duration $delay 1 forwards;
+}
+
+.intro {
+	grid-column: 1 / -1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10vw;
+	width: 100%;
+	min-height: 50vh;
+	@include desktop() {
+		min-height: 90vh;
+	}
+}
+
+.content {
+	grid-column: 1 / -1;
+	padding: 5vh 10vw 10vw;
+	width: 100%;
+	background: $primary;
+}
+
+.nav {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto $space--x-large;
+}
+
+.grido {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: $space;
+}
+
+.grido__item {
+	background: $light;
+	padding: $space;
+	border-radius: $border-radius;
+	&--dashed {
+		background: none;
+		border: 1px dashed $light;
+	}
+}
+
+.hooper{
+	.hooper-list {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+	.hooper-track {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		transform: translate(-1000px, 0px);
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.hooper-slide {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 500px;
+		height: 100%;
+		padding: calc(#{$space--x-large} + #{$space});
+	}
+	.hooper-navigation {
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		pointer-events: none;
+		padding: 0 $space;
+
+		button {
+			margin: auto 0;
+			pointer-events: all;
+		}
+	}
+	.hooper-liveregion {
+		display: none;
+	}
+}
+
+.slideshow {
+	background: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.slide-item {
+	background: red;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .18s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}

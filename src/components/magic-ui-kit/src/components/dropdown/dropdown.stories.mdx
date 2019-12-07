@@ -1,0 +1,201 @@
+import '.';
+import '../icon';
+import { ComponentInterop } from '@gig/magic-wand-spellbook/dist/components/interop';
+import {
+    Meta,
+    Story,
+    Preview,
+} from '@gig/magic-wand-spellbook/dist/storybook/helpers';
+import ReadMe from './README.md';
+
+<Meta title="UI Kit|Dropdown" />
+
+<ReadMe.parameters.docs.page />
+
+## Stories
+
+export const options = [
+    { name: 'Option 1', value: 'A' },
+    { name: 'Option 2', value: 'B' },
+    { name: 'Option 3', value: 'C' },
+    { name: 'Really long option name', value: 'D' },
+];
+
+export const dark = {
+    backgroundColor: '#333',
+    padding: '4px',
+    borderRadius: '5px',
+};
+
+The dropdown element is a form control element. Similarly to the native `select` element it displays a list of selectable items.
+
+The `options` property specifies the options of the dropdown, it's made up of an array of objects with `{ name: string, value: any }` signature.
+Values are not limited to strings and can be of any type.
+
+<Preview>
+    <Story name="Default">
+        <ComponentInterop props={{ options }}>
+            <magic-ui-dropdown />
+        </ComponentInterop>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-dropdown id="dropdown" />
+
+<script>
+    const dropdown = document.getElementById('dropdown');
+
+    dropdown.options = [
+        { name: 'Option', value: { hello: 'world' }}
+    ];
+</script>
+```
+
+### Ellipsis
+
+The `ellipsis` attribute constrains the maximum width of the dropdown based on the `--magic-dropdown-ellipsis-max-width` css variable.
+
+When using the ellipsis option you must provide the current `value` attribute. This usage will be simplified in the future.
+
+<Preview>
+    <Story name="Ellipsis">
+        <ComponentInterop props={{ options }}>
+            <magic-ui-dropdown ellipsis value="D" />
+        </ComponentInterop>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-dropdown ellipsis id="dropdown" value="My Value" />
+
+<script>
+    const dropdown = document.getElementById('dropdown');
+
+    dropdown.options = [
+        { name: 'Really long option name', value: 'My Value' }
+    ];
+</script>
+```
+
+### Disabled
+
+The `disabled` attribute disables interaction with the dropdown.
+
+<Preview>
+    <Story name="Disabled">
+        <ComponentInterop props={{ options }}>
+            <magic-ui-dropdown disabled />
+        </ComponentInterop>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-dropdown id="dropdown" disabled />
+
+<script>
+    const dropdown = document.getElementById('dropdown');
+
+    dropdown.options = [
+        { name: 'Option', value: { hello: 'world' }}
+    ];
+</script>
+```
+
+### Link variant
+
+The `link` attribute variant removes all outside borders until focused and displays the dropdown as if it were a link.
+
+<Preview>
+    <Story name="Link">
+        <ComponentInterop props={{ options }}>
+            <magic-ui-dropdown link />
+        </ComponentInterop>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-dropdown id="dropdown" link />
+
+<script>
+    const dropdown = document.getElementById('dropdown');
+
+    dropdown.options = [
+        { name: 'Option', value: { hello: 'world' }}
+    ];
+</script>
+```
+
+### Allow Empty
+
+The `allow-empty` attribute allows the user to select an empty option. Eg. `Not selected`
+
+<Preview>
+    <Story name="Allow Empty">
+        <ComponentInterop props={{ options }}>
+            <magic-ui-dropdown allow-empty />
+        </ComponentInterop>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-dropdown id="dropdown" allow-empty />
+
+<script>
+    const dropdown = document.getElementById('dropdown');
+
+    dropdown.options = [
+        { name: 'Option', value: { hello: 'world' }}
+    ];
+</script>
+```
+
+### Placeholder
+
+To show a placeholder value until the element has a value, the `placeholder` attribute accepts a string value.
+
+<Preview>
+    <Story name="With Placeholder">
+        <ComponentInterop props={{ options }}>
+            <magic-ui-dropdown placeholder="This is an unselectable placeholder" />
+        </ComponentInterop>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-dropdown id="dropdown" placeholder="This is an unselectable placeholder" />
+
+<script>
+    const dropdown = document.getElementById('dropdown');
+
+    dropdown.options = [
+        { name: 'Option', value: { hello: 'world' }}
+    ];
+</script>
+```
+
+### Light
+
+The `light` variant is used when displaying the dropdown on top of a dark background.
+
+<Preview>
+    <Story name="Light">
+        <div style={dark}>
+            <ComponentInterop props={{ options }}>
+                <magic-ui-dropdown light />
+            </ComponentInterop>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-dropdown id="dropdown" light />
+
+<script>
+    const dropdown = document.getElementById('dropdown');
+
+    dropdown.options = [
+        { name: 'Option', value: { hello: 'world' }}
+    ];
+</script>
+```

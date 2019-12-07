@@ -1,0 +1,28 @@
+// badge
+// =====================================================================================================================
+$_badge-size: 20px;
+
+$badge-size: var(--magic-badge-size, $_badge-size);
+
+// badge
+// ---------------------------------------------------------------------------------------------------------------------
+.badge {
+    @include set-font-size(11px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: $badge-size;
+    height: $badge-size;
+    background: $error;
+    color: $error-contrast;
+    line-height: 1;
+
+    // variant floats
+    // -----------------------------------------------------------------------------------------------------------------
+    &--floats {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

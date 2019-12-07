@@ -1,0 +1,41 @@
+import '.';
+import '../input';
+import {
+    Meta,
+    Story,
+    Preview,
+} from '@gig/magic-wand-spellbook/dist/storybook/helpers';
+import ReadMe from './README.md';
+
+<Meta title="UI Kit|Number" />
+
+<ReadMe.parameters.docs.page />
+
+## Stories
+
+`magic-ui-number` is a form control element. It creates an input element and
+disallows any non-numeric values.
+
+<Preview>
+    <Story name="Default">
+        <magic-ui-number />
+    </Story>
+</Preview>
+
+```html
+<magic-ui-number />
+```
+
+### Maxlength
+
+To constrain the length of the number you can use `maxlength` attribute.
+
+<Preview>
+    <Story name="Maximum">
+        <magic-ui-number maxlength="4" />
+    </Story>
+</Preview>
+
+```html
+<magic-ui-number maxlength="4" />
+```

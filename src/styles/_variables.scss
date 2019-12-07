@@ -1,0 +1,27 @@
+// VARIABLES
+//Breakpoint
+$bp-small: 600px;
+$bp-medium: 900px;
+$bp-large: 1200px;
+$bp-xlarge: 1800px;
+
+//Color
+$c-primary: #384B60;
+$c-secondary: #ff7677;
+$c-tertiary: #f8f1e0;
+$c-success: #3483ca;
+$c-alarm: gold;
+$c-error: brown;
+$c-light: white;
+$c-dark: black;
+
+//Type
+$f-base: 16px;
+
+//Spaces
+$space: 16px;
+$space--large: calc(#{$space} * 2);
+$space--x-large: calc(#{$space--large} * 2);
+$space--xx-large: calc(#{$space--x-large} * 2);
+$space--x-small: calc(#{$space} / 2);
+$space--xx-small: calc(#{$space--x-small} / 2);

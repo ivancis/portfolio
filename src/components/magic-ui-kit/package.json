@@ -1,0 +1,62 @@
+{
+    "name": "@gig/magic-ui-kit",
+    "version": "3.0.0",
+    "description": "Provides shared UI components for the GiG Magic Wand project",
+    "contributors": [
+        "Alessandro Maruccia <alessandro.maruccia@gig.com>",
+        "Daniel Marín Sánchez <daniel.marin@gig.com>",
+        "Krzysztof Bebenek <krzysztof.bebenek@gig.com>",
+        "Jose Escobar <jose.escobar@gig.com>",
+        "Thomas Caserta <thomas.caserta@gig.com>"
+    ],
+    "homepage": "https://github.com/GiG/magic-frontend#readme",
+    "license": "UNLICENSED",
+    "main": "./dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GiG/magic-frontend.git"
+    },
+    "publishConfig": {
+        "registry": "http://igcproget.igc.zone/npm/gig-wand-npm/"
+    },
+    "scripts": {
+        "build": "magic build --output ./dist/index.js",
+        "lint": "../../node_modules/.bin/eslint --ext .js,.ts,.vue src",
+        "lint:fix": "npm run lint -- --fix",
+        "watch": "npm run build -- --watch"
+    },
+    "bugs": {
+        "url": "https://github.com/GiG/magic-frontend/issues"
+    },
+    "peerDependencies": {
+        "@gig/magic-common": "3.0.0",
+        "@gig/magic-test-helpers": "3.0.0",
+        "@vue/web-component-wrapper": "GiG/vue-web-component-wrapper#61c9e386037e87c3fec514d9830c5b6fd5c228ef",
+        "marked": "^0.7.0",
+        "vue": "2.5.22",
+        "vue-class-component": "^6.2.0",
+        "vue-property-decorator": "^7.2.0",
+        "vuelidate": "^0.7.4"
+    },
+    "devDependencies": {
+        "@gig/magic-common": "^3.0.0",
+        "@gig/magic-sdk": "^3.0.0",
+        "@gig/magic-test-helpers": "^3.0.0",
+        "@gig/magic-types": "^3.0.0",
+        "@gig/magic-wand": "^3.0.0",
+        "@gig/magic-wand-spellbook": "^3.0.0",
+        "@gig/magic-wand-unit-test": "^3.0.0",
+        "@gig/magic-wand-wc-test": "^3.0.0",
+        "@types/jest": "^23.3.10",
+        "@types/node": "^10.12.19",
+        "@vue/web-component-wrapper": "GiG/vue-web-component-wrapper#61c9e386037e87c3fec514d9830c5b6fd5c228ef",
+        "marked": "^0.7.0",
+        "typescript": "^3.5.3",
+        "vue": "2.5.22",
+        "vue-class-component": "^6.2.0",
+        "vue-property-decorator": "^7.2.0",
+        "vuelidate": "^0.7.4"
+    },
+    "gitHead": "c889b2229128421427f7a5ccddd999fcd9fa9bb7"
+}

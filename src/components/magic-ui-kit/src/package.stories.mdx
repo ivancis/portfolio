@@ -1,0 +1,27 @@
+import { Meta } from '@gig/magic-wand-spellbook/dist/storybook/helpers';
+
+<Meta title="UI Kit|Getting Started" />
+
+# Getting Started
+
+The UI Kit is a set of common components used across the entire Wand ecosystem.
+
+The components for the most part are considered 'dumb' and just take input and display it. Rarely do they call any outside methods or functions.
+
+The library relies on `@gig/magic-common` and therefore both should be installed before using a component from this library.
+
+```bash
+npm i @gig/magic-ui-kit @gig/magic-common
+```
+
+# Usage
+
+To use a component from the UI Kit you must register the web components with the browser. To do so simply import the root of the package:
+
+```javascript
+import '@gig/magic-ui-kit';
+```
+
+You can also register individual components by importing directly from the `dist/components/{component-name}` folder. This is rarely useful though unless you are overriding specific components.
+
+Once registered, the components work as any normal HTML element. Use the documentation for each component on the left side menu to find out more information.

@@ -1,0 +1,15 @@
+{
+    "extends": "./node_modules/@gig/magic-wand/configs/tsconfig.json",
+    "compilerOptions": {
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "typeRoots": [
+            "node_modules/@types",
+            // Hoisted Types
+            "../../node_modules/@types",
+            "node_modules/@gig/magic-types/src/types"
+        ]
+    },
+    "include": ["./src/**/*"],
+    "exclude": ["node_modules", "dist"]
+}

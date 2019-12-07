@@ -1,0 +1,80 @@
+// reconnect loader
+// =====================================================================================================================
+$_reconnect-loader-stroke: $_primary;
+
+$reconnect-loader-stroke: var(--magic-reconnect-loader-stroke, $_reconnect-loader-stroke);
+
+// reconnect loader
+// ---------------------------------------------------------------------------------------------------------------------
+.reconnect-loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $background;
+    z-index: 5;
+}
+
+// loader
+// ---------------------------------------------------------------------------------------------------------------------
+.loader {
+    --magic-loader-stroke: #{$reconnect-loader-stroke};
+}
+
+// text
+// ---------------------------------------------------------------------------------------------------------------------
+.text {
+    @include set-font-size(14px);
+    position: relative;
+    margin: calc(#{$space--large} - #{$space--x-small}) 0 0;
+    color: $text-medium;
+    transform: translate3d(0, 100%, 0);
+
+    // dots
+    // -----------------------------------------------------------------------------------------------------------------
+    &:after {
+        position: absolute;
+        content: "...";
+        animation: dots-animation calc(#{$duration} * 3) infinite ease-in-out forwards;
+        will-change: content;
+    }
+
+    // state is loaded
+    // -----------------------------------------------------------------------------------------------------------------
+    .is-loaded & {
+        animation: none;
+    }
+}
+
+// dots animation
+// ---------------------------------------------------------------------------------------------------------------------
+@keyframes dots-animation {
+    0% {
+        content: "\00a0\00a0\00a0";
+    }
+    16.666% {
+        content: ".\00a0\00a0";
+    }
+    33.333% {
+        content: "..\00a0";
+    }
+    50% {
+        content: "...";
+    }
+    66.666% {
+        content: "..\00a0";
+    }
+    83.333% {
+        content: ".\00a0\00a0";
+    }
+    100% {
+        content: "\00a0\00a0\00a0";
+    }
+}

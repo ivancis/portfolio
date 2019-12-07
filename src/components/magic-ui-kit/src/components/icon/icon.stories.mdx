@@ -1,0 +1,152 @@
+import '.';
+import {
+    Meta,
+    Story,
+    Preview,
+} from '@gig/magic-wand-spellbook/dist/storybook/helpers';
+import ReadMe from './README.md';
+
+<Meta title="UI Kit|Icon" />
+
+<ReadMe.parameters.docs.page />
+
+## Stories
+
+export const iconNames = [
+    'admin',
+    'alert-solid',
+    'book',
+    'checked-solid',
+    'checked',
+    'close-solid',
+    'close',
+    'denied',
+    'down-arrow-long',
+    'down-arrow',
+    'download',
+    'edit-pencil',
+    'edit',
+    'email',
+    'exit-fullscreen',
+    'eye-solid',
+    'eye',
+    'facebook',
+    'field-alert',
+    'field-error',
+    'field-success',
+    'fullscreen',
+    'games',
+    'heart',
+    'home',
+    'info-solid',
+    'info',
+    'instagram',
+    'intermediate',
+    'left-arrow-long',
+    'left-arrow',
+    'left-up-arrow-long',
+    'live-casino',
+    'loader',
+    'loading',
+    'maximize',
+    'menu',
+    'message',
+    'notification',
+    'options-vertical',
+    'options',
+    'padlock',
+    'play-solid',
+    'play',
+    'plus',
+    'promotions',
+    'protect',
+    'question-solid',
+    'rewards',
+    'right-arrow-long',
+    'right-arrow',
+    'right-up-arrow-long',
+    'search',
+    'settings',
+    'tick-solid',
+    'timestamp',
+    'trophy',
+    'up-arrow-long',
+    'up-arrow',
+    'upload',
+    'user',
+    'virtual-sports',
+    'wallet-alert-solid',
+    'wallet-arrow-down',
+    'wallet-arrow-up',
+    'wallet-bonus-close',
+    'wallet-bonus-collapse',
+    'wallet-bonus-info',
+    'wallet-close',
+    'wallet-edit',
+    'wallet-info',
+    'wallet-loading',
+    'wallet-padlock',
+    'wallet-remove',
+    'wallet-tick-solid',
+];
+
+export const iconStyle = {
+    display: 'inline-block',
+    width: '24px',
+    height: '24px',
+};
+
+By default the icon element has no width and height and inherits it's size from the container.
+The SVG is downloaded from `/img/icons` directory on the web server and is preprocessed to remove any attributes on the `<svg>` tag.
+The icon color is inherited from the parent, if no color is set it defaults to black.
+
+<Preview>
+    <Story name="Default">
+        <magic-ui-icon name="user" />
+    </Story>
+</Preview>
+
+```html
+<magic-ui-icon name="user" />
+```
+
+### With Color
+
+<Preview>
+    <Story name="With color">
+        <magic-ui-icon
+            name="user"
+            style={{ color: 'red', width: '48px', height: '48px' }}
+        />
+    </Story>
+</Preview>
+
+```html
+<magic-ui-icon name="user" style="color: red; width: 48px; height: 48px" />
+```
+
+### With Badge
+
+The `badge` variant attribute gives the icon a circular background.
+
+<Preview>
+    <Story name="Badge">
+        <magic-ui-icon badge name="user" style={{ display: 'inline-block' }} />
+    </Story>
+</Preview>
+
+```html
+<magic-ui-icon badge name="user" />
+```
+
+### All Icons
+
+<Preview>
+    <Story name="All Icons">
+        {iconNames.map((name) => (
+            <magic-ui-icon name={name} style={iconStyle} />
+        ))}
+    </Story>
+</Preview>
+
+Note: You can modify the `path` attribute to change where the icon will look up icon svgs.

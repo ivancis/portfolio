@@ -1,0 +1,219 @@
+// checkbox
+// =====================================================================================================================
+$_checkbox-lighten: 35%;
+
+$_checkbox-size: 18px;
+$_checkbox-space: ($_checkbox-size / 9);
+$_checkbox-border-size: ($_checkbox-size / 9);
+
+$checkbox-border: var(--magic-checkbox-border, var(--magic-field-border, lighten($_medium, $_checkbox-lighten)));
+$checkbox-hover-border: var(--magic-checkbox-hover-border, var(--magic-field-border, $_primary));
+$checkbox-focus-border: var(--magic-checkbox-focus-border, var(--magic-field-border, $_primary));
+$checkbox-checked-border: var(--magic-checkbox-checked-border, var(--magic-field-border, $_primary));
+$checkbox-background: var(--magic-checkbox-background, $_primary);
+$checkbox-disabled-border: var(--magic-checkbox-disabled-border, var(--magic-field-border, lighten($_medium, $_checkbox-lighten)));
+$checkbox-disabled-label: var(--magic-checkbox-disabled-label, lighten($_medium, $_checkbox-lighten));
+$checkbox-disabled-background: var(--magic-checkbox-disabled-background, lighten($_medium, $_checkbox-lighten));
+
+$checkbox-size: var(--magic-checkbox-size, $_checkbox-size);
+$checkbox-space: var(--magic-checkbox-space, $_checkbox-space);
+$checkbox-border-size: var(--magic-checkbox-border-size, $_checkbox-border-size);
+
+// checkbox
+// ---------------------------------------------------------------------------------------------------------------------
+.checkbox {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 0 $space;
+    padding: 0 calc(#{$checkbox-size} + #{$space});
+    width: 100%;
+
+    // spacer
+    // -----------------------------------------------------------------------------------------------------------------
+    &:after {
+        content: "\A";
+        display: block;
+        width: 1000px;
+    }
+
+    // variant inline
+    // -----------------------------------------------------------------------------------------------------------------
+    &--inline {
+        padding: 0 0 0 calc(#{$checkbox-size} + #{$space});
+
+        // spacer
+        // -------------------------------------------------------------------------------------------------------------
+        &:after {
+            width: auto;
+        }
+    }
+
+    // variant no-label
+    // -----------------------------------------------------------------------------------------------------------------
+    &--no-label {
+        padding: 0;
+        width: $checkbox-size;
+        height: $checkbox-size;
+    }
+
+    // variant no-margin
+    // -----------------------------------------------------------------------------------------------------------------
+    &--no-margin {
+        margin: 0;
+    }
+}
+
+// input
+// ---------------------------------------------------------------------------------------------------------------------
+.input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+// label
+// ---------------------------------------------------------------------------------------------------------------------
+.label {
+    @include set-font-size(14px);
+    padding: 0;
+    min-height: $checkbox-size;
+    line-height: $checkbox-size;
+    cursor: pointer;
+
+    // background, icon
+    // -----------------------------------------------------------------------------------------------------------------
+    &:before,
+    &:after {
+        content: " ";
+        position: absolute;
+        pointer-events: none;
+    }
+
+    // background
+    // -----------------------------------------------------------------------------------------------------------------
+    &:before {
+        top: 0;
+        left: 0;
+        width: $checkbox-size;
+        height: $checkbox-size;
+        border: $checkbox-border-size solid $checkbox-border;
+        border-radius: $border-radius;
+        transition: border-color $duration ease;
+        will-change: border-color;
+    }
+
+    // icon
+    // -----------------------------------------------------------------------------------------------------------------
+    &:after {
+        @include bg("/img/icons/checked.svg", no-repeat);
+        top: $checkbox-space;
+        left: $checkbox-space;
+        width: calc(#{$_checkbox-size} - (#{$_checkbox-space} * 2));
+        height: calc(#{$_checkbox-size} - (#{$_checkbox-space} * 2));
+        background-size: 125% auto;
+        background-position: 50% 50%;
+        background-color: $checkbox-background;
+        opacity: 0;
+        transition: opacity $duration ease;
+        will-change: opacity;
+    }
+
+    // variant bold
+    // -----------------------------------------------------------------------------------------------------------------
+    &--bold {
+        @include bold-text();
+    }
+
+    // link
+    // -----------------------------------------------------------------------------------------------------------------
+    ::slotted(a) {
+        font-weight: 600 !important;
+        text-decoration: none !important;
+        color: $text-primary !important;
+    }
+
+    // state hover, focus, active
+    // -----------------------------------------------------------------------------------------------------------------
+    ::slotted(a:hover),
+    ::slotted(a:focus),
+    ::slotted(a:active) {
+        text-decoration: underline !important;
+    }
+}
+
+// state hover (background)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:hover ~ .label:before {
+    border-color: $checkbox-hover-border;
+}
+
+// state focus (background)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:focus ~ .label:before {
+    border-color: $checkbox-focus-border;
+}
+
+// state checked (background)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:checked + .label:before {
+    border-color: $checkbox-checked-border;
+}
+
+// state checked (icon)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:checked + .label:after {
+    opacity: 1;
+}
+
+// state disabled (input)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:disabled {
+    cursor: default;
+}
+
+// state disabled (label)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:disabled + .label {
+    color: $checkbox-disabled-label;
+    cursor: default;
+}
+
+// state disabled (background)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:disabled + .label:before {
+    border-color: $checkbox-disabled-border;
+}
+
+// state disabled (icon)
+// ---------------------------------------------------------------------------------------------------------------------
+.input:disabled + .label:after {
+    @include bg($checkbox-disabled-background);
+    top: calc(#{$checkbox-space} * 4);
+    left: calc(#{$checkbox-space} * 2);
+    width: calc(#{$checkbox-size} - (#{$checkbox-space} + (#{$checkbox-border-size} * 3)));
+    height: $checkbox-border-size;
+    opacity: 1;
+}
+
+
+.input:indeterminate + .label:after {
+    @include bg("/img/icons/intermediate.svg", no-repeat);
+    top: $checkbox-space;
+    left: $checkbox-space;
+    width: calc(#{$_checkbox-size} - (#{$_checkbox-space} * 2));
+    height: calc(#{$_checkbox-size} - (#{$_checkbox-space} * 2));
+    background-size: 125% auto;
+    background-position: 50% 50%;
+    opacity: 0.2;
+    transition: opacity $duration ease;
+    will-change: opacity;
+}

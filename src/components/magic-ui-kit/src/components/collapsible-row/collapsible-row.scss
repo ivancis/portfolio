@@ -1,0 +1,73 @@
+// collapsible row
+// =====================================================================================================================
+$_collapsible-row-underline: $primary;
+$_collapsible-row-height: 44px;
+
+$collapsible-row-underline: var(--magic-collapsible-row-underline, $_collapsible-row-underline);
+$collapsible-row-height: var(--magic-collapsible-row-height, $_collapsible-row-height);
+
+:host {
+    width: 100%;
+    height: 100%;
+}
+
+// list
+// ---------------------------------------------------------------------------------------------------------------------
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: $collapsible-row-height;
+    overflow: hidden;
+}
+
+// item
+// ---------------------------------------------------------------------------------------------------------------------
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: $space--small;
+    height: $collapsible-row-height;
+}
+
+// link
+// ---------------------------------------------------------------------------------------------------------------------
+.link {
+    @include set-font-size(14px);
+    @include semibold-text;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: $text-dark;
+
+    // underline
+    // -----------------------------------------------------------------------------------------------------------------
+    &:before {
+        @include bg($collapsible-row-underline);
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        transform: translate3d(-50%, 2px, 0);
+        will-change: width;
+        transition: width $duration calc(#{$delay} / 2) ease;
+    }
+
+    // state hover, focus
+    // -----------------------------------------------------------------------------------------------------------------
+    &:hover,
+    &:focus,
+    &.is-active {
+
+        // underline
+        // -------------------------------------------------------------------------------------------------------------
+        &:before {
+            width: calc(100% + #{$space--small});
+            transition: width $duration ease;
+        }
+    }
+}

@@ -1,0 +1,201 @@
+// config
+// =====================================================================================================================
+
+// colors
+// ---------------------------------------------------------------------------------------------------------------------
+$_primary: #002CC8;
+$_secondary: #7b6aff;
+$_tertiary: #141f33;
+$_background: #fbfbfb;
+$_success: #22c993;
+$_alert: #ffad0d;
+$_error: #f03d3d;
+$_dark: #000;
+$_medium: #757575;
+$_light: #fff;
+
+$_disabled: #e4e4e4;
+
+$_text-primary: $_primary;
+$_text-secondary: $_secondary;
+$_text-tertiary: $_tertiary;
+$_text-success: #00865a;
+$_text-alert: #f07300;
+$_text-error: #dd2727;
+$_text-dark: #161616;
+$_text-medium: #757575;
+$_text-light: #b0b0b0;
+$_text-lighter: #c6c6c6;
+
+$_primary-contrast: #fff;
+$_secondary-contrast: #fff;
+$_tertiary-contrast: #fff;
+$_background-contrast: #fff;
+$_success-contrast: #fff;
+$_alert-contrast: $_text-dark;
+$_error-contrast: #fff;
+$_dark-contrast: #fff;
+$_medium-contrast: #fff;
+$_light-contrast: #000;
+
+$primary: var(--primary, #{$_primary});
+$secondary: var(--secondary, #{$_secondary});
+$tertiary: var(--tertiary, #{$_tertiary});
+$background: var(--background, #{$_background});
+$success: var(--success, #{$_success});
+$alert: var(--alert, #{$_alert});
+$error: var(--error, #{$_error});
+$dark: var(--dark, #{$_dark});
+$medium: var(--medium, #{$_medium});
+$light: var(--light, $_light);
+
+$disabled: var(--disabled, #{$_disabled});
+
+$text-primary: var(--text-primary, #{$_text-primary});
+$text-success: var(--text-success, #{$_text-success});
+$text-alert: var(--text-alert, #{$_text-alert});
+$text-error: var(--text-error, #{$_text-error});
+$text-dark: var(--text-dark, #{$_text-dark});
+$text-medium: var(--text-medium, #{$_text-medium});
+$text-light: var(--text-light, #{$_text-light});
+$text-lighter: var(--text-lighter, #{$_text-lighter});
+
+$primary-contrast: var(--primary-contrast, #{$_primary-contrast});
+$secondary-contrast: var(--secondary-contrast, #{$_secondary-contrast});
+$tertiary-contrast: var(--tertiary-contrast, #{$_tertiary-contrast});
+$background-contrast: var(--background-contrast, #{$_background-contrast});
+$success-contrast: var(--success-contrast, #{$_success-contrast});
+$error-contrast: var(--error-contrast, #{$_error-contrast});
+$alert-contrast: var(--alert-contrast, #{$_alert-contrast});
+$dark-contrast: var(--dark-contrast, #{$_dark-contrast});
+$medium-contrast: var(--medium-contrast, #{$_medium-contrast});
+$light-contrast: var(--light-contrast, #{$_light-contrast});
+
+// gradients
+// ---------------------------------------------------------------------------------------------------------------------
+$_gradient-1: $_primary linear-gradient(135deg, $_secondary, $_primary);
+$_gradient-2: $_primary linear-gradient(135deg, $_success, $_primary);
+$_gradient-3: $_error linear-gradient(135deg, $_alert, $_error);
+
+$gradient-1: var(--gradient-1, #{$_gradient-1});
+$gradient-2: var(--gradient-2, #{$_gradient-2});
+$gradient-3: var(--gradient-3, #{$_gradient-3});
+
+// typography
+// ---------------------------------------------------------------------------------------------------------------------
+$_font-family: "Montserrat", Helvetica, Arial, sans-serif;
+$_header-font-family: $_font-family;
+$_font-size: 14px;
+$_font-weight: 400;
+$_line-height: 1.43;
+
+$font-family: var(--font-family, #{$_font-family});
+$header-font-family: var(--header-font-family, #{$_header-font-family});
+$font-size: var(--font-size, #{$_font-size});
+$font-weight: var(--font-weight, #{$_font-weight});
+$line-height: var(--line-height, #{$_line-height});
+
+// spaces
+// ---------------------------------------------------------------------------------------------------------------------
+$_space: 16px;
+$_space--large: ($_space * 2);
+$_space--small: ($_space / 2);
+$_space--x-large: ($_space--large * 2);
+$_space--x-small: ($_space--small / 2);
+$_space--xx-large: ($_space--x-large * 2);
+$_space--xx-small: ($_space--x-small / 2);
+$_space--xxx-large: ($_space--xx-large * 2);
+$_space--xxx-small: ($_space--xx-small / 2);
+
+$space: var(--space, #{$_space});
+$space--large: var(--space--large, #{$_space--large});
+$space--small: var(--space--small, #{$_space--small});
+$space--x-large: var(--space--x-large, #{$_space--x-large});
+$space--x-small: var(--space--x-small, #{$_space--x-small});
+$space--xx-large: var(--space--xx-large, #{$_space--xx-large});
+$space--xx-small: var(--space--xx-small, #{$_space--xx-small});
+$space--xxx-large: var(--space--xxx-large, #{$_space--xxx-large});
+$space--xxx-small: var(--space--xxx-small, #{$_space--xxx-small});
+
+// sizes
+// ---------------------------------------------------------------------------------------------------------------------
+$_content-size: 1110px;
+$_content-size-medium: 920px;
+$_content-size-small: 830px;
+$_element-default-width: 288px;
+$_top-navigation-height: 56px;
+$_bottom-navigation-height: 64px;
+$_icon-size: 24px;
+$_icon-size-small: 20px;
+$_scroll-size: 17px;
+$_border-radius: 4px;
+
+$content-size: var(--content-size, #{$_content-size});
+$content-size-medium: var(--content-size-medium, #{$_content-size-medium});
+$content-size-small: var(--content-size-small, #{$_content-size-small});
+$element-default-width: var(--element-default-width, #{$_element-default-width});
+$top-navigation-height: var(--top-navigation-height, #{$_top-navigation-height});
+$bottom-navigation-height: var(--bottom-navigation-height, #{$_bottom-navigation-height});
+$icon-size: var(--icon-size, #{$_icon-size});
+$icon-size-small: var(--icon-size-small, #{$_icon-size-small});
+$scroll-size: var(--scroll-size, #{$_scroll-size});
+$border-radius: var(--border-radius, #{$_border-radius});
+
+// transitions
+// ---------------------------------------------------------------------------------------------------------------------
+$_duration: .15s;
+$_delay: .5s;
+
+$duration: var(--duration, #{$_duration});
+$delay: var(--delay, #{$_delay});
+
+// shadows
+// ---------------------------------------------------------------------------------------------------------------------
+$_shadow: #0a1f44;
+$_shadow-1: 0 01px 01px 0 rgba($_shadow, .08), 0 0 1px 0 rgba($_shadow, .08);
+$_shadow-2: 0 03px 04px 0 rgba($_shadow, .10), 0 0 1px 0 rgba($_shadow, .08);
+$_shadow-3: 0 08px 10px 0 rgba($_shadow, .10), 0 0 1px 0 rgba($_shadow, .08);
+$_shadow-4: 0 18px 18px 0 rgba($_shadow, .12), 0 0 1px 0 rgba($_shadow, .10);
+$_shadow-5: 0 26px 26px 0 rgba($_shadow, .12), 0 0 1px 0 rgba($_shadow, .10);
+
+$shadow-1: var(--shadow-1, #{$_shadow-1});
+$shadow-2: var(--shadow-2, #{$_shadow-2});
+$shadow-3: var(--shadow-3, #{$_shadow-3});
+$shadow-4: var(--shadow-4, #{$_shadow-4});
+$shadow-5: var(--shadow-5, #{$_shadow-5});
+
+
+h1 {
+    @include set-font-size(30px);
+    margin: 0 0 .5em;
+}
+
+h2 {
+    @include set-font-size(24px);
+    margin: 0 0 .5em;
+}
+
+h3 {
+    @include set-font-size(21px);
+    margin: 0 0 .5em;
+}
+
+h4 {
+    @include set-font-size(18px);
+    margin: 0 0 .5em;
+}
+
+h5 {
+    @include set-font-size(16px);
+    margin: 0 0 .5em;
+}
+
+h6 {
+    @include set-font-size(16px);
+    margin: 0 0 .5em;
+}
+
+p {
+    @include set-font-size(16px);
+    margin: 0 0 .5em;
+}

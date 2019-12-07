@@ -1,0 +1,26 @@
+// loader
+// =====================================================================================================================
+$_loader-icon-size: 100px;
+$_loader-stroke: $_medium;
+$_loader-stroke-width: 2px;
+
+$loader-icon-size: var(--magic-loader-icon-size, $_loader-icon-size);
+$loader-stroke: var(--magic-loader-stroke, $_loader-stroke);
+$loader-stroke-width: var(--magic-loader-stroke-width, $_loader-stroke-width);
+
+// loader
+// ---------------------------------------------------------------------------------------------------------------------
+.loader {
+    @include transparent-light;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: calc((#{$loader-icon-size} / 2) * -1) 0;
+    width: $loader-icon-size;
+    height: $loader-icon-size;
+    stroke: $loader-stroke;
+    stroke-width: $loader-stroke-width;
+    transform: translate3d(-50%, 0, 0);
+    z-index: 1;
+}

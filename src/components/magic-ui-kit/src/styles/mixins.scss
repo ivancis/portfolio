@@ -1,0 +1,251 @@
+// mixins
+// =====================================================================================================================
+
+// image
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin image($src, $constrainHeight: null) {
+    $_size: image-dimensions($src);
+    $_retina: get-retina-image($src);
+    $_width: map-get($_size, "width");
+    $_height: map-get($_size, "height");
+    $_ratio: if($constrainHeight, ($constrainHeight / $_height), 1);
+    $_constrainedWidth: #{if($constrainHeight, $_width * $_ratio, $_width)}px;
+    $_constrainedHeight: #{if($constrainHeight, $constrainHeight, $_height)}px;
+
+    background-image: url($src);
+    background-repeat: no-repeat;
+    width: $_constrainedWidth;
+    height: $_constrainedHeight;
+    background-size: 100% 100%;
+
+    @if file-exists($_retina) {
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            background-image: url($_retina);
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+// grid base
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin grid-base() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+// grid column
+// ---------------------------------------------------------------------------------------------------------------------
+$gutter: $_space--small;
+
+@mixin grid-column($_wrap, $_count, $_gutter: $gutter) {
+    @if (is-css-variable($_count)) {
+        flex-basis: unquote("calc((100% - ((#{$_count} - 1) * #{$_gutter})) * (#{$_wrap} / #{$_count}) + #{($_wrap - 1) * $_gutter})");
+    } @else {
+        flex-basis: unquote("calc(((100% - #{($_count - 1) * $_gutter}) * #{($_wrap / $_count)}) + #{($_wrap - 1) * $_gutter})");
+    }
+    flex-grow: 0;
+}
+
+// transition default state
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin transition-base($name) {
+
+    // [to]
+    // -----------------------------------------------------------------------------------------------------------------
+    &.#{$name}-enter,
+    &.#{$name}-leave-to {
+        @content;
+    }
+}
+
+// transition active state
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin transition-active($name) {
+
+    // [active]
+    // -----------------------------------------------------------------------------------------------------------------
+    &.#{$name}-enter-active,
+    &.#{$name}-leave-active {
+        @content;
+    }
+}
+
+// transition fade-in
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin transition-fade-in() {
+    opacity: 1;
+    will-change: opacity;
+
+    // fade in [active]
+    // -----------------------------------------------------------------------------------------------------------------
+    &.fade-in-enter-active,
+    &.fade-in-leave-active {
+        transition: opacity $duration ease;
+    }
+
+    // fade in [to]
+    // -----------------------------------------------------------------------------------------------------------------
+    &.fade-in-enter,
+    &.fade-in-leave-to {
+        opacity: 0;
+    }
+}
+
+// touch scroll
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin touch-scroll($value, $axis: "") {
+    @if ($value == "on") {
+        overflow: auto;
+        backface-visibility: hidden;
+        -webkit-overflow-scrolling: touch;
+        @if ($axis == "x") {
+            overflow-x: auto;
+            overflow-y: hidden;
+        } @else if ($axis == "y") {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    } @else if ($value == "off") {
+        overflow: visible;
+        -webkit-overflow-scrolling: auto;
+    }
+}
+
+// hide scrollbars
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin hide-scrollbars() {
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-track-piece:start,
+    &::-webkit-scrollbar-track-piece:end {
+        display: none;
+        width: 0;
+        height: 0;
+        background: transparent none 0 0;
+    }
+}
+
+// set font size
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin set-font-size($value) {
+    @if ($value == "inherit") {
+        font-size: inherit;
+    } @else {
+        font-size: remify($value);
+    }
+}
+
+// font smoothing
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin font-smoothing($value) {
+    @if ($value == "on") {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    } @else if ($value == "off") {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+// placeholder
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin placeholder() {
+    &::placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+        line-height: normal;
+    }
+
+    &::-moz-placeholder {
+        @content;
+        opacity: 1;
+    }
+
+    &::-ms-input-placeholder {
+        @content;
+    }
+}
+
+// regular text
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin regular-text() {
+    font-weight: 400;
+}
+
+// semibold text
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin semibold-text() {
+    font-weight: 600;
+}
+
+// bold text
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin bold-text() {
+    font-weight: 700;
+}
+
+// autofill
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin autofill() {
+    &:-webkit-autofill {
+        @content;
+    }
+}
+
+// mobile
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin mobile() {
+    @media (min-width: 320px) {
+        @content;
+    }
+}
+
+// phablet
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin phablet() {
+    @media (min-width: 501px) {
+        @content;
+    }
+}
+
+// tablet
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin tablet() {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+// desktop
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin desktop() {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+// large
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin large() {
+    @media (min-width: 1401px) {
+        @content;
+    }
+}
+
+// transparent light
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin transparent-light() {
+    color: rgba(255, 255, 255, 0);
+}
+
+// transparent dark
+// ---------------------------------------------------------------------------------------------------------------------
+@mixin transparent-dark() {
+    color: rgba(0, 0, 0, 0);
+}

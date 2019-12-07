@@ -1,0 +1,82 @@
+import '.';
+import {
+    Meta,
+    Story,
+    Preview,
+    boolean,
+} from '@gig/magic-wand-spellbook/dist/storybook/helpers';
+import { ComponentInterop } from '@gig/magic-wand-spellbook/dist/components/interop';
+import { RoutablePage, setRouteGetter } from '@gig/magic-common';
+import ReadMe from './README.md';
+
+<Meta title="UI Kit|Collapsible Row" />
+
+<ReadMe.parameters.docs.page />
+
+## Stories
+
+export const _UNUSED = setRouteGetter(() => ({
+    link: '#games-page',
+    go: () => null,
+}));
+
+export const defaultItems = [
+    'Recommended Games',
+    'Slots',
+    'Table Games',
+    'Live Games',
+    'Other Games',
+    'Long Category Name',
+    'Flagship Games',
+    'More Games',
+].map((name) => ({ name, slug: name, link: { route: RoutablePage.GAMES } }));
+
+The collapsible row component is used to display a list of links up to the available space. Once an item no longer fits on the row it'l be hidden, all hidden elements are emitted as an event.
+
+<!-- TODO: Set routing link -->
+
+Right now the component is heavily linked to our routing system and only accepts links that are specified on the `RoutablePage` enum. See more in our [Routing](/setup-link) section.
+
+Items can only be specified by the property `items` via javascript.
+
+<Preview>
+    <Story name="Default">
+        <ComponentInterop props={{ items: defaultItems }}>
+            <magic-ui-collapsible-row />
+        </ComponentInterop>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-collapsible-row id="collapsible-row" />
+
+<script>
+    const row = document.getElementById('collapsible-row');
+    row.items = [
+        { name: 'An item', slug: 'hello-world', link: { route: RoutablePage.GAMES } },
+    ];
+</script>
+```
+
+### Setting the Active Item
+
+To denote a link as active, use the `active-item` attribute. It should match with the slug of the item to activate.
+
+<Preview>
+    <Story name="Active Item">
+        <ComponentInterop props={{ items: defaultItems }}>
+            <magic-ui-collapsible-row active-item="Live Games" />
+        </ComponentInterop>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-collapsible-row id="collapsible-row" active-item="hello-world" />
+
+<script>
+    const row = document.getElementById('collapsible-row');
+    row.items = [
+        { name: 'An item', slug: 'hello-world', link: { route: RoutablePage.GAMES } },
+    ];
+</script>
+```

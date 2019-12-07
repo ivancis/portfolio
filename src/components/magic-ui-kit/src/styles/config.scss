@@ -1,0 +1,193 @@
+// config
+// =====================================================================================================================
+
+// colors
+// ---------------------------------------------------------------------------------------------------------------------
+$_primary: #0c66ff;
+$_secondary: #7b6aff;
+$_tertiary: #141f33;
+$_background: #fbfbfb;
+$_success: #22c993;
+$_alert: #ffad0d;
+$_error: #f03d3d;
+$_dark: #000;
+$_medium: #757575;
+$_light: #fff;
+
+$_disabled: #e4e4e4;
+
+$_text-primary: $_primary;
+$_text-info: $_primary;
+$_text-success: #00865a;
+$_text-alert: #f07300;
+$_text-error: #dd2727;
+$_text-dark: #161616;
+$_text-medium: #757575;
+$_text-light: #b0b0b0;
+$_text-lighter: #c6c6c6;
+
+$_primary-contrast: #fff;
+$_secondary-contrast: #fff;
+$_tertiary-contrast: #fff;
+$_background-contrast: #fff;
+$_success-contrast: #fff;
+$_alert-contrast: $_text-dark;
+$_error-contrast: #fff;
+$_dark-contrast: #fff;
+$_medium-contrast: #fff;
+$_light-contrast: #000;
+
+$primary: var(--magic-primary, #{$_primary});
+$secondary: var(--magic-secondary, #{$_secondary});
+$tertiary: var(--magic-tertiary, #{$_tertiary});
+$background: var(--magic-background, #{$_background});
+$success: var(--magic-success, #{$_success});
+$alert: var(--magic-alert, #{$_alert});
+$error: var(--magic-error, #{$_error});
+$dark: var(--magic-dark, #{$_dark});
+$medium: var(--magic-medium, #{$_medium});
+$light: var(--magic-light, $_light);
+
+$disabled: var(--magic-disabled, #{$_disabled});
+
+$text-info: var(--magic-text-info, #{$_text-info});
+$text-primary: var(--magic-text-primary, #{$_text-primary});
+$text-success: var(--magic-text-success, #{$_text-success});
+$text-alert: var(--magic-text-alert, #{$_text-alert});
+$text-error: var(--magic-text-error, #{$_text-error});
+$text-dark: var(--magic-text-dark, #{$_text-dark});
+$text-medium: var(--magic-text-medium, #{$_text-medium});
+$text-light: var(--magic-text-light, #{$_text-light});
+$text-lighter: var(--magic-text-lighter, #{$_text-lighter});
+
+$primary-contrast: var(--magic-primary-contrast, #{$_primary-contrast});
+$secondary-contrast: var(--magic-secondary-contrast, #{$_secondary-contrast});
+$tertiary-contrast: var(--magic-tertiary-contrast, #{$_tertiary-contrast});
+$background-contrast: var(--magic-background-contrast, #{$_background-contrast});
+$success-contrast: var(--magic-success-contrast, #{$_success-contrast});
+$error-contrast: var(--magic-error-contrast, #{$_error-contrast});
+$alert-contrast: var(--magic-alert-contrast, #{$_alert-contrast});
+$dark-contrast: var(--magic-dark-contrast, #{$_dark-contrast});
+$medium-contrast: var(--magic-medium-contrast, #{$_medium-contrast});
+$light-contrast: var(--magic-light-contrast, #{$_light-contrast});
+
+// gradients
+// ---------------------------------------------------------------------------------------------------------------------
+$_gradient-1: $_primary linear-gradient(135deg, $_secondary, $_primary);
+$_gradient-2: $_primary linear-gradient(135deg, $_success, $_primary);
+$_gradient-3: $_error linear-gradient(135deg, $_alert, $_error);
+
+$gradient-1: var(--magic-gradient-1, #{$_gradient-1});
+$gradient-2: var(--magic-gradient-2, #{$_gradient-2});
+$gradient-3: var(--magic-gradient-3, #{$_gradient-3});
+
+// typography
+// ---------------------------------------------------------------------------------------------------------------------
+$_font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+$_header-font-family: $_font-family;
+$_font-size: 14px;
+$_font-weight: 400;
+$_line-height: 1.43;
+
+$font-family: var(--magic-font-family, #{$_font-family});
+$header-font-family: var(--magic-header-font-family, #{$_header-font-family});
+$font-size: var(--magic-font-size, #{$_font-size});
+$font-weight: var(--magic-font-weight, #{$_font-weight});
+$line-height: var(--magic-line-height, #{$_line-height});
+
+// spaces
+// ---------------------------------------------------------------------------------------------------------------------
+$_space: 16px;
+$_space--large: ($_space * 2);
+$_space--small: ($_space / 2);
+$_space--x-large: ($_space--large * 2);
+$_space--x-small: ($_space--small / 2);
+$_space--xx-large: ($_space--x-large * 2);
+$_space--xx-small: ($_space--x-small / 2);
+$_space--xxx-large: ($_space--xx-large * 2);
+$_space--xxx-small: ($_space--xx-small / 2);
+
+$space: var(--magic-space, #{$_space});
+$space--large: var(--magic-space--large, #{$_space--large});
+$space--small: var(--magic-space--small, #{$_space--small});
+$space--x-large: var(--magic-space--x-large, #{$_space--x-large});
+$space--x-small: var(--magic-space--x-small, #{$_space--x-small});
+$space--xx-large: var(--magic-space--xx-large, #{$_space--xx-large});
+$space--xx-small: var(--magic-space--xx-small, #{$_space--xx-small});
+$space--xxx-large: var(--magic-space--xxx-large, #{$_space--xxx-large});
+$space--xxx-small: var(--magic-space--xxx-small, #{$_space--xxx-small});
+
+// sizes
+// ---------------------------------------------------------------------------------------------------------------------
+$_content-size: 1110px;
+$_element-default-width: 288px;
+$_content-size-medium: 920px;
+$_content-size-small: 830px;
+$_content-size-offer: 735px;
+$_content-size-rewards: 820px;
+$_content-size-static-page: 920px;
+$_content-size-faq: 735px;
+$_content-size-account: 550px;
+$_main-navigation-width--m: 304px;
+$_main-navigation-width--d: 230px;
+$_header-height--m: 360px;
+$_header-height--d: 460px;
+$_top-navigation-height: 56px;
+$_bottom-navigation-height: 64px;
+$_sga-header: 62px;
+$_icon-size: 24px;
+$_icon-size-small: 20px;
+$_scroll-size: 17px;
+$_border-radius: 4px;
+$_game-margin: 16px;
+$_modal-size-small: 520px;
+$_modal-size-large: 700px;
+$_game-minimized-width: 204px;
+
+$content-size: var(--magic-content-size, #{$_content-size});
+$element-default-width: var(--magic-element-default-width, #{$_element-default-width});
+$content-size-medium: var(--magic-content-size-medium, #{$_content-size-medium});
+$content-size-small: var(--magic-content-size-small, #{$_content-size-small});
+$content-size-offer: var(--magic-content-size-offer, #{$_content-size-offer});
+$content-size-rewards: var(--magic-content-size-rewards, #{$_content-size-rewards});
+$content-size-static-page: var(--magic-content-size-static-page, #{$_content-size-static-page});
+$content-size-faq: var(--magic-content-size-faq, #{$_content-size-faq});
+$content-size-account: var(--magic-content-size-account, #{$_content-size-account});
+$main-navigation-width--m: var(--magic-menu-width--m, #{$_main-navigation-width--m});
+$main-navigation-width--d: var(--magic-menu-width--d, #{$_main-navigation-width--d});
+$header-height--m: var(--magic-header--m, #{$_header-height--m});
+$header-height--d: var(--magic-header--d, #{$_header-height--d});
+$top-navigation-height: var(--magic-top-navigation-height, #{$_top-navigation-height});
+$bottom-navigation-height: var(--magic-bottom-navigation-height, #{$_bottom-navigation-height});
+$sga-header: var(--magic-sga-header, #{$_sga-header});
+$icon-size: var(--magic-icon-size, #{$_icon-size});
+$icon-size-small: var(--magic-icon-size-small, #{$_icon-size-small});
+$scroll-size: var(--magic-scroll-size, #{$_scroll-size});
+$border-radius: var(--magic-border-radius, #{$_border-radius});
+$game-margin: var(--magic-game-margin, #{$_game-margin});
+$modal-size-small: var(--magic-modal-size-small, #{$_modal-size-small});
+$modal-size-large: var(--magic-modal-size-large, #{$_modal-size-large});
+$game-minimized-width: var(--magic-game-minimized-width, #{$_game-minimized-width});
+
+// transitions
+// ---------------------------------------------------------------------------------------------------------------------
+$_duration: .3s;
+$_delay: .3s;
+
+$duration: var(--magic-duration, #{$_duration});
+$delay: var(--magic-delay, #{$_delay});
+
+// shadows
+// ---------------------------------------------------------------------------------------------------------------------
+$_shadow: #0a1f44;
+$_shadow-1: 0 01px 01px 0 rgba($_shadow, .08), 0 0 1px 0 rgba($_shadow, .08);
+$_shadow-2: 0 03px 04px 0 rgba($_shadow, .10), 0 0 1px 0 rgba($_shadow, .08);
+$_shadow-3: 0 08px 10px 0 rgba($_shadow, .10), 0 0 1px 0 rgba($_shadow, .08);
+$_shadow-4: 0 18px 18px 0 rgba($_shadow, .12), 0 0 1px 0 rgba($_shadow, .10);
+$_shadow-5: 0 26px 26px 0 rgba($_shadow, .12), 0 0 1px 0 rgba($_shadow, .10);
+
+$shadow-1: var(--magic-shadow-1, #{$_shadow-1});
+$shadow-2: var(--magic-shadow-2, #{$_shadow-2});
+$shadow-3: var(--magic-shadow-3, #{$_shadow-3});
+$shadow-4: var(--magic-shadow-4, #{$_shadow-4});
+$shadow-5: var(--magic-shadow-5, #{$_shadow-5});

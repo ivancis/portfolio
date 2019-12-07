@@ -1,0 +1,471 @@
+import '.';
+import '../icon';
+import {
+    Meta,
+    Story,
+    Preview,
+} from '@gig/magic-wand-spellbook/dist/storybook/helpers';
+import ReadMe from './README.md';
+
+<Meta title="UI Kit|Button" />
+
+<ReadMe.parameters.docs.page />
+
+export const dark = {
+    backgroundColor: '#333',
+    padding: '4px',
+    borderRadius: '5px',
+};
+
+## Stories
+
+By default the button element is a solid colour depending on the variant, for example:
+
+<Preview>
+    <Story name="Variants">
+        <div style={dark}>
+            <magic-ui-button add-space>Default</magic-ui-button>
+            <magic-ui-button variant="primary" add-space>
+                Primary
+            </magic-ui-button>
+            <magic-ui-button variant="success" add-space>
+                Success
+            </magic-ui-button>
+            <magic-ui-button variant="alert" add-space>
+                Alert
+            </magic-ui-button>
+            <magic-ui-button variant="error" add-space>
+                Error
+            </magic-ui-button>
+            <magic-ui-button variant="light" add-space>
+                Light
+            </magic-ui-button>
+            <magic-ui-button variant="transparent" add-space>
+                Transparent
+            </magic-ui-button>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<div>
+    <magic-ui-button>My Button Text</magic-ui-button>
+    <magic-ui-button variant="primary">My Button Text</magic-ui-button>
+    <magic-ui-button variant="success">My Button Text</magic-ui-button>
+    <magic-ui-button variant="alert">My Button Text</magic-ui-button>
+    <magic-ui-button variant="error">My Button Text</magic-ui-button>
+    <magic-ui-button variant="light">My Button Text</magic-ui-button>
+    <magic-ui-button variant="transparent">My Button Text</magic-ui-button>
+</div>
+```
+
+### Inline Buttons
+
+By default buttons are inline however they do not add spacing between each button/textual content.
+You can use the `add-space` attribute in order to add a sufficient gutter between elements:
+
+<Preview>
+    <Story name="With Added Space">
+        <div>
+            <magic-ui-button variant="primary" add-space>
+                OK
+            </magic-ui-button>
+            <magic-ui-button variant="error" add-space>
+                CANCEL
+            </magic-ui-button>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<div>
+    <magic-ui-button variant="primary" add-space>OK</magic-ui-button>
+    <magic-ui-button variant="error" add-space>CANCEL</magic-ui-button>
+</div>
+```
+
+### Hollow Variant
+
+Along with the colour based variants theres also different styles of buttons, these are useful when you want to take focus away from a particular button.
+
+<Preview>
+    <Story name="Hollow">
+        <div>
+            <magic-ui-button hollow add-space>
+                Default
+            </magic-ui-button>
+            <magic-ui-button hollow variant="primary" add-space>
+                Primary
+            </magic-ui-button>
+            <magic-ui-button hollow variant="success" add-space>
+                Success
+            </magic-ui-button>
+            <magic-ui-button hollow variant="alert" add-space>
+                Alert
+            </magic-ui-button>
+            <magic-ui-button hollow variant="error" add-space>
+                Error
+            </magic-ui-button>
+            <magic-ui-button hollow variant="light" add-space>
+                Light
+            </magic-ui-button>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-button hollow variant="primary">Primary</magic-ui-button>
+```
+
+### Usage with Icons
+
+When using an icon with a button you should specify the `icon` attribute.
+
+<Preview>
+    <Story name="With Icon">
+        <magic-ui-button icon variant="error">
+            <magic-ui-icon style={{ width: 24, height: 24 }} name="denied" />
+        </magic-ui-button>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-button icon variant="error">
+    <magic-ui-icon name="denied"></magic-ui-icon>
+</magic-ui-button>
+```
+
+To make the button round with icon, specify the `round` attribute.
+
+<Preview>
+    <Story name="Round With Icon">
+        <magic-ui-button icon round variant="error">
+            <magic-ui-icon style={{ width: 24, height: 24 }} name="denied" />
+        </magic-ui-button>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-button icon round variant="error">
+    <magic-ui-icon name="denied"></magic-ui-icon>
+</magic-ui-button>
+```
+
+To make the button with right aligned icon and text, specify the `icon right` attributes and add content as tag with `class="button-text"`. Tags order matters.
+
+<Preview>
+    <Story name="Right Aligned Icon">
+        <magic-ui-button icon right variant="error">
+            <span class="button-text">Button icon right</span>
+            <magic-ui-icon
+                style={{ width: 24, height: 24 }}
+                name="close-solid"
+            />
+        </magic-ui-button>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-button icon right variant="error">
+    <span class="button-text">Button icon right</span>
+    <magic-ui-icon name="close-solid"></magic-ui-icon>
+</magic-ui-button>
+```
+
+To make the button with left aligned icon and text, specify the `icon left` attributes and add content as tag with `class="button-text"`. Tags order matters.
+
+<Preview>
+    <Story name="Left Aligned Icon">
+        <magic-ui-button icon left variant="success">
+            <magic-ui-icon
+                style={{ width: 24, height: 24 }}
+                name="checked-solid"
+            />
+            <span class="button-text">Button icon left</span>
+        </magic-ui-button>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-button icon left variant="error">
+    <magic-ui-icon name="solid-checked"></magic-ui-icon>
+    <span class="button-text">Button icon left</span>
+</magic-ui-button>
+```
+
+### Disabled Styles
+
+Like a normal button element the `disabled` attribute specifies the button is disabled. The disabled attribute overrides the variant.
+
+<Preview>
+    <Story name="Disabled">
+        <div>
+            <div style={{ padding: '4px' }}>
+                <magic-ui-button disabled no-margin add-space>
+                    Default
+                </magic-ui-button>
+                <magic-ui-button disabled no-margin variant="primary" add-space>
+                    Primary
+                </magic-ui-button>
+                <magic-ui-button disabled no-margin variant="success" add-space>
+                    Success
+                </magic-ui-button>
+                <magic-ui-button disabled no-margin variant="alert" add-space>
+                    Alert
+                </magic-ui-button>
+                <magic-ui-button disabled no-margin variant="error" add-space>
+                    Error
+                </magic-ui-button>
+            </div>
+            <div style={dark}>
+                <magic-ui-button disabled no-margin hollow add-space>
+                    Default Hollow
+                </magic-ui-button>
+                <magic-ui-button
+                    disabled
+                    no-margin
+                    hollow
+                    variant="primary"
+                    add-space
+                >
+                    Primary Hollow
+                </magic-ui-button>
+                <magic-ui-button
+                    disabled
+                    no-margin
+                    hollow
+                    variant="success"
+                    add-space
+                >
+                    Success Hollow
+                </magic-ui-button>
+                <magic-ui-button
+                    disabled
+                    no-margin
+                    hollow
+                    variant="alert"
+                    add-space
+                >
+                    Alert Hollow
+                </magic-ui-button>
+                <magic-ui-button
+                    disabled
+                    no-margin
+                    hollow
+                    variant="error"
+                    add-space
+                >
+                    Error Hollow
+                </magic-ui-button>
+                <magic-ui-button
+                    disabled
+                    no-margin
+                    hollow
+                    variant="light"
+                    add-space
+                >
+                    Light Hollow
+                </magic-ui-button>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-button disabled>Default</magic-ui-button>
+```
+
+### Loading State
+
+When a button is indicating data is loading the `loading` attribute replaces the button content with a loading spinner:
+
+<Preview>
+    <Story name="Loading">
+        <div>
+            <div style={{ padding: '4px' }}>
+                <magic-ui-button loading no-margin add-space>
+                    Loading
+                </magic-ui-button>
+                <magic-ui-button loading no-margin variant="primary" add-space>
+                    Loading
+                </magic-ui-button>
+                <magic-ui-button loading no-margin variant="success" add-space>
+                    Loading
+                </magic-ui-button>
+                <magic-ui-button loading no-margin variant="alert" add-space>
+                    Loading
+                </magic-ui-button>
+                <magic-ui-button loading no-margin variant="error" add-space>
+                    Loading
+                </magic-ui-button>
+            </div>
+            <div style={dark}>
+                <magic-ui-button loading no-margin hollow add-space>
+                    Loading
+                </magic-ui-button>
+                <magic-ui-button
+                    loading
+                    no-margin
+                    hollow
+                    variant="primary"
+                    add-space
+                >
+                    Loading
+                </magic-ui-button>
+                <magic-ui-button
+                    loading
+                    no-margin
+                    hollow
+                    variant="success"
+                    add-space
+                >
+                    Loading
+                </magic-ui-button>
+                <magic-ui-button
+                    loading
+                    no-margin
+                    hollow
+                    variant="alert"
+                    add-space
+                >
+                    Loading
+                </magic-ui-button>
+                <magic-ui-button
+                    loading
+                    no-margin
+                    hollow
+                    variant="error"
+                    add-space
+                >
+                    Loading
+                </magic-ui-button>
+                <magic-ui-button
+                    loading
+                    no-margin
+                    hollow
+                    variant="light"
+                    add-space
+                >
+                    Loading
+                </magic-ui-button>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-button loading variant="primary">Loading</magic-ui-button>
+```
+
+### Button Sizes
+
+By providing the `small` or `tiny` attribute the padding, font and overall size of the button is reduced.
+
+<Preview>
+    <Story name="Small Buttons">
+        <div>
+            <magic-ui-button variant="primary" add-space>
+                Normal Button
+            </magic-ui-button>
+            <magic-ui-button small variant="primary" add-space>
+                Small Button
+            </magic-ui-button>
+            <magic-ui-button tiny variant="primary" add-space>
+                Tiny Button
+            </magic-ui-button>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-button small variant="primary">Small Button</magic-ui-button>
+```
+
+```html
+<magic-ui-button tiny variant="primary">Tiny Button</magic-ui-button>
+```
+
+### Wide Buttons
+
+The `wide` attribute ensures button will take all available horizontal space:
+
+<Preview>
+    <Story name="Wide Buttons">
+        <magic-ui-button wide variant="primary">
+            Full Width Button
+        </magic-ui-button>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-button wide variant="primary">Full Width Button</magic-ui-button>
+```
+
+### Smaller Margins
+
+The `lessMargin` attribute halves the bottom margin between button elements:
+
+<Preview>
+    <Story name="Less Margins">
+        <div>
+            <div>
+                <b>Less Margins</b>:<br />
+                <div>
+                    <magic-ui-button less-margin variant="primary">
+                        Less Margin
+                    </magic-ui-button>
+                </div>
+                <div>
+                    <magic-ui-button less-margin variant="primary">
+                        Less Margin
+                    </magic-ui-button>
+                </div>
+            </div>
+            <div>
+                <b>Normal Margins for comparison</b>:<br />
+                <div>
+                    <magic-ui-button variant="primary">
+                        Normal Margin
+                    </magic-ui-button>
+                </div>
+                <div>
+                    <magic-ui-button variant="primary">
+                        Normal Margin
+                    </magic-ui-button>
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-button less-margin variant="primary">Less Margin</magic-ui-button>
+```
+
+### Links as buttons
+
+Using the `button-tag` attribute you can change the rendered element, for example you could use it to create an `a` tag and specify the `href` attribute as any unrecognized attributes are passed to the child element.
+
+<Preview>
+    <Story name="Button Tag">
+        <magic-ui-button
+            button-tag="a"
+            href="https://google.com"
+            target="_blank"
+            variant="primary"
+        >
+            Go to Google
+        </magic-ui-button>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-button
+    button-tag="a"
+    href="https://google.com"
+    target="_blank"
+    variant="primary"
+>
+    Go to Google
+</magic-ui-button>
+```

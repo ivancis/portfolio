@@ -1,0 +1,79 @@
+import '.';
+import '../form-field';
+import '../icon';
+import {
+    Meta,
+    Story,
+    Preview,
+} from '@gig/magic-wand-spellbook/dist/storybook/helpers';
+import ReadMe from './README.md';
+
+<Meta title="UI Kit|Input" />
+
+<ReadMe.parameters.docs.page />
+
+export const field = {
+    position: 'relative',
+};
+
+export const icon = {
+    position: 'absolute',
+    top: '12px',
+    right: '8px',
+    width: '20px',
+    height: '20px',
+    color: '#333',
+};
+
+## Stories
+
+The ui-input component simply displays an input element, by default nothing more than a bit of styling.
+Any attribute on this is passed down to the underlying `input` element.
+
+<Preview>
+    <Story name="Default">
+        <magic-ui-input placeholder="My placeholder" />
+    </Story>
+</Preview>
+
+```html
+<magic-ui-input placeholder="My placeholder" />
+```
+
+### Centered
+
+When you want to center the input contents the `centered` attribute will move everything including the
+placeholder to the center.
+
+<Preview>
+    <Story name="Centered">
+        <magic-ui-input centered placeholder="My placeholder" />
+    </Story>
+</Preview>
+
+```html
+<magic-ui-input centered placeholder="My placeholder" />
+```
+
+### With Icons
+
+The element can accomodate for icons when specifying the `icon` attribute. This leaves a bit of padding on the right side of the element to allow
+for any additional content.
+
+For example we can float an icon on the right side of the field:
+
+<Preview>
+    <Story name="Has icon">
+        <magic-ui-form-field style={field}>
+            <magic-ui-input icon placeholder="My placeholder" />
+            <magic-ui-icon name="edit" style={icon} />
+        </magic-ui-form-field>
+    </Story>
+</Preview>
+
+```html
+<magic-ui-form-field>
+    <magic-ui-input icon placeholder="My placeholder" />
+    <magic-ui-icon name="edit" />
+</magic-ui-form-field>
+```

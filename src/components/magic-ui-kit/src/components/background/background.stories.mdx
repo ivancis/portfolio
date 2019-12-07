@@ -1,0 +1,62 @@
+import '.';
+import {
+    Meta,
+    Story,
+    Preview,
+    text,
+    boolean,
+} from '@gig/magic-wand-spellbook/dist/storybook/helpers';
+import ReadMe from './README.md';
+import { cdnService } from '@gig/magic-common';
+
+<Meta title="UI Kit|Background" />
+
+<ReadMe.parameters.docs.page />
+
+export const setup = cdnService.setup('https://img.superlenny.com');
+
+## Set up
+
+The background component is used to take an image path that is supplied on the CMS and
+show it responsively depending on device.
+
+The component uses the `@gig/magic-common` `CdnService` to get the path. Therefore the CDN service needs
+to be set up with the CDN URL before using this component.
+
+```js
+import { cdnService } from '@gig/magic-common';
+
+cdnService.setup('https://img.superlenny.com');
+```
+
+## Stories
+
+By default the image path is for a page background image.
+
+<Preview>
+    <Story name="Default">
+        <magic-ui-background path="header@2x.jpg" />
+    </Story>
+</Preview>
+
+```html
+<magic-ui-background path='header@2x.jpg' />
+```
+
+### Image Type
+
+For the `image-type` attribute you can use the `ImageType` enum provided by `@gig/magic-common`.
+
+Alternatively you can pass through string values. Any of the following are acceptable: `game-thumbnail`, `game-background`, `game-token`, `game-token-history`, `game-logo-small`, `game-logo-large`, `game-detail-background-portrait`, `game-detail-background-landscape`, `game-detail-logo`, `category-background`, `category-thumbnail`, `offer-images`, `offer-background`, `reward-images`, `page-images`, `page-background`, `promo-lobby`, `promo-mobile-background`, `promo-images`, `teaser-image`, `oms-image`, `calendar-backgrounds`, `bonuses-images`, `lottery-background`, `lottery-logos`
+
+These directly correspond to the image type on the CMS.
+
+<Preview>
+    <Story name="Image Type">
+        <magic-ui-background image-type="offer-images" path="lobby-2.jpg" />
+    </Story>
+</Preview>
+
+```html
+<magic-ui-background image-type='offer-images' path='lobby-2.jpg' />
+```
