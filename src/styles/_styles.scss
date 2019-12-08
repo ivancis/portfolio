@@ -1,31 +1,31 @@
 .page{
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 1fr auto;
+	grid-template-rows: minmax(90vh, 1fr) auto;
 	align-items: center;
 	min-height: 100vh;
 	opacity: 0;
 	animation: fade-in-animation $duration $delay 1 forwards;
 }
 
-.intro {
+.section {
+	@include set-font-size(27px);
 	grid-column: 1 / -1;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-wrap: wrap;
 	padding: 10vw;
 	width: 100%;
-	min-height: 50vh;
-	@include desktop() {
-		min-height: 90vh;
+	min-height: 100vh;
+	color: $text-dark;
+
+	&--gallery {
+		background: $primary;
 	}
 }
 
-.content {
-	grid-column: 1 / -1;
-	padding: 5vh 10vw 10vw;
-	width: 100%;
-	background: $primary;
+.column {
+	margin: auto;
+	max-width: 600px;
 }
 
 .nav {
@@ -37,17 +37,34 @@
 
 .grido {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, minmax(100px, auto));
 	grid-gap: $space;
+	margin: 0 auto $space--large;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .grido__item {
-	background: $light;
-	padding: $space;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: $space--large;
+	border: 1px dashed $light;
 	border-radius: $border-radius;
-	&--dashed {
-		background: none;
-		border: 1px dashed $light;
+}
+
+.filling {
+	display: flex;
+	width: 100px;
+	height: 100px;
+	background: $light;
+	transition: transform $duration ease;
+	transform: scale(0.3);
+
+	&:hover{
+		transform: scale(4);
 	}
 }
 

@@ -21,7 +21,7 @@ $_text-info: $_primary;
 $_text-success: #00865a;
 $_text-alert: #f07300;
 $_text-error: #dd2727;
-$_text-dark: #161616;
+$_text-dark: #040816;
 $_text-medium: #757575;
 $_text-light: #b0b0b0;
 $_text-lighter: #c6c6c6;
@@ -83,7 +83,7 @@ $gradient-3: var(--magic-gradient-3, #{$_gradient-3});
 
 // typography
 // ---------------------------------------------------------------------------------------------------------------------
-$_font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+$_font-family: "Karla", Helvetica, Arial, sans-serif;
 $_header-font-family: $_font-family;
 $_font-size: 14px;
 $_font-weight: 400;

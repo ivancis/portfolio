@@ -1,12 +1,15 @@
 <template>
-    <section class="page page--home">
-        <div class="intro">
-            <h1>Hello, my name is Iván</h1>
-            <h2>I’m a graphic and UI designer, working on UX also UI developer, working on full front-end</h2>
-        </div>
+    <div class="page page--home">
+        <section class="section section--intro">
+            <div class="column">
+                <h2>Hello, my name is <b>Iván.</b></h2>
+                <h2>I’m a <b>graphic and UI designer</b>, playing with <b>UX</b>.</h2>
+                <h2>Also <b>UI developer</b>, aiming to <b>full front-end.</b></h2>
+            </div>
+        </section>
 
-        <div class="content">
-            <ul class="nav">
+        <section class="section section--gallery">
+            <!-- <ul class="nav">
                 <li class="nav-item">
                     <button
                         v-on:click="component = 'works'"
@@ -26,9 +29,30 @@
             </ul>
             <keep-alive class="gallery">
                 <component v-bind:is="component" />
-            </keep-alive>
-        </div>
-    </section>
+            </keep-alive> -->
+
+            <div class="grido">
+                <div class="grido__item">
+                    <span class="filling"></span>
+                </div>
+                <div class="grido__item">
+                    <span class="filling"></span>
+                </div>
+                <div class="grido__item">
+                    <span class="filling"></span>
+                </div>
+                <div class="grido__item">
+                    <span class="filling"></span>
+                </div>
+                <div class="grido__item">
+                    <span class="filling"></span>
+                </div>
+                <div class="grido__item">
+                    <span class="filling"></span>
+                </div>
+            </div>
+        </section>
+    </div>
 </template>
 
 <script>

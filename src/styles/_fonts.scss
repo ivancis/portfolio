@@ -1,33 +1,33 @@
 // fonts
 // =====================================================================================================================
-$_url: "https://cdn.superlenny.com/fonts";
+// $_url: "https://cdn.superlenny.com/fonts";
 
-@font-face {
-    font-family: "proxima-nova"; // proxima nova regular
-    src: unquote('url("#{unquote($_url)}/proxima-nova-regular.woff2") format("woff2")'),
-         unquote('url("#{unquote($_url)}/proxima-nova-regular.woff") format("woff")'),
-         unquote('url("#{unquote($_url)}/proxima-nova-regular.ttf") format("truetype")');
-    font-weight: 400;
-    font-style: normal;
-    font-display: fallback;
-}
+// @font-face {
+//     font-family: "karla"; // proxima nova regular
+//     src: unquote('url("#{unquote($_url)}/karla-regular.woff2") format("woff2")'),
+//          unquote('url("#{unquote($_url)}/karla-regular.woff") format("woff")'),
+//          unquote('url("#{unquote($_url)}/karla-regular.ttf") format("truetype")');
+//     font-weight: 400;
+//     font-style: normal;
+//     font-display: fallback;
+// }
 
-@font-face {
-    font-family: "proxima-nova"; // proxima nova semibold
-    src: unquote('url("#{unquote($_url)}/proxima-nova-semibold.woff2") format("woff2")'),
-         unquote('url("#{unquote($_url)}/proxima-nova-semibold.woff") format("woff")'),
-         unquote('url("#{unquote($_url)}/proxima-nova-semibold.ttf") format("truetype")');
-    font-weight: 600;
-    font-style: normal;
-    font-display: fallback;
-}
+// @font-face {
+//     font-family: "karla"; // proxima nova semibold
+//     src: unquote('url("#{unquote($_url)}/karla-semibold.woff2") format("woff2")'),
+//          unquote('url("#{unquote($_url)}/karla-semibold.woff") format("woff")'),
+//          unquote('url("#{unquote($_url)}/karla-semibold.ttf") format("truetype")');
+//     font-weight: 600;
+//     font-style: normal;
+//     font-display: fallback;
+// }
 
-@font-face {
-    font-family: "proxima-nova"; // proxima nova bold
-    src: unquote('url("#{unquote($_url)}/proxima-nova-bold.woff2") format("woff2")'),
-         unquote('url("#{unquote($_url)}/proxima-nova-bold.woff") format("woff")'),
-         unquote('url("#{unquote($_url)}/proxima-nova-bold.ttf") format("truetype")');
-    font-weight: 700;
-    font-style: normal;
-    font-display: fallback;
-}
+// @font-face {
+//     font-family: "karla"; // proxima nova bold
+//     src: unquote('url("#{unquote($_url)}/karla-bold.woff2") format("woff2")'),
+//          unquote('url("#{unquote($_url)}/karla-bold.woff") format("woff")'),
+//          unquote('url("#{unquote($_url)}/karla-bold.ttf") format("truetype")');
+//     font-weight: 700;
+//     font-style: normal;
+//     font-display: fallback;
+// }
