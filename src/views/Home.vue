@@ -3,55 +3,28 @@
         <section class="section section--intro">
             <div class="column">
                 <h2>Hello, my name is <b>Iván.</b></h2>
-                <h2>I’m a <b>graphic and UI designer</b>, playing with <b>UX</b>.</h2>
-                <h2>Also <b>UI developer</b>, aiming to <b>full front-end.</b></h2>
-            </div>
-        </section>
-
-        <section class="section section--gallery">
-            <!-- <ul class="nav">
-                <li class="nav-item">
-                    <button
-                        v-on:click="component = 'works'"
-                        class="button"
-                    >
-                        <span>Works</span>
-                    </button>
-                </li>
-                <li class="nav-item">
-                    <button
+                <h2>I’m a <b>graphic and UI designer</b>, passionate about UX.</h2>
+                <h2>Also an experienced <b>UI developer</b>, aiming to be full front-end.</h2>
+                <div class="nav">
+                    <span class="nav__text">Here you'll find more</span>
+                    <a
                         v-on:click="component = 'about'"
-                        class="button"
+                        class="nav__link"
                     >
-                        <span>About</span>
-                    </button>
-                </li>
-            </ul>
-            <keep-alive class="gallery">
-                <component v-bind:is="component" />
-            </keep-alive> -->
-
-            <div class="grido">
-                <div class="grido__item">
-                    <span class="filling"></span>
-                </div>
-                <div class="grido__item">
-                    <span class="filling"></span>
-                </div>
-                <div class="grido__item">
-                    <span class="filling"></span>
-                </div>
-                <div class="grido__item">
-                    <span class="filling"></span>
-                </div>
-                <div class="grido__item">
-                    <span class="filling"></span>
-                </div>
-                <div class="grido__item">
-                    <span class="filling"></span>
+                        <span class="nav__text">about me</span>
+                    </a>
+                    <span class="nav__text">and some of</span>
+                    <a
+                        v-on:click="component = 'works'"
+                        class="nav__link"
+                    >
+                        <span class="nav__text">my works</span>
+                    </a>
                 </div>
             </div>
         </section>
+
+        <component v-bind:is="component" />
     </div>
 </template>
 
@@ -70,7 +43,7 @@ export default {
     },
     data(){
         return{
-            component: 'mapa'
+            component: 'about'
         }
     }
 };

@@ -5,6 +5,14 @@
                 Works
             </p>
         </div> -->
+        <div class="grido">
+            <div class="grido__item">works</div>
+            <div class="grido__item">works</div>
+            <div class="grido__item">works</div>
+            <div class="grido__item">works</div>
+            <div class="grido__item">works</div>
+            <div class="grido__item">works</div>
+        </div>
     </div>
 </template>
 
