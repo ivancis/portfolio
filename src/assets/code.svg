@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+    <rect class="frame" width="30" height="30"/>
+    <line class="code" x1="12" y1="21" x2="18" y2="21"/>
+    <polyline class="chevron__right" points="19 21 25 15 19 9"/>
+    <polyline class="chevron__left" points="11 9 5 15 11 21"/>
+</svg>
