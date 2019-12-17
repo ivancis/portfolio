@@ -24,9 +24,13 @@
 		margin: 0 0 auto;
 	}
 	
+	&--content {
+		padding: $space--large 0;
+	}
+
 	&--footer {
-		@include set-font-size(14px);
-		letter-spacing: 2px;
+		@include set-font-size(13px);
+		letter-spacing: 0.05rem;
 	}
 }
 
@@ -39,19 +43,29 @@
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: center;
-	padding: $space--large;
-	border-left: $space--small solid rgba($_dark, 0.05);
+	padding: $space;
+	max-width: 300px;
+	border-left: $space--x-small solid rgba($_dark, 0.05);
+	
+	@include tablet {
+		padding: $space--large;
+		max-width: 100%;
+		border-left: $space--small solid rgba($_dark, 0.05);
+	}
 }
 
 .nav__link {
 	color: $primary;
 	cursor: pointer;
+	border-bottom: 2px solid $primary;
+
 	&:hover {
 		opacity: 0.7;
 	}
 }
 .nav__text {
 	@include set-font-size(18px);
+	line-height: 2;
 }
 
 .content {
