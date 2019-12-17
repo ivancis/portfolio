@@ -5,6 +5,7 @@
 	min-height: 100vh;
 	opacity: 0;
 	animation: fade-in-animation $duration $delay 1 forwards;
+	scroll-snap-type: y mandatory;
 }
 
 .section {
@@ -12,17 +13,21 @@
 	grid-column: 1 / -1;
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 	position: relative;
+	padding: 10vw 5vw 0 10vw;
 	width: 100%;
 	color: $text-dark;
-	
-	&--intro {
-		padding: 10vw;
-	}
+	scroll-snap-align: start;
 }
 
-.column {
-	max-width: 780px;
+.intro-text {
+	margin: auto 0;
+	em {
+		color: rgba($_text-dark, 0);
+		font-style: normal;
+		animation: hidden-text 4s 2s 1 forwards;
+	}
 }
 
 .nav {
@@ -30,7 +35,6 @@
 	justify-content: flex-start;
 	align-items: center;
 	width: 100%;
-	margin: $space--x-large auto;
 }
 
 .nav__link {
@@ -65,6 +69,17 @@
 }
 .nav__text {
 	@include set-font-size(18px);
+}
+
+.content {
+	border: 1px solid red;
+	&--about {
+		border: 1px dashed blue;
+	}
+	
+	&--works {
+		border: 1px dashed purple;
+	}
 }
 
 .grido {
@@ -150,4 +165,76 @@
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.score {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 20px;
+	background: orange;
+	height: auto;
+}
+
+.sandbox{
+	position: fixed;
+    left: 0;
+    top: 0;
+    height: 50vh;
+    z-index: -1;
+}
+
+.path {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ball{
+  height: 100%;
+/*   overkill */
+//   animation: scale 30s alternate infinite ease;
+  margin: 50px;
+}
+
+.circle {
+  fill: url(#gradient-1) #fff;
+  transform: translateZ(0);
+}
+
+#gradient-1 {
+  --color-stop: blue;
+  --color-bot: teal;
+}
+
+@keyframes hidden-text {
+  0%   {
+    color: rgba($_text-dark, 0);
+  }
+  100% {
+    color: rgba($_text-dark, 0.1);
+  }
+}
+
+@keyframes scale {
+  0%   {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .2s
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0
 }
