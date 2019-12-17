@@ -7,6 +7,7 @@
 	opacity: 0;
 	animation: fade-in-animation $duration $delay 1 forwards;
 	scroll-snap-type: y mandatory;
+	background: $background;
 }
 
 .section {
@@ -68,21 +69,10 @@
 	line-height: 2;
 }
 
-.content {
-	border: 3px solid red;
-	&--about {
-		border: 3px dashed blue;
-	}
-	
-	&--works {
-		border: 3px dashed purple;
-	}
-}
-
 .grido {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(100px, auto));
-	grid-gap: $space;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: $space--small;
 	margin: 0 auto $space--large;
 	
 	&:last-child {
@@ -94,9 +84,35 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: $space--large;
-	border: 1px dashed $light;
+	// border: 1px dashed #ccc;
 	border-radius: $border-radius;
+}
+
+.card {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-gap: calc(#{$space--small} + #{$space--x-small});
+	align-items: center;
+	padding: $space--large;
+	width: 100%;
+	border-radius: $border-radius;
+	color: $medium;
+	background: $light;
+	transition: box-shadow $duration ease-in-out;
+
+	&:hover {
+		--medium: #{$primary};
+	}
+}
+
+.card-icon {
+	width: calc(#{$space--large} + #{$space--small});
+	height: calc(#{$space--large} + #{$space--small});
+}
+
+.card-label {
+	@include set-font-size(16px);
+	transition: all $duration;
 }
 
 .hooper{
@@ -234,4 +250,14 @@
 .fade-enter,
 .fade-leave-to {
     opacity: 0
+}
+
+svg {
+    stroke: currentcolor;
+    stroke-width: 1.5;
+    fill: none;
+    stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke: $medium;
+	transition: all $duration;
 }

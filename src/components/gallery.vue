@@ -1,11 +1,7 @@
 <template>
     <div class="gallery gallery--gallery">
         <div class="gallery-element gallery-element--slideshow">
-            <hooper
-                class="slideshow"
-                :infiniteScroll="true"
-                pagination="no"
-            >
+            <hooper class="slideshow" :infiniteScroll="true" pagination="no">
                 <slide>
                     <div class="slide-item">
                         HELLO
@@ -29,14 +25,13 @@
 </template>
 
 <script>
-
-import { Hooper, Slide, Navigation as HooperNavigation} from 'hooper';
+import { Hooper, Slide, Navigation as HooperNavigation } from 'hooper';
 export default {
     name: 'gallery',
     components: {
-      Hooper,
-      Slide,
-      HooperNavigation
+        Hooper,
+        Slide,
+        HooperNavigation
     }
 };
 </script>
