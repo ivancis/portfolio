@@ -1,44 +1,46 @@
 <template>
-    <div class="grido">
-        <div class="grido__item">
-            <div class="about-card">
-                <div class="about-card__cover">
-                    <span class="icon">X</span>
+    <div class="content content--about">
+        <div class="grido">
+            <div class="grido__item">
+                <div class="card card--about">
+                    <div class="card__cover">
+                        <span class="icon">Xabout</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="grido__item">
-            <div class="about-card">
-                <div class="about-card__cover">
-                    <span class="icon">X</span>
+            <div class="grido__item">
+                <div class="card card--about">
+                    <div class="card__cover">
+                        <span class="icon">Xabout</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="grido__item">
-            <div class="about-card">
-                <div class="about-card__cover">
-                    <span class="icon">X</span>
+            <div class="grido__item">
+                <div class="card card--about">
+                    <div class="card__cover">
+                        <span class="icon">Xabout</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="grido__item">
-            <div class="about-card">
-                <div class="about-card__cover">
-                    <span class="icon">X</span>
+            <div class="grido__item">
+                <div class="card card--about">
+                    <div class="card__cover">
+                        <span class="icon">Xabout</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="grido__item">
-            <div class="about-card">
-                <div class="about-card__cover">
-                    <span class="icon">X</span>
+            <div class="grido__item">
+                <div class="card card--about">
+                    <div class="card__cover">
+                        <span class="icon">Xabout</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="grido__item">
-            <div class="about-card">
-                <div class="about-card__cover">
-                    <span class="icon">X</span>
+            <div class="grido__item">
+                <div class="card card--about">
+                    <div class="card__cover">
+                        <span class="icon">Xabout</span>
+                    </div>
                 </div>
             </div>
         </div>
