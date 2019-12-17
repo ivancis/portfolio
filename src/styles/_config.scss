@@ -128,7 +128,7 @@ $_bottom-navigation-height: 64px;
 $_icon-size: 24px;
 $_icon-size-small: 20px;
 $_scroll-size: 17px;
-$_border-radius: 4px;
+$_border-radius: 10px;
 
 $content-size: var(--content-size, #{$_content-size});
 $content-size-medium: var(--content-size-medium, #{$_content-size-medium});
@@ -189,7 +189,7 @@ h3 {
 
 h4 {
     @include set-font-size(18px);
-    margin: 0 0 .5em;
+    margin: 0 0 1em;
 }
 
 h5 {
