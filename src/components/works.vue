@@ -5,47 +5,41 @@
                 Works
             </p>
         </div> -->
-        <div class="grido">
+        <div class="grido grido--works">
             <div class="grido__item">
                 <div class="card card--work">
-                    <div class="card__cover">
-                        <span class="icon">Xworks</span>
-                    </div>
+                    <div class="card-cover" />
+                    <h5 class="card-label">Megalotto</h5>
                 </div>
             </div>
             <div class="grido__item">
                 <div class="card card--work">
-                    <div class="card__cover">
-                        <span class="icon">Xworks</span>
-                    </div>
+                    <div class="card-cover" />
+                    <h5 class="card-label">Crucijuegos</h5>
                 </div>
             </div>
             <div class="grido__item">
                 <div class="card card--work">
-                    <div class="card__cover">
-                        <span class="icon">Xworks</span>
-                    </div>
+                    <div class="card-cover" />
+                    <h5 class="card-label">Fucci</h5>
                 </div>
             </div>
             <div class="grido__item">
                 <div class="card card--work">
-                    <div class="card__cover">
-                        <span class="icon">Xworks</span>
-                    </div>
+                    <div class="card-cover" />
+                    <h5 class="card-label">Garpapp</h5>
                 </div>
             </div>
             <div class="grido__item">
                 <div class="card card--work">
-                    <div class="card__cover">
-                        <span class="icon">Xworks</span>
-                    </div>
+                    <div class="card-cover" />
+                    <h5 class="card-label">Proglobal</h5>
                 </div>
             </div>
             <div class="grido__item">
                 <div class="card card--work">
-                    <div class="card__cover">
-                        <span class="icon">Xworks</span>
-                    </div>
+                    <div class="card-cover" />
+                    <h5 class="card-label">Timekeep</h5>
                 </div>
             </div>
         </div>

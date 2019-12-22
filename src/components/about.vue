@@ -37,31 +37,41 @@
             </div>
             <div class="grido__item">
                 <div class="card card--about">
-                    <span class="card-icon">X</span>
-                    <b class="card-label">User experience</b>
+                    <span class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><rect class="layout__box" x="6" y="6" width="18" height="18" /></svg>
+                    </span>
+                    <b class="card-label card-label--small">User experience</b>
                 </div>
             </div>
             <div class="grido__item">
                 <div class="card card--about">
-                    <span class="card-icon">X</span>
+                    <span class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><rect class="layout__box" x="6" y="6" width="18" height="18" /></svg>
+                    </span>
                     <b class="card-label">Front-end</b>
                 </div>
             </div>
             <div class="grido__item">
                 <div class="card card--about">
-                    <span class="card-icon">X</span>
+                    <span class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><rect class="layout__box" x="6" y="6" width="18" height="18" /></svg>
+                    </span>
                     <b class="card-label">Rubberduck</b>
                 </div>
             </div>
             <div class="grido__item">
                 <div class="card card--about">
-                    <span class="card-icon">X</span>
+                    <span class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><rect class="layout__box" x="6" y="6" width="18" height="18" /></svg>
+                    </span>
                     <b class="card-label">Brand</b>
                 </div>
             </div>
             <div class="grido__item">
                 <div class="card card--about">
-                    <span class="card-icon">X</span>
+                    <span class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><rect class="layout__box" x="6" y="6" width="18" height="18" /></svg>
+                    </span>
                     <b class="card-label">Team</b>
                 </div>
             </div>

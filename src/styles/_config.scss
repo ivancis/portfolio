@@ -6,7 +6,7 @@
 $_primary: #002CC8;
 $_secondary: #7b6aff;
 $_tertiary: #141f33;
-$_background: #fbfbfb;
+$_background: #edf2f7;
 $_success: #22c993;
 $_alert: #ffad0d;
 $_error: #f03d3d;
@@ -188,7 +188,7 @@ h3 {
 }
 
 h4 {
-    @include set-font-size(18px);
+    @include set-font-size(20px);
     margin: 0 0 1em;
 }
 

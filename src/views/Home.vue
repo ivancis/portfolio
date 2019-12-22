@@ -22,7 +22,7 @@
                     <b v-on:click="component = 'about'" class="nav__link"
                         >About</b
                     >
-                    section aaand some of my
+                    section and some of my
                     <b v-on:click="component = 'works'" class="nav__link"
                         >works</b
                     >.</span
