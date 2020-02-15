@@ -3,19 +3,11 @@
         <section class="section section--cover">
             <div class="intro-text">
                 <h2>Hello, I'm Iván</h2>
+                <h4>I design and build digital products, focused on relevant visual interfaces and user experiences.</h4>
+                <h4>Also this is my <a href="mailto:hello@ivandb.com?Subject=Hello%20Iván" target="_top">email</a>.</h4>
             </div>
         </section>
         <section class="section section--intro">
-            <div class="intro-text">
-                <h4>
-                    I studied <b>graphic design</b> in Argentina and specialized
-                    in <b>digital UI and UX.</b>
-                </h4>
-                <h4>
-                    Also I've been working as a
-                    <b>front-end UI developer</b> for 5 Earth years.
-                </h4>
-            </div>
             <div class="nav">
                 <span class="nav__text"
                     >Check out the
@@ -32,7 +24,6 @@
         <section class="section section--content">
             <component v-bind:is="component" />
         </section>
-        <footer class="section section--footer">hello@ivandb.com</footer>
     </div>
 </template>
 
