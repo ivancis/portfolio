@@ -1,13 +1,10 @@
 .page {
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	align-items: center;
-	padding: 10vw 10vw $space;
-	min-height: 100vh;
+	grid-gap: $space--large;
 	opacity: 0;
 	animation: fade-in-animation $duration $delay 1 forwards;
 	scroll-snap-type: y mandatory;
-	background: $background;
+	max-width: 480px;
 }
 
 .section {
@@ -35,22 +32,14 @@
 }
 
 .nav {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-	padding: $space;
-	max-width: 300px;
-	border-left: $space--x-small solid rgba($_dark, 0.05);
-	
-	@include tablet {
-		padding: $space--large;
-		max-width: 100%;
-		border-left: $space--small solid rgba($_dark, 0.05);
-	}
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: $space;
+	margin: 0 auto 0 0;
 }
 
 .nav__link {
+	padding: $space--small;
 	color: $primary;
 	cursor: pointer;
 	border-bottom: 2px solid $primary;
@@ -59,58 +48,21 @@
 		opacity: 0.7;
 	}
 }
-.nav__text {
-	@include set-font-size(18px);
-	line-height: 2;
-}
 
-.grido {
+.grid-works {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: $space--x-large;
-	margin: 0 auto $space--large;
-	
-	&--works {
-		grid-gap:  calc(#{$space} + #{$space});
-	}
-	
-	&:last-child {
-		margin-bottom: 0;
-	}
+	grid-gap: $space;
 }
 
-.grido__item {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	// border: 1px dashed #ccc;
+.grid-works__item {
 	border-radius: $border-radius;
-}
-
-.content {
-	position: relative;
-	left: calc(#{$space} * -1); // REVIEW
 }
 
 .card {
 	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-gap: calc(#{$space--small} + #{$space--x-small});
-	align-items: center;
-	padding: $space;
-	width: 100%;
+	grid-gap: $space;
 	border-radius: $border-radius;
-	color: $medium;
-	transition: box-shadow $duration ease-in-out;
-	cursor: pointer;
-
-	&:hover {
-		--medium: #{$primary};
-	}
-
-	&--work {
-		grid-template-columns: 1fr;
-	}
 }
 
 .card-icon {
@@ -120,9 +72,8 @@
 }
 
 .card-cover {
-	@include ratio(1, .75);
+	@include ratio(4, 3);
 	background: $medium;
-	width: $space--xx-large;
 }
 
 .card-label {

@@ -97,7 +97,7 @@ $line-height: var(--line-height, #{$_line-height});
 
 // spaces
 // ---------------------------------------------------------------------------------------------------------------------
-$_space: 16px;
+$_space: 1rem;
 $_space--large: ($_space * 2);
 $_space--small: ($_space / 2);
 $_space--x-large: ($_space--large * 2);
