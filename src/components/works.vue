@@ -1,47 +1,60 @@
 <template>
-    <div class="grid-works">
-        <div class="grid-works__item">
-            <div class="card card--work">
-                <div class="card-cover" />
-                <h5 class="card-label">Megalotto</h5>
+    <section class="content-section works">
+        <article class="work-item work-item--megalotto" v-on:click="component = 'megalotto'">
+            <div class="work-item__thumbnail">
+                <figure>
+                    <img src="../assets/megalotto_thumbnail.jpg" alt="Megalotto">
+                </figure>
             </div>
-        </div>
-        <div class="grid-works__item">
-            <div class="card card--work">
-                <div class="card-cover" />
-                <h5 class="card-label">Crucijuegos</h5>
+            <div class="work-item__description">
+                <span>UI development</span>
             </div>
-        </div>
-        <div class="grid-works__item">
-            <div class="card card--work">
-                <div class="card-cover" />
-                <h5 class="card-label">Fucci</h5>
+        </article>
+        <article class="work-item work-item--linkiar" v-on:click="component = 'linkiar'">
+            <div class="work-item__thumbnail">
+                <figure>
+                    <img src="../assets/linkiar_thumbnail.jpg" alt="Linkiar">
+                </figure>
             </div>
-        </div>
-        <div class="grid-works__item">
-            <div class="card card--work">
-                <div class="card-cover" />
-                <h5 class="card-label">Garpapp</h5>
+            <div class="work-item__description">
+                <span>UI design & development. UX.</span>
             </div>
-        </div>
-        <div class="grid-works__item">
-            <div class="card card--work">
-                <div class="card-cover" />
-                <h5 class="card-label">Proglobal</h5>
+        </article>
+        <article class="work-item work-item--crucijuegos" v-on:click="component = 'crucijuegos'">
+            <div class="work-item__thumbnail">
+                <figure>
+                    <img src="../assets/crucijuegos_thumbnail.jpg" alt="Crucijuegos">
+                </figure>
             </div>
-        </div>
-        <div class="grid-works__item">
-            <div class="card card--work">
-                <div class="card-cover" />
-                <h5 class="card-label">Timekeep</h5>
+            <div class="work-item__description">
+                <span>UI design & development. UX. Branding, graphics, etc.</span>
             </div>
-        </div>
-    </div>
+        </article>
+        <component v-bind:is="component" />
+    </section>
 </template>
 
 <script>
+import megalotto from '@/components/megalotto.vue';
+import linkiar from '@/components/linkiar.vue';
+import crucijuegos from '@/components/crucijuegos.vue';
+
 export default {
-    name: 'works'
+    name: 'works',
+    components: {
+        megalotto,
+        linkiar,
+        crucijuegos
+    },
+    data() {
+        return {
+            hooperSettings: {
+                itemsToShow: 2,
+                centerMode: true
+            },
+            component: ''
+        };
+    }
 };
 </script>
 

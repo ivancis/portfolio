@@ -49,6 +49,10 @@ $dark: var(--dark, #{$_dark});
 $medium: var(--medium, #{$_medium});
 $light: var(--light, $_light);
 
+$header: var(--header, $_text-dark);
+$caption: var(--caption, $_text-dark);
+$text: var(--text, $_text-medium);
+
 $disabled: var(--disabled, #{$_disabled});
 
 $text-primary: var(--text-primary, #{$_text-primary});
@@ -117,6 +121,26 @@ $space--xx-small: var(--space--xx-small, #{$_space--xx-small});
 $space--xxx-large: var(--space--xxx-large, #{$_space--xxx-large});
 $space--xxx-small: var(--space--xxx-small, #{$_space--xxx-small});
 
+$_space--negative: (1rem * -1);
+$_space--large--negative: ($_space--negative * 2);
+$_space--small--negative: ($_space--negative / 2);
+$_space--x-large--negative: ($_space--large--negative * 2);
+$_space--x-small--negative: ($_space--small--negative / 2);
+$_space--xx-large--negative: ($_space--x-large--negative * 2);
+$_space--xx-small--negative: ($_space--x-small--negative / 2);
+$_space--xxx-large--negative: ($_space--xx-large--negative * 2);
+$_space--xxx-small--negative: ($_space--xx-small--negative / 2);
+
+$space--negative: var(--space--negative, #{$_space--negative});
+$space--large--negative: var(--space--large--negative, #{$_space--large--negative});
+$space--small--negative: var(--space--small--negative, #{$_space--small--negative});
+$space--x-large--negative: var(--space--x-large--negative, #{$_space--x-large--negative});
+$space--x-small--negative: var(--space--x-small--negative, #{$_space--x-small--negative});
+$space--xx-large--negative: var(--space--xx-large--negative, #{$_space--xx-large--negative});
+$space--xx-small--negative: var(--space--xx-small--negative, #{$_space--xx-small--negative});
+$space--xxx-large--negative: var(--space--xxx-large--negative, #{$_space--xxx-large--negative});
+$space--xxx-small--negative: var(--space--xxx-small--negative, #{$_space--xxx-small--negative});
+
 // sizes
 // ---------------------------------------------------------------------------------------------------------------------
 $_content-size: 1110px;
@@ -163,46 +187,3 @@ $shadow-2: var(--shadow-2, #{$_shadow-2});
 $shadow-3: var(--shadow-3, #{$_shadow-3});
 $shadow-4: var(--shadow-4, #{$_shadow-4});
 $shadow-5: var(--shadow-5, #{$_shadow-5});
-
-
-h1 {
-    @include set-font-size(30px);
-    margin: 0 0 .5em;
-}
-
-h2 {
-    @include set-font-size(21px);
-    margin: 0 0 .5em;
-
-    //--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//--//
-    letter-spacing: 0.01em;
-    line-height: 1.6em;
-    @include tablet() {
-        @include set-font-size(27px);
-    }
-}
-
-h3 {
-    @include set-font-size(21px);
-    margin: 0 0 .5em;
-}
-
-h4 {
-    @include set-font-size(20px);
-    margin: 0 0 1em;
-}
-
-h5 {
-    @include set-font-size(16px);
-    margin: 0 0 .5em;
-}
-
-h6 {
-    @include set-font-size(16px);
-    margin: 0 0 .5em;
-}
-
-p {
-    @include set-font-size(16px);
-    margin: 0 0 .5em;
-}

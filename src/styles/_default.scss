@@ -13,7 +13,7 @@ body {
 body {
     font: normal normal $font-size $font-family;
     font-weight: $font-weight;
-    color: $text-medium;
+    color: $tertiary;
     text-size-adjust: none; // prevent iphone text enlargement
     overflow-x: hidden;
 
@@ -77,8 +77,8 @@ i {
 // ---------------------------------------------------------------------------------------------------------------------
 a {
     outline: none;
-    text-decoration: underline;
-    color: inherit;
+    text-decoration: none;
+    color: $primary;
     cursor: pointer;
 }
 
@@ -247,6 +247,18 @@ a {
 // -----------------------------------------------------------------------------------------------------------------
 @keyframes fade-in-animation {
     from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// slide in animation
+// -----------------------------------------------------------------------------------------------------------------
+@keyframes slide-in-animation {
+    from {
+        transform: translateY(16px);
         opacity: 0;
     }
     to {
