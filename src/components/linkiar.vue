@@ -14,10 +14,7 @@
             <div class="work-detail__gallery">
                 <div class="work-detail__gallery-item">
                     <figure>
-                        <img
-                            src="../assets/linkiar_1.jpg"
-                            alt="Linkiar"
-                        />
+                        <img src="../assets/linkiar_1.jpg" alt="Linkiar" />
                     </figure>
                 </div>
             </div>

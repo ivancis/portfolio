@@ -71,7 +71,8 @@
                 </div>
             </summary>
             <p>
-                Information architecture, card sorting. Big fan of interaction design and user feedback.
+                Information architecture, card sorting. Big fan of interaction
+                design and user feedback.
             </p>
         </details>
         <details class="about-item">
@@ -100,10 +101,11 @@
                 </div>
             </summary>
             <p>
-                +5 years of experience working on the front of the front-end. CSS
-                architecture, scalability, performance optimization, familiar
-                with W3C and accessibility standards. All around best practices
-                and clean code. Experienced with popular JS frameworks. Storybook documentation. Several CMS platforms.
+                +5 years of experience working on the front of the front-end.
+                CSS architecture, scalability, performance optimization,
+                familiar with W3C and accessibility standards. All around best
+                practices and clean code. Experienced with popular JS
+                frameworks. Storybook documentation. Several CMS platforms.
             </p>
         </details>
         <details class="about-item">
@@ -149,7 +151,10 @@
                 </div>
             </summary>
             <p>
-                Experience in managing department, coordinating small teams up to 5 people (programmers, SEO specialist, junior designer). Experienced with Agile, Scrum and continuous delivery methodologies.
+                Experience in managing department, coordinating small teams up
+                to 5 people (programmers, SEO specialist, junior designer).
+                Experienced with Agile, Scrum and continuous delivery
+                methodologies.
             </p>
         </details>
     </section>

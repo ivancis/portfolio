@@ -16,8 +16,8 @@
                     and internal ERP system.
                 </li>
                 <li>
-                    Team manager for the software development team, graphics brand manager with
-                    commercial focus.
+                    Team manager for the software development team, graphics
+                    brand manager with commercial focus.
                 </li>
                 <li>
                     Performance optimization of several other existing
@@ -65,26 +65,17 @@
                 </div>
                 <div class="work-detail__gallery-item">
                     <figure>
-                        <img
-                            src="../assets/modular_1.jpg"
-                            alt="modular"
-                        />
+                        <img src="../assets/modular_1.jpg" alt="modular" />
                     </figure>
                 </div>
                 <div class="work-detail__gallery-item">
                     <figure>
-                        <img
-                            src="../assets/modular_2.jpg"
-                            alt="modular"
-                        />
+                        <img src="../assets/modular_2.jpg" alt="modular" />
                     </figure>
                 </div>
                 <div class="work-detail__gallery-item">
                     <figure>
-                        <img
-                            src="../assets/modular_3.jpg"
-                            alt="modular"
-                        />
+                        <img src="../assets/modular_3.jpg" alt="modular" />
                     </figure>
                 </div>
             </div>

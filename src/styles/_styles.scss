@@ -35,7 +35,7 @@
 
 .work-item {
 	display: grid;
-	grid-gap: $space;
+	grid-gap: $space--small;
 	overflow: hidden;
 	cursor: pointer;
 	transition: transform calc(#{$duration} / 2) ease;
@@ -102,7 +102,7 @@
 	@include set-font-size(12px);
 	display: grid;
 	grid-gap: $space;
-	padding: $space;
+	padding: $space--x-small $space;
 }
 
 .work-detail {
@@ -216,6 +216,7 @@
 			object-fit: cover;
 			width: 100%;
 			border-radius: $space--x-small;
+			border: 2px solid rgba($_medium, .07);
 			overflow: hidden;
 		}
 	}
@@ -283,6 +284,7 @@ header {
 	@include set-font-size(12px);
 
 	display: grid;
+	grid-gap: $space;
 	grid-auto-flow: column;
 	place-content: center space-between;
 	margin: 0 auto auto;

@@ -2,7 +2,10 @@
     <div class="wrapper">
         <header>
             <div class="header-field">
-                <h1>Hello, I'm Iván. This website and it's content is still a WIP.</h1>
+                <h1>
+                    Hello, I'm Iván. This website and it's content is still a
+                    WIP.
+                </h1>
                 <h2>UI designer & developer</h2>
             </div>
             <div class="header-field header-field--right">
