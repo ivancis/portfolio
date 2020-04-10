@@ -1,33 +1,50 @@
 <template>
     <section class="content-section works">
-        <article class="work-item work-item--megalotto" v-on:click="component = 'megalotto'">
+        <article
+            class="work-item work-item--megalotto"
+            v-on:click="component = 'megalotto'"
+        >
             <div class="work-item__thumbnail">
                 <figure>
-                    <img src="../assets/megalotto_thumbnail.jpg" alt="Megalotto">
+                    <img
+                        src="../assets/megalotto_thumbnail.jpg"
+                        alt="Megalotto"
+                    />
                 </figure>
             </div>
             <div class="work-item__description">
                 <span>UI development</span>
             </div>
         </article>
-        <article class="work-item work-item--linkiar" v-on:click="component = 'linkiar'">
+        <article
+            class="work-item work-item--linkiar"
+            v-on:click="component = 'linkiar'"
+        >
             <div class="work-item__thumbnail">
                 <figure>
-                    <img src="../assets/linkiar_thumbnail.jpg" alt="Linkiar">
+                    <img src="../assets/linkiar_thumbnail.jpg" alt="Linkiar" />
                 </figure>
             </div>
             <div class="work-item__description">
                 <span>UI design & development. UX.</span>
             </div>
         </article>
-        <article class="work-item work-item--crucijuegos" v-on:click="component = 'crucijuegos'">
+        <article
+            class="work-item work-item--crucijuegos"
+            v-on:click="component = 'crucijuegos'"
+        >
             <div class="work-item__thumbnail">
                 <figure>
-                    <img src="../assets/crucijuegos_thumbnail.jpg" alt="Crucijuegos">
+                    <img
+                        src="../assets/crucijuegos_thumbnail.jpg"
+                        alt="Crucijuegos"
+                    />
                 </figure>
             </div>
             <div class="work-item__description">
-                <span>UI design & development. UX. Branding, graphics, etc.</span>
+                <span
+                    >UI design & development. UX. Branding, graphics, etc.</span
+                >
             </div>
         </article>
         <component v-bind:is="component" />

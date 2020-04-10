@@ -5,7 +5,7 @@
         </div>
         <div class="work-detail__description">
             <ul>
-                <li>Personal project, work in progress.</li>
+                <li>Personal project, currently under development.</li>
                 <li>UI designer & developer.</li>
                 <li>Coordination of back-end development.</li>
             </ul>
@@ -14,22 +14,10 @@
             <div class="work-detail__gallery">
                 <div class="work-detail__gallery-item">
                     <figure>
-                        <img src="http://via.placeholder.com/600x450" alt="Alt">
-                    </figure>
-                </div>
-                <div class="work-detail__gallery-item">
-                    <figure>
-                        <img src="http://via.placeholder.com/600x450" alt="Alt">
-                    </figure>
-                </div>
-                <div class="work-detail__gallery-item">
-                    <figure>
-                        <img src="http://via.placeholder.com/600x450" alt="Alt">
-                    </figure>
-                </div>
-                <div class="work-detail__gallery-item">
-                    <figure>
-                        <img src="http://via.placeholder.com/600x450" alt="Alt">
+                        <img
+                            src="../assets/linkiar_1.jpg"
+                            alt="Linkiar"
+                        />
                     </figure>
                 </div>
             </div>

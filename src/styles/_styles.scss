@@ -41,7 +41,6 @@
 	transition: transform calc(#{$duration} / 2) ease;
 
 	&:hover {
-		transform: translateY(-1px);
 		figure {
 			opacity: .8 !important;
 		}
