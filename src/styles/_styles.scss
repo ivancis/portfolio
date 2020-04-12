@@ -19,16 +19,16 @@
 	grid-auto-columns: 1fr;
 	place-content: flex-start stretch;
 	grid-template-areas:
-						"item_megalotto"
-						"item_detail-megalotto"
 						"item_linkiar"
 						"item_detail-linkiar"
+						"item_megalotto"
+						"item_detail-megalotto"
 						"item_crucijuegos"
 						"item_detail-crucijuegos";
 
 	@include phablet {
 		grid-template-areas:
-							"item_megalotto item_linkiar item_crucijuegos"
+							"item_linkiar item_megalotto item_crucijuegos"
 							"item_detail item_detail item_detail";
 	}
 }
@@ -154,6 +154,7 @@
 		grid-gap: $space--small;
 		list-style: none;
 		margin: 0 0 $space--large;
+		max-width: $content-size-small;
 	}
 
 	li {
@@ -175,13 +176,23 @@
 	margin: 0 auto 0 calc(#{$space} * -1);
 	width: calc(100% + #{$space--large});
 	scroll-behavior: smooth;
+
+	@include phablet {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	@include tablet {
+		margin: 0 auto 0 calc(#{$space} * -1);
+		width: calc(100% + #{$space--large});
+	}
 }
 
 .work-detail__gallery {
 	display: grid;
     grid-gap: $space--small;
     grid-auto-flow: column;
-	grid-auto-columns: 85vw;
+	grid-auto-columns: 80vw;
     position: relative;
 	margin: auto auto $space--x-large;
 	padding: 0 $space;
@@ -260,7 +271,7 @@
 	transition: opacity $duration ease;
 
 	&:hover {
-		color: $primary;
+		color: $secondary;
 	}
 
 	&::-webkit-details-marker {
@@ -285,11 +296,15 @@ header {
 
 	display: grid;
 	grid-gap: $space;
-	grid-auto-flow: column;
-	place-content: center space-between;
+	grid-auto-flow: row;
 	margin: 0 auto auto;
 	width: 100%;
 	max-width: $content-size;
+
+	@include phablet {
+		grid-auto-flow: column;
+		place-content: center space-between;
+	}
 
 	h1 {
 		color: $header;
@@ -337,12 +352,8 @@ nav {
 	font-weight: 800;
 	cursor: pointer;
 
-	&:hover {
-		opacity: .5;
-	}
-
-	&.is-active {
-		color: $primary;
+	&:hover, &.is-active {
+		color: $secondary;
 	}
 }
 
@@ -399,7 +410,7 @@ footer {
 	transform-origin: 50%;
 }
 
-.about-item[open], .about-item:hover {
+.about-item[open] {
 	.svg-layout__vertical {
 		animation: 1.2s ease-in-out infinite both layout-vertical;
 	}
@@ -410,7 +421,7 @@ footer {
 
 	.about-item__title,
 	.about-item__icon {
-		color: $primary;
+		color: $secondary;
 	}
 	.about-item__description {
 		display: block;

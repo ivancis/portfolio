@@ -6,9 +6,6 @@
         <div class="work-detail__description">
             <ul>
                 <li>
-                    Project manager during the digital transformation process.
-                </li>
-                <li>
                     UI designer & developer for e-commerce
                     <a href="https://insumos.crucijuegos.com" target="_blank"
                         >website</a
@@ -16,16 +13,18 @@
                     and internal ERP system.
                 </li>
                 <li>
-                    Team manager for the software development team, graphics
-                    brand manager with commercial focus.
+                    Team lead for development.
                 </li>
                 <li>
-                    Performance optimization of several other existing
+                    Performance optimization of several existing
                     applications through code refactoring.
                 </li>
                 <li>
                     External resource coordination, responsible for complying
                     with the processes established by QC (IRAM-ISO).
+                </li>
+                <li>
+                    Graphic marketing designer (social media, brochures, etc.).
                 </li>
             </ul>
         </div>

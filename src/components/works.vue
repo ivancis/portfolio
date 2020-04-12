@@ -1,6 +1,19 @@
 <template>
     <section class="content-section works">
         <article
+            class="work-item work-item--linkiar"
+            v-on:click="component = 'linkiar'"
+        >
+            <div class="work-item__thumbnail">
+                <figure>
+                    <img src="../assets/linkiar_thumbnail.jpg" alt="Linkiar" />
+                </figure>
+            </div>
+            <div class="work-item__description">
+                <span>Linkiar (2020)</span>
+            </div>
+        </article>
+        <article
             class="work-item work-item--megalotto"
             v-on:click="component = 'megalotto'"
         >
@@ -13,20 +26,7 @@
                 </figure>
             </div>
             <div class="work-item__description">
-                <span>UI development</span>
-            </div>
-        </article>
-        <article
-            class="work-item work-item--linkiar"
-            v-on:click="component = 'linkiar'"
-        >
-            <div class="work-item__thumbnail">
-                <figure>
-                    <img src="../assets/linkiar_thumbnail.jpg" alt="Linkiar" />
-                </figure>
-            </div>
-            <div class="work-item__description">
-                <span>UI design & development. UX.</span>
+                <span>Megalotto (2019 ~ 2020)</span>
             </div>
         </article>
         <article
@@ -42,9 +42,7 @@
                 </figure>
             </div>
             <div class="work-item__description">
-                <span
-                    >UI design & development. UX. Branding, graphics, etc.</span
-                >
+                <span>Crucijuegos (2018 ~ 2019)</span>
             </div>
         </article>
         <component v-bind:is="component" />

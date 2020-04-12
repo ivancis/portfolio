@@ -11,9 +11,9 @@
             <div class="header-field header-field--right">
                 <a href="https://www.linkedin.com/in/ivandb/">LinkedIn</a>
                 <a
-                    href="mailto:hello@ivandb.com?Subject=Hello%20Ivan"
+                    href="mailto:email@ivandb.com?Subject=Hello%20Ivan"
                     target="_top"
-                    >hello@ivandb.com</a
+                    >email@ivandb.com</a
                 >
             </div>
         </header>
