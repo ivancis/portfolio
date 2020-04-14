@@ -44,8 +44,11 @@
                 </figure>
             </div>
             <div class="work-item__description">
-                <h5>Crucijuegos (2018 ~ 2019)</h5>
-                <span>Branding, Strategy, Art Direction, UI design & development</span>
+                <h5>Crucijuegos (2016 ~ 2019)</h5>
+                <span
+                    >Branding, Strategy, Art Direction, UI design &
+                    development</span
+                >
             </div>
         </article>
         <component v-bind:is="component" />

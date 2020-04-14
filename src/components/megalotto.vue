@@ -5,7 +5,11 @@
             <a href="https://megalotto.com" target="_blank">Visit website</a>
         </div>
         <div class="work-detail__description">
-            <p>Megalotto is an iGaming startup with offices in Malta and Spain, aiming to deliver an disruptive online lottery experience that is clear, transparent and trustworthy for it's user.</p>
+            <p>
+                Megalotto is an iGaming startup with offices in Malta and Spain,
+                aiming to deliver an disruptive online lottery experience that
+                is clear, transparent and trustworthy for it's user.
+            </p>
         </div>
         <ul>
             <h6>Main responsibilities:</h6>
@@ -14,15 +18,16 @@
                 interaction design, SVG animations, etc.
             </li>
             <li>
-                UI design scalability improvements and suggestions for Megalotto.com.
+                UI design scalability improvements and suggestions for
+                Megalotto.com.
             </li>
             <li>
-                Contribution and enhancement based on consistent functionality of Megalotto design system.
+                Contribution and enhancement based on consistent functionality
+                of Megalotto design system.
             </li>
             <li>
-                Contribution and documentation for in-house front-end
-                framework, based on encapsulated fully supported web
-                components.
+                Contribution and documentation for in-house front-end framework,
+                based on encapsulated fully supported web components.
             </li>
         </ul>
         <div class="work-detail__gallery-wrapper">

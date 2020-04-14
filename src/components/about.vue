@@ -1,8 +1,17 @@
 <template>
     <section id="about" class="content-section about">
         <article class="about-body">
-            <p>I'm a truly passionated UI designer and CSS development specialist.<br> I work hard to achieve a polished and spotles digital experience.
-            <p>With every engagement, I aim to work as closely as possible with the project as a whole asset, bringing my multidisciplinary expertise to the table to bring the product closer to it's users.</p>
+            <p>
+                I'm a truly passionated UI designer and CSS development
+                specialist.<br />
+                I work hard to achieve a polished and spotless digital
+                experience.
+            </p>
+            <p>
+                With every engagement, I try to get as involved as possible with
+                the project as a whole asset, bringing my multidisciplinary
+                expertise to the table to take the product closer to it's users.
+            </p>
             <p>Born in Rosario, Argentina, now based in Marbella, Spain.</p>
         </article>
         <article class="about-list">
@@ -35,9 +44,9 @@
                     </div>
                 </summary>
                 <p>
-                    +5 years of experience designing wireframes and prototypes from
-                    low to high fidelity; crafting and constantly enhancing design
-                    systems.
+                    +5 years of experience designing wireframes and prototypes
+                    from low to high fidelity; crafting and constantly enhancing
+                    design systems.
                 </p>
             </details>
             <details class="about-item">
@@ -48,7 +57,12 @@
                                 class="svg-ux__head"
                                 d="M16,20v-1c0-2.2-1.8-4-4-4H5c-2.2,0-4,1.8-4,4v1"
                             />
-                            <circle class="svg-ux__body" cx="8.5" cy="7" r="4" />
+                            <circle
+                                class="svg-ux__body"
+                                cx="8.5"
+                                cy="7"
+                                r="4"
+                            />
                             <line
                                 class="svg-ux__line"
                                 x1="18"
@@ -77,8 +91,8 @@
                     </div>
                 </summary>
                 <p>
-                    Information architecture, card sorting. Big fan of interaction
-                    design and user feedback.
+                    Information architecture, card sorting. Big fan of
+                    interaction design and user feedback.
                 </p>
             </details>
             <details class="about-item">
@@ -107,11 +121,12 @@
                     </div>
                 </summary>
                 <p>
-                    +5 years of experience working on the front of the front-end.
-                    CSS architecture, scalability, performance optimization,
-                    familiar with W3C and accessibility standards. All around best
-                    practices and clean code. Experienced with popular JS
-                    frameworks. Storybook documentation. Several CMS platforms.
+                    +5 years of experience working on the front of the
+                    front-end. CSS architecture, scalability, performance
+                    optimization, familiar with W3C and accessibility standards.
+                    All around best practices and clean code. Experienced with
+                    popular JS frameworks. Storybook documentation. Several CMS
+                    platforms.
                 </p>
             </details>
             <details class="about-item">
@@ -136,16 +151,21 @@
                     </div>
                 </summary>
                 <p>
-                    Experience in working with front & back-end development teams,
-                    proposing logic workarounds. Exploratory and manual testing,
-                    user simulation, gherkin syntax BDD writing.
+                    Experience in working with front & back-end development
+                    teams, proposing logic workarounds. Exploratory and manual
+                    testing, user simulation, gherkin syntax BDD writing.
                 </p>
             </details>
             <details class="about-item">
                 <summary class="about-item__summary">
                     <div class="about-item__icon">
                         <svg version="1.1" viewBox="0 0 24 24">
-                            <circle class="svg-compass" cx="12" cy="12" r="10" />
+                            <circle
+                                class="svg-compass"
+                                cx="12"
+                                cy="12"
+                                r="10"
+                            />
                             <polygon
                                 class="svg-compass__needle"
                                 points="12,6 9,12 12,18 15,12 "
@@ -157,10 +177,10 @@
                     </div>
                 </summary>
                 <p>
-                    Experience in managing department, coordinating small teams up
-                    to 5 people (programmers, SEO specialist, junior designer).
-                    Experienced with Agile, Scrum and continuous delivery
-                    methodologies.
+                    Experience in managing department, coordinating small teams
+                    up to 5 people (programmers, SEO specialist, junior
+                    designer). Experienced with Agile, Scrum and continuous
+                    delivery methodologies.
                 </p>
             </details>
         </article>

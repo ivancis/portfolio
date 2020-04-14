@@ -306,6 +306,9 @@ li {
 .about-list {
 	display: grid;
 	grid-gap: $space;
+	margin: 0 auto 0 0;
+	width: 100%;
+	max-width: 400px;
 }
 
 .about-item {
@@ -313,14 +316,21 @@ li {
 	grid-gap: $space;
 	opacity: 0;
 	animation: slide-in-animation $duration calc(#{$delay} * 2) 1 forwards;
+	border: 2px solid rgba($_medium, .07);
+	padding: $space--small;
+
+	&:hover {
+		border: 2px solid rgba($_medium, .09);
+	}
 
 	p {
 		@include set-font-size(12px);
-
-		margin: 0 0 $space;
-		max-width: 450px;
+		margin: 0;
 		color: $text;
 		line-height: 1.6;
+		border-top: 1px solid rgba($_medium, .07);
+		padding-top: $space--small;
+		margin-top: $space--small;
 	}
 }
 
@@ -334,7 +344,6 @@ li {
     display: grid;
 	grid-template-columns: auto 1fr;
 	grid-gap: $space;
-	margin: 0 0 $space--small;
 	color: $header;
 	outline: none;
 	cursor: pointer;

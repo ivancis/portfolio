@@ -2,27 +2,39 @@
     <section class="work-detail work-detail--crucijuegos">
         <div class="work-detail__title">
             <h3>Crucijuegos</h3>
-            <a href="https://insumos.crucijuegos.com" target="_blank">Visit website</a>
+            <a href="https://insumos.crucijuegos.com" target="_blank"
+                >Visit website</a
+            >
         </div>
         <div class="work-detail__description">
-            <p>Crucijuegos is a company dedicated to the custom design, manufacture, distribution and installation of heavy duty playgrounds, aqua parks and different urban furnitures for public spaces.</p>
-            <p>They've been around for almost 30 years in the Argentinian market and a growing portfolio through other Latin American regions.</p>
+            <p>
+                Crucijuegos is a company dedicated to the custom design,
+                manufacture, distribution and installation of heavy duty
+                playgrounds, aqua parks and different urban furnitures for
+                public spaces.
+            </p>
+            <p>
+                They've been around for almost 30 years in the Argentinian
+                market and a growing portfolio through other Latin American
+                regions.
+            </p>
         </div>
         <ul>
             <h6>Main responsibilities:</h6>
             <li>
-                UI designer & developer for e-commerce website and internal ERP system.
+                UI designer & developer for e-commerce website and internal ERP
+                system.
             </li>
             <li>
                 Team lead for development.
             </li>
             <li>
-                Performance optimization of several existing
-                applications through code refactoring.
+                Performance optimization of several existing applications
+                through code refactoring.
             </li>
             <li>
-                External resource coordination, responsible for complying
-                with the processes established by QC (IRAM-ISO).
+                External resource coordination, responsible for complying with
+                the processes established by QC (IRAM-ISO).
             </li>
             <li>
                 Graphic marketing designer (social media, brochures, etc.).
