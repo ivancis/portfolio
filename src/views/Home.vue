@@ -20,10 +20,10 @@
         <div class="content">
             <nav class="nav">
                 <span v-on:click="component = 'works'" class="nav-link">
-                    Portfolio
+                    Works
                 </span>
                 <span v-on:click="component = 'about'" class="nav-link">
-                    Profile
+                    About
                 </span>
             </nav>
             <component v-bind:is="component" />

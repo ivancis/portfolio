@@ -10,7 +10,8 @@
                 </figure>
             </div>
             <div class="work-item__description">
-                <span>Linkiar (2020)</span>
+                <h5>Linkiar (2020)</h5>
+                <span>Branding, Strategy, UI design & development</span>
             </div>
         </article>
         <article
@@ -26,7 +27,8 @@
                 </figure>
             </div>
             <div class="work-item__description">
-                <span>Megalotto (2019 ~ 2020)</span>
+                <h5>Megalotto (2019 ~ 2020)</h5>
+                <span>UI/Front-end development</span>
             </div>
         </article>
         <article
@@ -42,7 +44,8 @@
                 </figure>
             </div>
             <div class="work-item__description">
-                <span>Crucijuegos (2018 ~ 2019)</span>
+                <h5>Crucijuegos (2018 ~ 2019)</h5>
+                <span>Branding, Strategy, Art Direction, UI design & development</span>
             </div>
         </article>
         <component v-bind:is="component" />

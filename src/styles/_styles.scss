@@ -15,7 +15,7 @@
 
 .works {
 	display: grid;
-	grid-gap: $space;
+	grid-gap: $space--small;
 	grid-auto-columns: 1fr;
 	place-content: flex-start stretch;
 	grid-template-areas:
@@ -36,6 +36,7 @@
 .work-item {
 	display: grid;
 	grid-gap: $space--small;
+	margin: 0 auto auto;
 	overflow: hidden;
 	cursor: pointer;
 	transition: transform calc(#{$duration} / 2) ease;
@@ -92,23 +93,33 @@
 		img {
 			object-fit: cover;
 			width: 100%;
-			border-radius: $border-radius;
+			border-radius: $space--xx-small;
 			overflow: hidden;
 		}
 	}
 }
 
 .work-item__description {
-	@include set-font-size(12px);
 	display: grid;
-	grid-gap: $space;
+	grid-gap: $space--small;
 	padding: $space--x-small $space;
+
+	h5 {
+		@include set-font-size(14px);
+	}
+
+	span {
+		@include set-font-size(12px);
+
+		color: $text;
+	}
 }
 
 .work-detail {
 	grid-area: item_detail;
 	display: grid;
 	grid-gap: $space;
+	padding: $space--large 0 0;
 	opacity: 0;
 	animation: fade-in-animation $duration 1 forwards;
 
@@ -129,41 +140,73 @@
 	&--crucijuegos {
 		@include phablet {
 			grid-area: item_detail;
-			padding: $space--large 0 0;
+			padding: $space--x-large 0 0;
 		}
+
+		@include tablet {
+			padding: $space--xx-large 0 0;
+		}
+	}
+}
+
+h6 {
+	text-transform: uppercase;
+	color: $text;
+	opacity: .5;
+	letter-spacing: 1px;
+	margin: 0 0 $space--x-small;
+}
+
+p {
+	line-height: 1.6;
+	margin: 0 0 $space;
+	max-width: 600px;
+	color: $caption;
+}
+
+ul {
+	display: grid;
+	grid-gap: $space--small;
+	list-style: none;
+	margin: 0 0 $space--large;
+	max-width: $content-size-small;
+}
+
+li {
+	&:before {
+		content: "-";
+		margin: 0 $space--small 0 0;
+		color: $text;
 	}
 }
 
 .work-detail__title {
-	@include set-font-size(24px);
-	color: $text;
-	opacity: .1;
+	display: grid;
+	grid-gap: $space--small;
+	grid-template-columns: 1fr;
+	place-content: center space-between;
+
+	h3{
+		@include set-font-size(24px);
+		color: $text;
+		opacity: .5;
+	}
+
+	a, span {
+		@include set-font-size(12px);
+	}
 }
 .work-detail__description {
 	@include set-font-size(13px);
 	line-height: 1.6;
+}
 
-	p {
-		margin: 0 0 $space;
-		max-width: 600px;
-		color: $caption;
-	}
+.work-detail__credits {
+	@include set-font-size(12px);
+	color: $text;
 
-	ul {
-		display: grid;
-		grid-gap: $space--small;
-		list-style: none;
-		margin: 0 0 $space--large;
-		max-width: $content-size-small;
-	}
-
-	li {
-
-		&:before {
-			content: "-";
-			margin: 0 $space--small 0 0;
-			color: $text;
-		}
+	a{
+		color: $text;
 	}
 }
 
@@ -226,7 +269,7 @@
 		img {
 			object-fit: cover;
 			width: 100%;
-			border-radius: $space--x-small;
+			border-radius: $space--xx-small;
 			border: 2px solid rgba($_medium, .07);
 			overflow: hidden;
 		}
@@ -235,8 +278,34 @@
 
 .about {
 	display: grid;
+	grid-gap: $space--large;
+	margin: 0 0 auto;
+
+	@include tablet {
+		grid-gap: $space--x-large;
+	}
+}
+
+.about-body {
+	display: grid;
 	grid-gap: $space;
-	place-content: flex-start;
+	margin: 0 0 auto;
+	opacity: 0;
+	animation: slide-in-animation $duration calc(#{$delay} / 3) 1 forwards;
+
+	p {
+		@include set-font-size(12px);
+
+		margin: 0 0 $space;
+		max-width: 600px;
+		color: $caption;
+		line-height: 1.6;
+	}
+}
+
+.about-list {
+	display: grid;
+	grid-gap: $space;
 }
 
 .about-item {
@@ -251,6 +320,7 @@
 		margin: 0 0 $space;
 		max-width: 450px;
 		color: $text;
+		line-height: 1.6;
 	}
 }
 
@@ -348,7 +418,7 @@ nav {
 }
 
 .nav-link {
-	@include set-font-size(12px);
+	@include set-font-size(13px);
 	font-weight: 800;
 	cursor: pointer;
 
