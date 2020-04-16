@@ -87,7 +87,7 @@ $gradient-3: var(--gradient-3, #{$_gradient-3});
 
 // typography
 // ---------------------------------------------------------------------------------------------------------------------
-$_font-family: 'Karla', Helvetica, Arial, sans-serif;
+$_font-family: Helvetica, Arial, sans-serif;
 $_header-font-family: $_font-family;
 $_font-size: 14px;
 $_font-weight: 400;
@@ -143,9 +143,9 @@ $space--xxx-small--negative: var(--space--xxx-small--negative, #{$_space--xxx-sm
 
 // sizes
 // ---------------------------------------------------------------------------------------------------------------------
-$_content-size: 1110px;
+$_content-size: 1002px;
 $_content-size-medium: 920px;
-$_content-size-small: 830px;
+$_content-size-small: 400px;
 $_element-default-width: 288px;
 $_top-navigation-height: 56px;
 $_bottom-navigation-height: 64px;

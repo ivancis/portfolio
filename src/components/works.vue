@@ -1,24 +1,18 @@
 <template>
-    <section class="content-section works">
-        <article
-            class="work-item work-item--linkiar"
-            v-on:click="component = 'linkiar'"
-        >
-            <div class="work-item__thumbnail">
+    <section class="works">
+        <router-link class="works-item" to="/linkiar">
+            <div class="works-thumbnail">
                 <figure>
                     <img src="../assets/linkiar_thumbnail.jpg" alt="Linkiar" />
                 </figure>
             </div>
-            <div class="work-item__description">
-                <h5>Linkiar (2020)</h5>
-                <span>Branding, Strategy, UI design & development</span>
+            <div class="works-description">
+                <h5 class="works-title">Linkiar (2020)</h5>
+                <span class="works-subtitle">Branding, Strategy, UI design & development</span>
             </div>
-        </article>
-        <article
-            class="work-item work-item--megalotto"
-            v-on:click="component = 'megalotto'"
-        >
-            <div class="work-item__thumbnail">
+        </router-link>
+        <router-link class="works-item" to="/megalotto">
+            <div class="works-thumbnail">
                 <figure>
                     <img
                         src="../assets/megalotto_thumbnail.jpg"
@@ -26,16 +20,13 @@
                     />
                 </figure>
             </div>
-            <div class="work-item__description">
-                <h5>Megalotto (2019 ~ 2020)</h5>
-                <span>UI/Front-end development</span>
+            <div class="works-description">
+                <h5 class="works-title">Megalotto (2019 ~ 2020)</h5>
+                <span class="works-subtitle">UI/Front-end development</span>
             </div>
-        </article>
-        <article
-            class="work-item work-item--crucijuegos"
-            v-on:click="component = 'crucijuegos'"
-        >
-            <div class="work-item__thumbnail">
+        </router-link>
+        <router-link class="works-item" to="/crucijuegos">
+            <div class="works-thumbnail">
                 <figure>
                     <img
                         src="../assets/crucijuegos_thumbnail.jpg"
@@ -43,15 +34,12 @@
                     />
                 </figure>
             </div>
-            <div class="work-item__description">
-                <h5>Crucijuegos (2016 ~ 2019)</h5>
-                <span
-                    >Branding, Strategy, Art Direction, UI design &
-                    development</span
-                >
+            <div class="works-description">
+
+                <h5 class="works-title">Crucijuegos (2016 ~ 2019)</h5>
+                <span class="works-subtitle">Art Direction, UI design & development</span>
             </div>
-        </article>
-        <component v-bind:is="component" />
+        </router-link>
     </section>
 </template>
 

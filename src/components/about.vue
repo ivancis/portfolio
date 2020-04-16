@@ -1,23 +1,20 @@
 <template>
-    <section id="about" class="content-section about">
-        <article class="about-body">
-            <p>
-                I'm a truly passionated UI designer and CSS development
-                specialist.<br />
-                I work hard to achieve a polished and spotless digital
-                experience.
+    <div class="about">
+        <div class="about-body">
+            <p class="about-p">
+                I'm truly passionated for user interfaces.<br />
+                I work hard to achieve a spotless and satisfying digital experience.
             </p>
-            <p>
-                With every engagement, I try to get as involved as possible with
-                the project as a whole asset, bringing my multidisciplinary
+            <p class="about-p">
+                With every engagement, I try to get involved as a whole asset, bringing my multidisciplinary
                 expertise to the table to take the product closer to it's users.
             </p>
-            <p>Born in Rosario, Argentina, now based in Marbella, Spain.</p>
-        </article>
-        <article class="about-list">
-            <details class="about-item">
-                <summary class="about-item__summary">
-                    <div class="about-item__icon">
+            <p class="about-p about-p--year">2020, Marbella, Spain</p>
+        </div>
+        <div class="about-accordions">
+            <details class="accordion">
+                <summary class="summary">
+                    <div class="summary__icon">
                         <svg version="1.1" viewBox="0 0 24 24">
                             <path
                                 class="svg-layout__frame"
@@ -39,19 +36,19 @@
                             />
                         </svg>
                     </div>
-                    <div class="about-item__title">
+                    <div class="summary__title">
                         <h4>User interface</h4>
                     </div>
                 </summary>
-                <p>
+                <p class="summary__description">
                     +5 years of experience designing wireframes and prototypes
                     from low to high fidelity; crafting and constantly enhancing
                     design systems.
                 </p>
             </details>
-            <details class="about-item">
-                <summary class="about-item__summary">
-                    <div class="about-item__icon">
+            <details class="accordion">
+                <summary class="summary">
+                    <div class="summary__icon">
                         <svg version="1.1" viewBox="0 0 24 24">
                             <path
                                 class="svg-ux__head"
@@ -86,18 +83,18 @@
                             />
                         </svg>
                     </div>
-                    <div class="about-item__title">
+                    <div class="summary__title">
                         <h4>User experience</h4>
                     </div>
                 </summary>
-                <p>
+                <p class="summary__description">
                     Information architecture, card sorting. Big fan of
                     interaction design and user feedback.
                 </p>
             </details>
-            <details class="about-item">
-                <summary class="about-item__summary">
-                    <div class="about-item__icon">
+            <details class="accordion">
+                <summary class="summary">
+                    <div class="summary__icon">
                         <svg version="1.1" viewBox="0 0 24 24">
                             <polyline
                                 class="svg-code__chevron-right"
@@ -116,11 +113,11 @@
                             />
                         </svg>
                     </div>
-                    <div class="about-item__title">
+                    <div class="summary__title">
                         <h4>Coding</h4>
                     </div>
                 </summary>
-                <p>
+                <p class="summary__description">
                     +5 years of experience working on the front of the
                     front-end. CSS architecture, scalability, performance
                     optimization, familiar with W3C and accessibility standards.
@@ -129,9 +126,9 @@
                     platforms.
                 </p>
             </details>
-            <details class="about-item">
-                <summary class="about-item__summary">
-                    <div class="about-item__icon">
+            <details class="accordion">
+                <summary class="summary">
+                    <div class="summary__icon">
                         <svg class="svg-duck" version="1.1" viewBox="0 0 24 24">
                             <path
                                 class="svg-duck__shape"
@@ -146,19 +143,19 @@
                             />
                         </svg>
                     </div>
-                    <div class="about-item__title">
+                    <div class="summary__title">
                         <h4>Rubberduck</h4>
                     </div>
                 </summary>
-                <p>
+                <p class="summary__description">
                     Experience in working with front & back-end development
                     teams, proposing logic workarounds. Exploratory and manual
                     testing, user simulation, gherkin syntax BDD writing.
                 </p>
             </details>
-            <details class="about-item">
-                <summary class="about-item__summary">
-                    <div class="about-item__icon">
+            <details class="accordion">
+                <summary class="summary">
+                    <div class="summary__icon">
                         <svg version="1.1" viewBox="0 0 24 24">
                             <circle
                                 class="svg-compass"
@@ -172,29 +169,24 @@
                             />
                         </svg>
                     </div>
-                    <div class="about-item__title">
+                    <div class="summary__title">
                         <h4>Collaboration</h4>
                     </div>
                 </summary>
-                <p>
+                <p class="summary__description">
                     Experience in managing department, coordinating small teams
                     up to 5 people (programmers, SEO specialist, junior
                     designer). Experienced with Agile, Scrum and continuous
                     delivery methodologies.
                 </p>
             </details>
-        </article>
-    </section>
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
     name: 'about',
-    data: function() {
-        return {
-            isActive: false
-        };
-    }
 };
 </script>
 

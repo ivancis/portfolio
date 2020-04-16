@@ -29,6 +29,7 @@ body {
 html {
     --scrollbarBG: #fff;
     --thumbBG: #ccc;
+    padding-right: 10px;
 }
 body {
     scrollbar-width: thin;
@@ -50,6 +51,7 @@ body {
 // ---------------------------------------------------------------------------------------------------------------------
 * {
     font-family: $font-family;
+    font-weight: 400;
     box-sizing: border-box;
 
     // pseudo elements
@@ -79,8 +81,8 @@ i {
 a {
     outline: none;
     text-decoration: underline;
-    color: $primary;
     cursor: pointer;
+    color: $primary;
 }
 
 // button

@@ -62,6 +62,14 @@
     }
 }
 
+@mixin regular-text() {
+    font-weight: 400;
+}
+
+@mixin bold-text() {
+    font-weight: 600;
+}
+
 // font smoothing
 // ---------------------------------------------------------------------------------------------------------------------
 @mixin font-smoothing($value) {
