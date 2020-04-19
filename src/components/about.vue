@@ -6,9 +6,14 @@
                 I care to achieve a spotless digital experience.
             </p>
             <p class="about-p">
-                With every engagement, I try to get involved as a whole asset, bringing my multidisciplinary expertise to the table to take the product closer to its users.
+                With every engagement, I try to get involved as a whole asset,
+                bringing my multidisciplinary expertise to the table to take the
+                product closer to its users.
             </p>
-            <p class="about-p about-p--year">Born in Rosario, Argentina. Now working and living in Marbella, Spain.</p>
+            <p class="about-p about-p--year">
+                Born in Rosario, Argentina. Now working and living in Marbella,
+                Spain.
+            </p>
         </div>
         <accordion>
             <accordion-item>

@@ -8,7 +8,9 @@
             </div>
             <div class="works-description">
                 <h5 class="works-title">Linkiar (2020)</h5>
-                <span class="works-subtitle">UI design, front-end development</span>
+                <span class="works-subtitle"
+                    >UI design, front-end development</span
+                >
             </div>
         </router-link>
         <router-link class="works-item" to="/megalotto">
@@ -30,7 +32,9 @@
             </div>
             <div class="works-description">
                 <h5 class="works-title">Modular (2019)</h5>
-                <span class="works-subtitle">UI design, front-end development</span>
+                <span class="works-subtitle"
+                    >UI design, front-end development</span
+                >
             </div>
         </router-link>
         <router-link class="works-item" to="/crucijuegos">
@@ -41,7 +45,9 @@
             </div>
             <div class="works-description">
                 <h5 class="works-title">Crucijuegos (2018)</h5>
-                <span class="works-subtitle">UI design, front-end development</span>
+                <span class="works-subtitle"
+                    >UI design, front-end development</span
+                >
             </div>
         </router-link>
     </section>

@@ -6,14 +6,10 @@
         fill="url(#megalotto-gradient)"
     >
         <linearGradient id="megalotto-gradient" x2="100%" y1="244.61%">
-            <stop offset=".62%" stop-color="#FF6847" ></stop>
-            <stop offset="96.81%" stop-color="#F8464E" ></stop>
+            <stop offset=".62%" stop-color="#FF6847"></stop>
+            <stop offset="96.81%" stop-color="#F8464E"></stop>
         </linearGradient>
-        <circle
-            cy="50"
-            cx="60"
-            r="50"
-        >
+        <circle cy="50" cx="60" r="50">
             <animate
                 attributeName="cx"
                 attributeType="XML"

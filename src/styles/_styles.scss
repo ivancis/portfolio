@@ -418,9 +418,13 @@ header {
 
 	display: grid;
 	position: relative;
-	grid-column: span 6;
+	grid-column: span 12;
 	overflow: hidden;
 	border-radius: $space--x-small;
+
+	@include tablet {
+		grid-column: span 6;
+	}
 
 	&--full {
 		grid-column: span 12;

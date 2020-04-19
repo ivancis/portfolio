@@ -1,8 +1,5 @@
 <template>
-    <li
-        class="accordion__item"
-        :class="{ accordion__item_active: visible }"
-    >
+    <li class="accordion__item" :class="{ accordion__item_active: visible }">
         <div
             class="accordion__trigger"
             :class="{ accordion__trigger_active: visible }"
@@ -67,7 +64,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .accordion__item {
     display: grid;
     grid-gap: $space--small;
