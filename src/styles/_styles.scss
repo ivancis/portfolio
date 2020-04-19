@@ -1,87 +1,260 @@
+
+.megalotto-background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: $_megalotto-gradient;
+}
+
+.megalotto-balls {
+	$_ball-grid__cell: 24;
+	$_ball-grid__col: calc(100% / #{$_ball-grid__cell});
+	$_ball-grid__row: calc(100% / #{$_ball-grid__cell});
+
+	display: grid;
+	grid-template-columns: repeat($_ball-grid__cell, $_ball-grid__col);
+	grid-template-rows: repeat($_ball-grid__cell, $_ball-grid__row);
+	position: relative;
+	top: calc(#{$_ball-grid__col} * -6);
+	left: calc(#{$_ball-grid__row} * -6);
+	width: calc(100% + calc(#{$_ball-grid__row} * 12));
+	height: calc(100% + calc(#{$_ball-grid__col} * 12));
+	overflow: hidden;
+
+}
+.megalotto-ball-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&--1 {
+		grid-area: 1/5/-5/10;
+		justify-content: flex-end;
+	}
+
+	&--2 {
+		grid-area: 1/11/-1/-11;
+		transform: rotate(16deg) scaleX(-1);
+	}
+
+	&--3 {
+		grid-area: -1/-4/4/-8;
+		transform: rotate(24deg) scaleY(-1);
+	}
+}
+
+.megalotto-ball {
+	@include ratio(1,1);
+	width: 100%;
+	fill: url(#megalotto-gradient) $_megalotto-secondary;
+}
+
+.crucijuegos-background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("https://insumos.crucijuegos.com/assets/img/bg/international01_big.jpg");
+	background-color: $_crucijuegos-primary;
+}
+
+.modular-background {
+	background-color: $_modular-primary;
+}
+
+.linkiar-background {
+	background-color: $_linkiar-primary;
+}
+
 #app {
 	display: grid;
-	grid-gap: $space--large;
-	margin: 0;
-	padding: $space--large $space;
+	grid-auto-rows: auto 1fr;
+	grid-gap: $space;
+	padding: $space--x-large 0;
 	opacity: 0;
-	animation: fade-in-animation $duration $delay 1 forwards;
+	animation: fade-in-animation $duration 1 forwards;
 	min-height: 100vh;
 
 	@include phablet {
-		padding: 5%;
+		padding: 5% 0;
 	}
-
-	@include tablet {
-		padding: 10%;
-	}
-}
-
-nav {
-	display: grid;
-	grid-gap: $space;
-    grid-auto-flow: column;
-    place-content: flex-start;
-	margin: $space auto;
-	padding: 0 0 $space--small;
-	width: 100%;
-	max-width: $content-size;
 }
 
 header {
+	@include set-font-size(12px);
+
+	margin: 0 auto;
+	padding: 0 $space;
+	width: 100%;
+}
+
+.header-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: $space--large;
+	margin: 0 auto;
+	width: 100%;
+	max-width: $content-size;
+
+	@include phablet() {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: $space;
+	}
+}
+
+.header-item {
+	display: grid;
+	grid-gap: $space--small;
+}
+
+.header-link {
+	@include set-font-size(10px);
+
+	&:before {
+		content: "—";
+		margin-right: $space--small;
+	}
+}
+
+.detail-nav {
+	display: grid;
+	background: $light;
+	padding: $space;
+	z-index: 1;
+
+	&--top {
+		position: sticky;
+		top: 0;
+		margin: 0 auto 0 calc(#{$space} * -1);
+		width: calc(100% + #{$space--large});
+
+		.detail-nav__list {
+			place-content: flex-start;
+		}
+	}
+}
+
+.detail-nav__list {
+	display: grid;
+	grid-gap: $space--x-large;
+	place-content: center;
+	grid-auto-flow: column;
+	margin: 0 auto;
+	width: 100%;
+	max-width: $content-size;
+}
+
+.detail-nav__link {
 	@include set-font-size(11px);
 
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: $space;
-	grid-auto-flow: row;
-	margin: 0 auto auto;
-	width: 100%;
-	max-width: $content-size;
-	letter-spacing: .1px;
+	grid-template-columns: auto 1fr;
+	grid-gap: $space--small;
+	text-decoration: none;
+	color: $caption;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+.detail-nav__link-icon {
+	width: $icon-size;
+	height: $icon-size;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.detail-nav__link-label {
+	margin: auto;
 }
 
 .content {
 	display: grid;
-	grid-gap: $space--x-large;
+	grid-gap: $space--xx-large;
 	margin: 0 auto;
+	padding: 0 $space;
 	width: 100%;
+}
+
+.page {
+	display: grid;
+	grid-gap: $space--large;
+	margin-bottom: $space--x-large;
+	opacity: 0;
+	animation: fade-in-animation calc(#{$duration} * 2) 1 forwards;
+
+	&--home {
+		grid-template-rows: auto 1fr;
+		grid-gap: $space--x-large;
+	}
 }
 
 .works {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-gap: $space $space--small;
+	grid-gap: $space--large $space;
 	grid-auto-columns: 1fr;
 	place-content: flex-start stretch;
-	margin: 0 auto;
+	margin: $space--x-large auto 0;
+	width: 100%;
 	max-width: $content-size;
 }
 
 .works-item {
-	display: grid;
 	grid-column: span 12;
+	display: grid;
 	grid-gap: calc(#{$space}) + #{$space--small};
 	margin: 0 auto auto;
-	overflow: hidden;
+	width: 100%;
 	cursor: pointer;
-	transition: transform calc(#{$duration} / 2) ease;
 	text-decoration: none;
+	opacity: 0;
+	animation: slide-in-animation $duration 1 forwards;
 
 	@include phablet {
 		grid-column: span 6;
 	}
 
-	@include tablet {
-		grid-column: span 4;
+
+	@include desktop {
+		grid-column: span 3;
+	}
+
+	&:hover {
+		.works-thumbnail {
+			box-shadow: $shadow-2;
+		}
+		.works-description {
+			animation: slide-in-animation $duration $bezier 1 forwards;
+		}
+	}
+}
+
+@for $i from 1 to 100 {
+	.works-item:nth-child(#{$i}) {
+		animation-delay: $i * 0.1s;
+	}
+
+	.accordion__item:nth-child(#{$i}) {
+		animation-delay: $i * 0.1s;
 	}
 }
 
 .works-thumbnail {
-	@include ratio(4,2);
+	@include ratio(18,13);
 	display: grid;
 	position: relative;
 	border-radius: $space--x-small;
 	overflow: hidden;
+	transition: box-shadow $duration $bezier;
+	box-shadow: $shadow-1;
 
 	&:before {
 		grid-area: 1 / 1 / 1 / 1;
@@ -91,9 +264,8 @@ header {
 		grid-area: 1 / 1 / 1 / 1;
 		display: grid;
 		place-content: center;
-		transition: opacity calc(#{$duration} / 3) ease;
 
-		img {
+		> * {
 			object-fit: cover;
 			width: 100%;
 		}
@@ -102,12 +274,17 @@ header {
 
 .works-description {
 	display: grid;
-	grid-gap: $space--small;
+	grid-gap: $space--x-small;
 	padding: $space--x-small;
+	transition: opacity $duration $bezier;
+
+	@include desktop {
+		opacity: 0;
+	}
 }
 
 .works-title {
-	@include set-font-size(11px);
+	@include set-font-size(12px);
 	@include regular-text();
 
 	color: $caption;
@@ -119,87 +296,135 @@ header {
 	color: $text;
 }
 
-.work-detail {
+.work-detail__cover {
+	@include ratio(1,1);
+
 	display: grid;
-	grid-gap: $space--large;
+	margin: 0 auto 0 calc(#{$space} * -1);
+	width: calc(100% + #{$space--large});
+	overflow: hidden;
+	background: $medium;
+	opacity: 0;
+	animation: fade-in-animation $duration $delay 1 forwards;
+
+	&:before {
+		grid-area: 1 / 1 / 1 / 1;
+	}
+
+	@include phablet() {
+		@include ratio(2,1);
+	}
+
+	@include desktop() {
+		@include ratio(4,1);
+	}
 }
 
-ul {
+.work-detail__cover-background {
+	grid-area: 1 / 1 / 1 / 1;
+}
+.work-detail__cover-content {
+	grid-area: 1 / 1 / 1 / 1;
 	display: grid;
-	grid-gap: $space--small;
-	list-style: none;
+	place-content: center;
+	z-index: 1;
+}
+
+.work-detail__logo {
+	width: $default-width;
+	max-width: 60vw;
+}
+
+.work-detail__content {
+	display: grid;
+	grid-gap: $space--x-large;
+	padding: $space--x-large 0 0;
+	margin: 0 auto;
+	width: 100%;
+	max-width: $content-size;
 }
 
 .work-detail__title {
-	display: grid;
-	grid-gap: $space--small;
-	grid-template-columns: 1fr;
-	place-content: center space-between;
-
-	h3{
-		@include set-font-size(24px);
-		color: $text;
-		opacity: .5;
-	}
-
-	a, span {
-		@include set-font-size(12px);
-	}
+	@include set-font-size(16px);
 }
+
 .work-detail__description {
-	@include set-font-size(11px);
+	@include set-font-size(12px);
+	display: grid;
+	grid-gap: $space--large;
+	justify-items: flex-start;
 	line-height: 1.6;
 	width: 100%;
+	max-width: $content-size-medium;
+
+	.link {
+		text-decoration: underline;
+	}
+}
+
+.work-detail__list {
+	display: grid;
+	grid-gap: $space--small;
+	max-width: calc(#{$content-size-medium} - #{$space--xx-large});
+}
+
+.work-detail__list-title {
+	@include set-font-size(14px);
+	color: $_n50;
+}
+
+.work-detail__list-item {
+
+	&:before {
+		content: "—";
+		margin-right: $space--small;
+		color: $caption;
+	}
+}
+
+.work-detail__credits {
+	@include set-font-size(11px);
+	display: grid;
+	grid-gap: $space--xx-small;
 	max-width: $content-size;
 	margin: 0 auto;
+	text-align: center;
+
+	.link {
+		text-decoration: underline;
+	}
+
+	strong {
+		margin-right: $space--xx-small;
+	}
 }
 
 .work-detail__gallery-wrapper {
-	@include touch-scroll(on, x);
-	@include hide-scrollbars();
-
 	display: flex;
 	position: relative;
-	margin: 0 auto 0 calc(#{$space} * -1);
-	width: calc(100% + #{$space--large});
-	scroll-behavior: smooth;
-
-	@include phablet {
-		margin: 0 auto;
-		width: 100%;
-	}
-
-	@include tablet {
-		margin: 0 auto 0 calc(#{$space} * -1);
-		width: calc(100% + #{$space--large});
-	}
 }
 
 .work-detail__gallery {
 	display: grid;
-    grid-gap: $space--small;
-    grid-auto-flow: column;
-	grid-auto-columns: 80vw;
-    position: relative;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: $space--small;
+	position: relative;
 	margin: auto auto $space--x-large;
-	padding: 0 $space;
-
-	@include phablet {
-		grid-template-columns: 1fr;
-		grid-auto-columns: 1fr;
-		grid-auto-flow: row;
-		padding: 0;
-	}
-
-	@include tablet {
-		grid-template-columns: 1fr 1fr;
-	}
+	max-width: $content-size;
 }
 
 .work-detail__gallery-item {
 	@include ratio(4,3);
+
 	display: grid;
 	position: relative;
+	grid-column: span 6;
+	overflow: hidden;
+	border-radius: $space--x-small;
+
+	&--full {
+		grid-column: span 12;
+	}
 
 	&:before {
 		grid-area: 1 / 1 / 1 / 1;
@@ -213,20 +438,23 @@ ul {
 		img {
 			object-fit: cover;
 			width: 100%;
-			border-radius: $space--xx-small;
-			border: 2px solid rgba($_medium, .07);
-			overflow: hidden;
 		}
 	}
 }
 
 .about {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: $space;
+	grid-template-columns: 1fr;
+	place-content: flex-start;
+	grid-gap: $space--x-large;
 	margin: 0 auto;
 	width: 100%;
 	max-width: $content-size;
+
+	@include tablet() {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: $space;
+	}
 }
 
 .about-body {
@@ -234,15 +462,10 @@ ul {
 	grid-gap: $space;
 	margin: 0 0 auto;
 	position: relative;
-
-	&::before {
-		content: "—";
-	}
-
 }
 
 .about-p {
-	@include set-font-size(11px);
+	@include set-font-size(12px);
 
 	max-width: $content-size-small;
 	color: $caption;
@@ -259,46 +482,26 @@ ul {
 	width: 100%;
 }
 
-.accordion {
-	display: grid;
-	grid-gap: $space;
-}
+.accordion-title {
+	@include set-font-size(13px);
+	@include regular-text();
 
-.summary {
-	@include set-font-size(11px);
-
-    display: grid;
-	grid-template-columns: auto 1fr;
-	grid-gap: $space--small;
-	margin: $space--small 0;
-	outline: none;
-	cursor: pointer;
-	color: $caption;
-	transition: opacity $duration ease, color $duration ease;
-
-	&:hover {
-		color: $header;
-		opacity: 1;
-	}
-
-	&::-webkit-details-marker {
-		display:none;
-	}
-}
-
-.summary__title {
 	margin: auto 0;
 }
 
-.summary__description {
+.accordion-content {
 	@include set-font-size(12px);
 
 	margin: 0;
 	line-height: 1.6;
 	max-width: $content-size-small;
+	padding: 0 0 0 calc((#{$icon-size} / 2) + #{$space});
+	border-left: $stroke-size solid $_n30;
+	margin-left: calc(#{$space--small} + #{$space--xx-small});
+	color: $caption;
 }
 
-.summary__icon {
+.accordion-icon {
 	svg {
 		width: $icon-size;
 		height: $icon-size;
@@ -310,6 +513,18 @@ ul {
 	}
 }
 
+// link
+// ---------------------------------------------------------------------------------------------------------------------
+.link {
+	color: inherit;
+	text-decoration: none;
+	transition: color calc(#{$duration} / 2) $bezier;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
 
 // icons animations
 // =====================================================================================================================
@@ -317,7 +532,7 @@ ul {
 .svg-ux__head,
 .svg-ux__body {
 	transform: translateX(4px);
-	transition: transform calc(#{$duration} / 2) ease;
+	transition: transform calc(#{$duration} / 2) $bezier;
 }
 
 .svg-ux__line {
@@ -331,12 +546,12 @@ ul {
 
 .svg-code__chevron-left {
 	transform: translateX(4px);
-	transition: transform calc(#{$duration} / 2) ease;
+	transition: transform calc(#{$duration} / 2) $bezier;
 }
 
 .svg-code__chevron-right {
 	transform: translateX(-4px);
-	transition: transform calc(#{$duration} / 2) ease;
+	transition: transform calc(#{$duration} / 2) $bezier;
 }
 
 .svg-code__character {
@@ -348,23 +563,14 @@ ul {
 	transform-origin: 50%;
 }
 
-.accordion[open] {
-	.summary {
-		opacity: 1;
-		color: $header;
-		grid-gap: $space;
-	}
-	.summary__description {
-		margin-bottom: $space;
-		padding-left: $space--small;
-	}
+.accordion__trigger_active {
 
 	.svg-layout__vertical {
-		animation: 1.2s ease-in-out infinite both layout-vertical;
+		animation: 1.2s $bezier infinite both layout-vertical;
 	}
 
 	.svg-layout__horizontal {
-		animation: 1.4s ease-in-out infinite both layout-horizontal;
+		animation: 1.4s $bezier infinite both layout-horizontal;
 	}
 
 	.svg-ux__head,
@@ -393,7 +599,7 @@ ul {
 	}
 
 	.svg-duck {
-		animation: rock-duck 1s ease-in-out infinite;
+		animation: rock-duck 1s $bezier infinite;
 		transform-origin: 50%;
 	}
 
@@ -407,7 +613,7 @@ ul {
 	}
 
 	.svg-compass__needle {
-		animation: waggle 1s ease-in-out infinite;
+		animation: waggle 1s $bezier infinite;
 		transform-origin: 50%;
 	}
 }
@@ -505,12 +711,12 @@ ul {
 }
 
 @keyframes waggle {
-    0%   {transform:rotate(-12deg);}
-    10%  {transform:rotate(12deg);}
-    40%  {transform:rotate(-25deg);}
-    60%  {transform:rotate(20deg);}
-    80%  {transform:rotate(-15deg);}
-    100% {transform:rotate(-12deg);}
+	0%   {transform:rotate(-12deg);}
+	10%  {transform:rotate(12deg);}
+	40%  {transform:rotate(-25deg);}
+	60%  {transform:rotate(20deg);}
+	80%  {transform:rotate(-15deg);}
+	100% {transform:rotate(-12deg);}
 }
 
 @keyframes brand-motion {

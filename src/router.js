@@ -14,32 +14,27 @@ export default new Router({
         {
             path: '/about',
             name: 'about',
-            component: () =>
-                import('./views/About.vue')
-        },
-        {
-            path: '/works',
-            name: 'works',
-            component: () =>
-                import('./views/Works.vue')
+            component: () => import('./views/About.vue')
         },
         {
             path: '/megalotto',
             name: 'megalotto',
-            component: () =>
-                import('./views/Megalotto.vue')
+            component: () => import('./views/Megalotto.vue')
         },
         {
             path: '/linkiar',
             name: 'linkiar',
-            component: () =>
-                import('./views/Linkiar.vue')
+            component: () => import('./views/Linkiar.vue')
+        },
+        {
+            path: '/modular',
+            name: 'modular',
+            component: () => import('./views/Modular.vue')
         },
         {
             path: '/crucijuegos',
             name: 'crucijuegos',
-            component: () =>
-                import('./views/Crucijuegos.vue')
+            component: () => import('./views/Crucijuegos.vue')
         }
     ],
     mode: 'history'

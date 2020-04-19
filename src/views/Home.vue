@@ -1,8 +1,8 @@
 <template>
-    <section class="content">
+    <div class="page page--home">
         <works></works>
         <about></about>
-    </section>
+    </div>
 </template>
 
 <script>

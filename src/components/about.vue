@@ -2,19 +2,18 @@
     <div class="about">
         <div class="about-body">
             <p class="about-p">
-                I'm truly passionated for user interfaces.<br />
-                I work hard to achieve a spotless and satisfying digital experience.
+                I'm truly passionate for user interfaces.<br />
+                I care to achieve a spotless digital experience.
             </p>
             <p class="about-p">
-                With every engagement, I try to get involved as a whole asset, bringing my multidisciplinary
-                expertise to the table to take the product closer to it's users.
+                With every engagement, I try to get involved as a whole asset, bringing my multidisciplinary expertise to the table to take the product closer to its users.
             </p>
-            <p class="about-p about-p--year">2020, Marbella, Spain</p>
+            <p class="about-p about-p--year">Born in Rosario, Argentina. Now working and living in Marbella, Spain.</p>
         </div>
-        <div class="about-accordions">
-            <details class="accordion">
-                <summary class="summary">
-                    <div class="summary__icon">
+        <accordion>
+            <accordion-item>
+                <template slot="accordion-trigger">
+                    <div class="accordion-icon">
                         <svg version="1.1" viewBox="0 0 24 24">
                             <path
                                 class="svg-layout__frame"
@@ -36,19 +35,21 @@
                             />
                         </svg>
                     </div>
-                    <div class="summary__title">
+                    <div class="accordion-title">
                         <h4>User interface</h4>
                     </div>
-                </summary>
-                <p class="summary__description">
-                    +5 years of experience designing wireframes and prototypes
-                    from low to high fidelity; crafting and constantly enhancing
-                    design systems.
-                </p>
-            </details>
-            <details class="accordion">
-                <summary class="summary">
-                    <div class="summary__icon">
+                </template>
+                <template slot="accordion-content">
+                    <p class="accordion-content">
+                        +5 years of experience designing wireframes and
+                        prototypes from low to high fidelity; crafting and
+                        constantly enhancing design systems.
+                    </p>
+                </template>
+            </accordion-item>
+            <accordion-item>
+                <template slot="accordion-trigger">
+                    <div class="accordion-icon">
                         <svg version="1.1" viewBox="0 0 24 24">
                             <path
                                 class="svg-ux__head"
@@ -83,18 +84,20 @@
                             />
                         </svg>
                     </div>
-                    <div class="summary__title">
+                    <div class="accordion-title">
                         <h4>User experience</h4>
                     </div>
-                </summary>
-                <p class="summary__description">
-                    Information architecture, card sorting. Big fan of
-                    interaction design and user feedback.
-                </p>
-            </details>
-            <details class="accordion">
-                <summary class="summary">
-                    <div class="summary__icon">
+                </template>
+                <template slot="accordion-content">
+                    <p class="accordion-content">
+                        Information architecture, card sorting. Big fan of
+                        interaction design and user feedback.
+                    </p>
+                </template>
+            </accordion-item>
+            <accordion-item>
+                <template slot="accordion-trigger">
+                    <div class="accordion-icon">
                         <svg version="1.1" viewBox="0 0 24 24">
                             <polyline
                                 class="svg-code__chevron-right"
@@ -113,22 +116,24 @@
                             />
                         </svg>
                     </div>
-                    <div class="summary__title">
-                        <h4>Coding</h4>
+                    <div class="accordion-title">
+                        <h4>Development</h4>
                     </div>
-                </summary>
-                <p class="summary__description">
-                    +5 years of experience working on the front of the
-                    front-end. CSS architecture, scalability, performance
-                    optimization, familiar with W3C and accessibility standards.
-                    All around best practices and clean code. Experienced with
-                    popular JS frameworks. Storybook documentation. Several CMS
-                    platforms.
-                </p>
-            </details>
-            <details class="accordion">
-                <summary class="summary">
-                    <div class="summary__icon">
+                </template>
+                <template slot="accordion-content">
+                    <p class="accordion-content">
+                        +5 years of experience working on the front of the
+                        front-end. CSS architecture, scalability, performance
+                        optimization, familiar with W3C and accessibility
+                        standards. All around best practices and clean code.
+                        Experienced with popular JS frameworks. Storybook
+                        documentation. Several CMS platforms.
+                    </p>
+                </template>
+            </accordion-item>
+            <accordion-item>
+                <template slot="accordion-trigger">
+                    <div class="accordion-icon">
                         <svg class="svg-duck" version="1.1" viewBox="0 0 24 24">
                             <path
                                 class="svg-duck__shape"
@@ -143,19 +148,22 @@
                             />
                         </svg>
                     </div>
-                    <div class="summary__title">
+                    <div class="accordion-title">
                         <h4>Rubberduck</h4>
                     </div>
-                </summary>
-                <p class="summary__description">
-                    Experience in working with front & back-end development
-                    teams, proposing logic workarounds. Exploratory and manual
-                    testing, user simulation, gherkin syntax BDD writing.
-                </p>
-            </details>
-            <details class="accordion">
-                <summary class="summary">
-                    <div class="summary__icon">
+                </template>
+                <template slot="accordion-content">
+                    <p class="accordion-content">
+                        Experience in working with front & back-end development
+                        teams, proposing logic workarounds. Exploratory and
+                        manual testing, user simulation, gherkin syntax BDD
+                        writing.
+                    </p>
+                </template>
+            </accordion-item>
+            <accordion-item>
+                <template slot="accordion-trigger">
+                    <div class="accordion-icon">
                         <svg version="1.1" viewBox="0 0 24 24">
                             <circle
                                 class="svg-compass"
@@ -169,24 +177,33 @@
                             />
                         </svg>
                     </div>
-                    <div class="summary__title">
+                    <div class="accordion-title">
                         <h4>Collaboration</h4>
                     </div>
-                </summary>
-                <p class="summary__description">
-                    Experience in managing department, coordinating small teams
-                    up to 5 people (programmers, SEO specialist, junior
-                    designer). Experienced with Agile, Scrum and continuous
-                    delivery methodologies.
-                </p>
-            </details>
-        </div>
+                </template>
+                <template slot="accordion-content">
+                    <p class="accordion-content">
+                        Experience in managing department, coordinating small
+                        teams up to 5 people (programmers, SEO specialist,
+                        junior designer). Experienced with Agile, Scrum and
+                        continuous delivery methodologies.
+                    </p>
+                </template>
+            </accordion-item>
+        </accordion>
     </div>
 </template>
 
 <script>
+import Accordion from '@/components/accordion';
+import AccordionItem from '@/components/accordion-item';
+
 export default {
     name: 'about',
+    components: {
+        Accordion,
+        AccordionItem
+    }
 };
 </script>
 

@@ -1,20 +1,36 @@
 // ratio
 // ---------------------------------------------------------------------------------------------------------------------
 @mixin ratio($width, $height) {
-  position: relative;
-  &:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: ($height / $width) * 100%;
-  }
-  > .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+        pointer-events: none;
+    }
+}
+
+@mixin x-animation($value, $time){
+	animation: axis-X $time infinite ease;
+	transform-origin: 50% 50%;
+
+	@keyframes axis-X {
+		50% {
+			transform: translate3d($value, 0, 0);
+		}
+	}
+}
+
+@mixin y-animation($value, $time){
+	animation: axis-Y $time infinite ease;
+	transform-origin: 50% 50%;
+
+	@keyframes axis-Y {
+        50% {
+            transform: translate3d(0, $value, 0);
+		}
+	}
 }
 
 // touch scroll
@@ -67,7 +83,7 @@
 }
 
 @mixin bold-text() {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 // font smoothing
