@@ -69,7 +69,7 @@
         <div class="work-detail__credits">
             <p>Work created at Crucijuegos</p>
             <p>
-                <strong>Team:</strong> Cristian Aragon, Pablo Ladreyt, Iván Díaz
+                <strong>Team:</strong> Cristian Aragon, Iván Díaz
                 Bonansea.
             </p>
             <p>
