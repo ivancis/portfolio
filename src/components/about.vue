@@ -2,17 +2,15 @@
     <div class="about">
         <div class="about-body">
             <p class="about-p">
-                I'm truly passionate for user interfaces.<br />
-                I care to achieve a spotless digital experience.
+                I'm passionated for UI design and CSS.
             </p>
             <p class="about-p">
-                With every engagement, I try to get involved as a whole asset,
-                bringing my multidisciplinary expertise to the table to take the
-                product closer to its users.
+                With every engagement I try to get involved as a whole asset,
+                bringing my multidisciplinary expertise to improve efficiency
+                and general <em>niceness</em> of the interactive system.
             </p>
             <p class="about-p about-p--year">
-                Born in Rosario, Argentina. Now working and living in Marbella,
-                Spain.
+                Born in Rosario, Argentina. Now living in Marbella, Spain.
             </p>
         </div>
         <accordion>
@@ -46,9 +44,9 @@
                 </template>
                 <template slot="accordion-content">
                     <p class="accordion-content">
-                        +5 years of experience designing wireframes and
+                        +5 years of experience wireframing and designing
                         prototypes from low to high fidelity; crafting and
-                        constantly enhancing design systems.
+                        enhancing design systems.
                     </p>
                 </template>
             </accordion-item>
@@ -95,8 +93,10 @@
                 </template>
                 <template slot="accordion-content">
                     <p class="accordion-content">
-                        Information architecture, card sorting. Big fan of
-                        interaction design and user feedback.
+                        Experienced in information architecture for small-medium
+                        size applications and websites. Card sorting with
+                        development teams, Userlytics for user feeback, A/B
+                        testing. Big fan of interaction design.
                     </p>
                 </template>
             </accordion-item>
@@ -128,11 +128,11 @@
                 <template slot="accordion-content">
                     <p class="accordion-content">
                         +5 years of experience working on the front of the
-                        front-end. CSS architecture, scalability, performance
+                        front-end. CSS specialist, scalability, performance
                         optimization, familiar with W3C and accessibility
-                        standards. All around best practices and clean code.
-                        Experienced with popular JS frameworks. Storybook
-                        documentation. Several CMS platforms.
+                        standards. All around best practices and clean code
+                        enforcer. Experienced with popular JS frameworks.
+                        Storybook documentation. Several CMS platforms.
                     </p>
                 </template>
             </accordion-item>
@@ -160,9 +160,9 @@
                 <template slot="accordion-content">
                     <p class="accordion-content">
                         Experience in working with front & back-end development
-                        teams, proposing logic workarounds. Exploratory and
-                        manual testing, user simulation, gherkin syntax BDD
-                        writing.
+                        teams, proposing logic workarounds. QA out of monkey,
+                        exploratory and manual testing, user simulation, gherkin
+                        syntax BDD writing.
                     </p>
                 </template>
             </accordion-item>
@@ -188,10 +188,10 @@
                 </template>
                 <template slot="accordion-content">
                     <p class="accordion-content">
-                        Experience in managing department, coordinating small
-                        teams up to 5 people (programmers, SEO specialist,
-                        junior designer). Experienced with Agile, Scrum and
-                        continuous delivery methodologies.
+                        Experienced in working with development teams as a
+                        member and in a management roles (up to 5 people).
+                        Experienced with Agile, Scrum and continuous delivery
+                        methodologies.
                     </p>
                 </template>
             </accordion-item>

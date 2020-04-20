@@ -18,7 +18,7 @@
 
             <div class="work-detail__cover-content">
                 <div class="work-detail__logo work-detail__logo--modular">
-                    <img src="../assets/modular-logo.svg" alt="Modular" />
+                    <img src="../assets/modular_thumbnail.svg" alt="linkiar" />
                 </div>
             </div>
         </div>
@@ -31,12 +31,28 @@
                     single place, keeping in the loop every touchpoint related
                     to Sales, Clients, C level management, HR, Accounting,
                     Factory, etc.<br /><br />
-                    What started as an challenging personal project turned out
-                    to be the cornerstone of the digital transformation for
+                    Started as an personal project to then turn out to be the
+                    cornerstone of the digital transformation for
                     <router-link class="link" to="/crucijuegos"
                         >Crucijuegos</router-link
                     >.
                 </p>
+                <ul class="work-detail__list">
+                    <h6 class="work-detail__list-title">
+                        Mentionable challenges:
+                    </h6>
+                    <li class="work-detail__list-item">
+                        Build a scalable platform to store and display extensive
+                        amounts of data, with dynamic & interchangeable modules,
+                        following visual cues from a previous, outdated,
+                        software.
+                    </li>
+                    <li class="work-detail__list-item">
+                        Streamline all company processes through digital
+                        transformation: prioritizing Sales, Design and
+                        Manufacturing deparments.
+                    </li>
+                </ul>
                 <ul class="work-detail__list">
                     <h6 class="work-detail__list-title">
                         Main responsibilities:
@@ -46,6 +62,10 @@
                         developer.
                     </li>
                 </ul>
+                <span
+                    >(This project is running in production and stores sensible
+                    data. There isn't a demo URL ready ATM.)</span
+                >
             </div>
         </div>
         <div class="work-detail__gallery-wrapper">

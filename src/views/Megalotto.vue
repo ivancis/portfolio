@@ -29,7 +29,10 @@
             </div>
             <div class="work-detail__cover-content">
                 <div class="work-detail__logo work-detail__logo--megalotto">
-                    <img src="../assets/megalotto-logo.svg" alt="Megalotto" />
+                    <img
+                        src="../assets/megalotto_thumbnail.svg"
+                        alt="linkiar"
+                    />
                 </div>
             </div>
         </div>
@@ -47,13 +50,13 @@
                         Main responsibilities:
                     </h6>
                     <li class="work-detail__list-item">
-                        Responsible for UI development, CSS architecture and
-                        performance, interaction design, responsive design, SVG
-                        animations, etc.
+                        Responsible for full UI development, CSS architecture,
+                        interaction design, responsive design, SVG animations,
+                        etc.
                     </li>
                     <li class="work-detail__list-item">
-                        Enhancement of Megalotto's design system based on
-                        consistency and scalability.
+                        Enhancement proposals for Megalotto's design system
+                        based on consistency and scalability.
                     </li>
                     <li class="work-detail__list-item">
                         Contributions for MagicWand, in house front-end
@@ -76,6 +79,13 @@
                 <div class="work-detail__gallery-item">
                     <figure>
                         <img src="../assets/megalotto_2.jpg" alt="" />
+                    </figure>
+                </div>
+                <div
+                    class="work-detail__gallery-item work-detail__gallery-item--full"
+                >
+                    <figure>
+                        <img src="../assets/megalotto_3.jpg" alt="" />
                     </figure>
                 </div>
             </div>

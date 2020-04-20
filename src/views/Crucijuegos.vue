@@ -21,7 +21,7 @@
             <div class="work-detail__cover-content">
                 <div class="work-detail__logo work-detail__logo--crucijuegos">
                     <img
-                        src="../assets/crucijuegos-logo.svg"
+                        src="../assets/crucijuegos-white_thumbnail.svg"
                         alt="Crucijuegos"
                     />
                 </div>
@@ -32,42 +32,62 @@
                 <h3 class="work-detail__title">Crucijuegos</h3>
                 <p class="work-detail__text">
                     Crucijuegos is 30 year old company that designs,
-                    manufactures, distributes and installs heavy duty
-                    playgrounds, aqua parks and several urban furnitures for
-                    public spaces.<br />They focus primarely in the Argentinian
-                    market, but with a growing portfolio through other Latin
-                    American regions.
+                    manufactures and distributes heavy duty playgrounds and aqua
+                    parks for public spaces and the general public.<br />They
+                    are focused primarely on the Argentinian market with a
+                    tendency of expansion to Latin American regions.
                 </p>
+
+                <ul class="work-detail__list">
+                    <h6 class="work-detail__list-title">
+                        Mentionable challenges:
+                    </h6>
+                    <li class="work-detail__list-item">
+                        Design and develop internal and external digital
+                        products. Some of them with an intended low learning
+                        curve, aimed to non-tech personas.
+                    </li>
+                    <li class="work-detail__list-item">
+                        Organize and coordinate small development team to
+                        achieve MVPs on tight schedules.
+                    </li>
+                </ul>
+
                 <ul class="work-detail__list">
                     <h6 class="work-detail__list-title">
                         Main responsibilities:
                     </h6>
                     <li class="work-detail__list-item">
-                        UI designer & developer for e-commerce Angular based
-                        website & other Electron applications.
-                    </li>
-                    <li class="work-detail__list-item">
                         Manager of the development team during the digital
                         transformation process.
                     </li>
                     <li class="work-detail__list-item">
+                        UI designer & developer for all web and isolated digital
+                        products (Angular, Python & Electron based
+                        applications).
+                    </li>
+                    <li class="work-detail__list-item">
                         Performance optimization of existing applications
-                        through refactoring.
+                        through code-refactoring and design adjustments.
                     </li>
                     <li class="work-detail__list-item">
                         Graphic designer with commercial focus: email marketing,
-                        social media, brochures, etc..
+                        social media, brochures, etc.
                     </li>
                     <li class="work-detail__list-item">
-                        External resource coordination, responsible for
-                        complying with IRAM-ISO.
+                        External resource coordination (SEO specialist,
+                        photographer, graphic design agency).
+                    </li>
+                    <li class="work-detail__list-item">
+                        Responsible for the IT area to comply with IRAM-ISO
+                        regulation.
                     </li>
                 </ul>
                 <a
                     href="https://insumos.crucijuegos.com"
                     class="link"
                     target="_blank"
-                    >Visit website</a
+                    >Visit commercial website</a
                 >
             </div>
         </div>
@@ -90,7 +110,17 @@
                 </div>
                 <div class="work-detail__gallery-item">
                     <figure>
+                        <img src="../assets/timekeeper2.jpg" alt="" />
+                    </figure>
+                </div>
+                <div class="work-detail__gallery-item">
+                    <figure>
                         <img src="../assets/crucijuegos_4.jpg" alt="" />
+                    </figure>
+                </div>
+                <div class="work-detail__gallery-item">
+                    <figure>
+                        <img src="../assets/crucijuegos_5.jpg" alt="" />
                     </figure>
                 </div>
             </div>

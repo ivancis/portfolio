@@ -18,7 +18,10 @@
 
             <div class="work-detail__cover-content">
                 <div class="work-detail__logo work-detail__logo--linkiar">
-                    <img src="../assets/linkiar-logo.svg" alt="linkiar" />
+                    <img
+                        src="../assets/linkiar-white_thumbnail.svg"
+                        alt="linkiar"
+                    />
                 </div>
             </div>
         </div>
@@ -45,21 +48,19 @@
                     </li>
                 </ul>
                 <span
-                    >Feel free to check out my
-                    <a
-                        href="https://www.figma.com/file/bFd5hsJnrvTjuJXX9agfqz/ant?node-id=0%3A2462"
-                        target="_blank"
-                        >Figma playground</a
-                    >, since we are still on very early stage to share a stable
-                    URL</span
+                    >(This project is on a very early stage to share a stable
+                    URL.)</span
                 >
             </div>
         </div>
         <div class="work-detail__gallery-wrapper">
             <div class="work-detail__gallery">
-                <div
-                    class="work-detail__gallery-item work-detail__gallery-item--full"
-                >
+                <div class="work-detail__gallery-item">
+                    <figure>
+                        <img src="../assets/linkiar_2.jpg" alt="" />
+                    </figure>
+                </div>
+                <div class="work-detail__gallery-item">
                     <figure>
                         <img src="../assets/linkiar_1.jpg" alt="" />
                     </figure>
@@ -68,10 +69,7 @@
         </div>
         <div class="work-detail__credits">
             <p>Work created at Crucijuegos</p>
-            <p>
-                <strong>Team:</strong> Cristian Aragon, Iván Díaz
-                Bonansea.
-            </p>
+            <p><strong>Team:</strong> Cristian Aragon, Iván Díaz Bonansea.</p>
             <p>
                 <strong>Roles:</strong> Team manager, UI designer, front-end
                 developer.

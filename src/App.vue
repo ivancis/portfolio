@@ -6,7 +6,6 @@
                     <h1 class="header-title">Iván Díaz Bonansea</h1>
                 </li>
                 <li class="header-item">
-                    <p>UI designer & developer</p>
                     <a
                         class="header-link link"
                         href="https://www.linkedin.com/in/ivandb/"
