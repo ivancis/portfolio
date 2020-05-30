@@ -21,7 +21,7 @@
             <div class="work-detail__cover-content">
                 <div class="work-detail__logo work-detail__logo--crucijuegos">
                     <img
-                        src="../assets/crucijuegos-white_thumbnail.svg"
+                        src="../assets/crucijuegos_thumbnail.svg"
                         alt="Crucijuegos"
                     />
                 </div>

@@ -1,6 +1,6 @@
 
 $_linkiar-primary: #05052D;
-$_modular-primary: #171c30;
+$_modular-primary: #3c3c61;
 $_crucijuegos-primary: #0a3666;
 $_megalotto-primary: #ff6847;
 $_megalotto-secondary: #f8464e;
@@ -206,7 +206,7 @@ $gradient-3: var(--gradient-3, #{$_gradient-3});
 // ---------------------------------------------------------------------------------------------------------------------
 $_text: $_medium;
 $_caption: $_medium-dark;
-$_header: $_dark;
+$_header: #383838;
 
 $text: var(--text, #{$_text});
 $caption: var(--caption, #{$_caption});
@@ -214,7 +214,7 @@ $header: var(--header, #{$_header});
 
 // typography
 // ---------------------------------------------------------------------------------------------------------------------
-$_font-family: 'Karla', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
+$_font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif;
 $_font-family--mono: monospace;
 $_font-family--header: $_font-family;
 $_font-size: 14px;
@@ -289,8 +289,8 @@ $space--xxx-small--negative: var(--space--xxx-small--negative, #{$_space--xxx-sm
 // ---------------------------------------------------------------------------------------------------------------------
 $_default-width: 290px;
 $_default-width-large: 360px;
-$_content-size: 1110px;
-$_content-size-medium: 640px;
+$_content-size: 968px;
+$_content-size-medium: 480px;
 $_content-size-small: 320px;
 $_top-navigation-height: 56px;
 $_bottom-navigation-height: 64px;

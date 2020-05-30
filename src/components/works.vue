@@ -1,55 +1,97 @@
 <template>
     <section class="works">
-        <router-link class="works-item" to="/linkiar">
-            <div class="works-thumbnail">
+        <div class="works-item">
+            <router-link
+                class="works-thumbnail works-thumbnail--linkiar"
+                style="--works-thumbnail-color: #05052D;"
+                to="/linkiar"
+            >
                 <figure>
-                    <img src="../assets/linkiar_thumbnail.svg" alt="test" />
+                    <img src="../assets/linkiar_thumbnail.svg" alt="linkiar" />
                 </figure>
-            </div>
+            </router-link>
             <div class="works-description">
-                <h5 class="works-title">Linkiar (2020)</h5>
-                <span class="works-subtitle"
-                    >UI design, front-end development</span
-                >
+                <div class="works-title">
+                    <router-link
+                        class="link"
+                        to="/linkiar"
+                    >
+                        Linkiar
+                    </router-link>
+                    <em>(2020)</em>
+                </div>
+                <span class="works-subtitle">UI & UX design, front-end development</span>
             </div>
-        </router-link>
-        <router-link class="works-item" to="/megalotto">
-            <div class="works-thumbnail">
+        </div>
+        <div class="works-item">
+            <router-link
+                class="works-thumbnail works-thumbnail--megalotto"
+                style="--works-thumbnail-color: #f8464e;"
+                to="/megalotto"
+            >
                 <figure>
-                    <img src="../assets/megalotto_thumbnail.svg" alt="test" />
+                    <img src="../assets/megalotto_thumbnail.svg" alt="megalotto" />
                 </figure>
-            </div>
+            </router-link>
             <div class="works-description">
-                <h5 class="works-title">Megalotto (2020)</h5>
+                <div class="works-title">
+                    <router-link
+                        class="link"
+                        to="/megalotto"
+                    >
+                        Megalotto
+                    </router-link>
+                    <em>(2020)</em>
+                </div>
                 <span class="works-subtitle">Front-end development</span>
             </div>
-        </router-link>
-        <router-link class="works-item" to="/modular">
-            <div class="works-thumbnail">
+        </div>
+        <div class="works-item">
+            <router-link
+                class="works-thumbnail works-thumbnail--modular"
+                style="--works-thumbnail-color: #3c3c61;"
+                to="/modular"
+            >
                 <figure>
-                    <img src="../assets/modular_thumbnail.svg" alt="test" />
+                    <img src="../assets/modular_thumbnail.svg" alt="modular" />
                 </figure>
-            </div>
+            </router-link>
             <div class="works-description">
-                <h5 class="works-title">Modular (2019)</h5>
-                <span class="works-subtitle"
-                    >UI design, front-end development</span
-                >
+                <div class="works-title">
+                    <router-link
+                        class="link"
+                        to="/modular"
+                    >
+                        Modular
+                    </router-link>
+                    <em>(2019)</em>
+                </div>
+                <span class="works-subtitle">UI & UX design, front-end development</span>
             </div>
-        </router-link>
-        <router-link class="works-item" to="/crucijuegos">
-            <div class="works-thumbnail">
+        </div>
+        <div class="works-item">
+            <router-link
+                class="works-thumbnail works-thumbnail--crucijuegos"
+                style="--works-thumbnail-color: #0a3666;"
+                to="/crucijuegos"
+            >
                 <figure>
-                    <img src="../assets/crucijuegos_thumbnail.svg" alt="test" />
+                    <img src="../assets/crucijuegos_thumbnail.svg" alt="crucijuegos" />
                 </figure>
-            </div>
+            </router-link>
             <div class="works-description">
-                <h5 class="works-title">Crucijuegos (2018)</h5>
-                <span class="works-subtitle"
-                    >UI design, front-end development</span
-                >
+                <div class="works-title">
+                    <router-link
+                        class="link"
+                        to="/crucijuegos"
+                    >
+                        Crucijuegos
+                    </router-link>
+                    <em>(2018)</em>
+                </div>
+                <span class="works-subtitle">UI & UX design, front-end development</span>
             </div>
-        </router-link>
+        </div>
     </section>
 </template>
 

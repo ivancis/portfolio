@@ -81,6 +81,16 @@
                         <img src="../assets/megalotto_2.jpg" alt="" />
                     </figure>
                 </div>
+                <div class="work-detail__gallery-item">
+                    <figure>
+                        <img src="../assets/megalotto_4.jpg" alt="" />
+                    </figure>
+                </div>
+                <div class="work-detail__gallery-item">
+                    <figure>
+                        <img src="../assets/megalotto_4.jpg" alt="" />
+                    </figure>
+                </div>
                 <div
                     class="work-detail__gallery-item work-detail__gallery-item--full"
                 >

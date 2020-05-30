@@ -21,12 +21,3 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.accordion {
-    display: grid;
-    grid-gap: $space;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-</style>

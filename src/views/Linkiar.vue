@@ -19,7 +19,7 @@
             <div class="work-detail__cover-content">
                 <div class="work-detail__logo work-detail__logo--linkiar">
                     <img
-                        src="../assets/linkiar-white_thumbnail.svg"
+                        src="../assets/linkiar_thumbnail.svg"
                         alt="linkiar"
                     />
                 </div>
