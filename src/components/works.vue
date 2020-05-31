@@ -20,7 +20,7 @@
                     </router-link>
                     <em>(2020)</em>
                 </div>
-                <span class="works-subtitle">UI & UX design, front-end development</span>
+                <span class="works-subtitle">UI, UX design & development</span>
             </div>
         </div>
         <div class="works-item">
@@ -66,7 +66,7 @@
                     </router-link>
                     <em>(2019)</em>
                 </div>
-                <span class="works-subtitle">UI & UX design, front-end development</span>
+                <span class="works-subtitle">UI, UX design & development</span>
             </div>
         </div>
         <div class="works-item">
@@ -89,7 +89,7 @@
                     </router-link>
                     <em>(2018)</em>
                 </div>
-                <span class="works-subtitle">UI & UX design, front-end development</span>
+                <span class="works-subtitle">UI, UX design & development</span>
             </div>
         </div>
     </section>

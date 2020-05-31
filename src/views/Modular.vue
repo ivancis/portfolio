@@ -14,7 +14,19 @@
             </ul>
         </div>
         <div class="work-detail__cover">
-            <div class="work-detail__cover-background modular-background"></div>
+            <div class="work-detail__cover-background modular-background">
+                <vue-css-doodle class="modular-doodle">
+                    :doodle {
+                        @grid: 200 / 100vmax;
+                    }
+
+                    @size: 1px calc(141.4% + 1px);
+                    transform: rotate(@p(±45deg));
+                    background: #384162;
+                    margin: auto;
+                    );
+                </vue-css-doodle>
+            </div>
 
             <div class="work-detail__cover-content">
                 <div class="work-detail__logo work-detail__logo--modular">
@@ -123,4 +135,12 @@
     </div>
 </template>
 
-<script></script>
+<script>
+import Vue from 'vue';
+import VueCssDoodle from '@luxdamore/vue-css-doodle';
+import '@luxdamore/vue-css-doodle/dist/VueCssDoodle.css';
+
+Vue.use(VueCssDoodle);
+
+export default {};
+</script>

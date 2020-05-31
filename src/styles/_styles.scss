@@ -59,48 +59,53 @@
 	height: 100%;
 	background-size: cover;
 	background-position: 50%;
+	/* background-image: url("../assets/crucijuegos-background.jpg"); */
 	background-color: $_crucijuegos-primary;
 }
 
-.modular-background {
-	background-color: $_modular-primary;
+.linkiar-background {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	background-color: $_linkiar-primary;
+	height: 100%;
 }
 
-.linkiar-background {
+.linkiar-particles {
+	grid-area: 1/1/1/1;
+    margin: auto;
+	background-color: $_linkiar-primary;
+}
+
+.particles-js-canvas-el {
+  width: auto !important;
+  height: 100% !important;
+}
+
+.modular-doodle {
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
 	background-color: $_linkiar-primary;
 }
 
 #app {
 	display: grid;
 	grid-auto-rows: auto 1fr;
-	grid-gap: $space;
-	padding: $space--x-large 0;
+	padding: 10vh 10vw;
+	grid-gap: 5vh;
 	opacity: 0;
 	animation: fade-in-animation $duration 1 forwards;
 	min-height: 100vh;
-
-	@include phablet {
-		padding: 10vw 0;
-	}
 }
 
-header {
-	@include set-font-size(11px);
-
-	margin: 0 auto 5vw;
-	padding: 0 $space;
-	width: 100%;
-	letter-spacing: .8px;
-	line-height: 1.5;
-}
-
-.header-list {
+.header {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: $space--large;
-	margin: 0 auto;
 	width: 100%;
-	max-width: $content-size;
+	max-width: $content-size-medium;
 
 	@include phablet() {
 		grid-template-columns: 1fr 1fr;
@@ -108,21 +113,32 @@ header {
 }
 
 .header-title {
+	@include set-font-size(13px);
+
+	letter-spacing: 1.3px;
+	line-height: 1.5;
 	cursor: pointer;
 }
 
+.header-list {
+	display: grid;
+	grid-gap: $space--small;
+}
 .header-item {
 	display: grid;
 	grid-gap: $space;
 	margin: 0 0 auto;
 
 	p {
-		@include set-font-size(10px);
+		@include set-font-size(12px);
+		letter-spacing: .8px;
 	}
 }
 
 .contact-links {
 	display: flex;
+	letter-spacing: 1.3px;
+
 	> * {
 		&:not(:last-child) {
 			margin: 0 1ex 0 0;
@@ -131,21 +147,19 @@ header {
 }
 
 .header-link {
-	@include set-font-size(11px);
+	@include set-font-size(12px);
 }
 
 .detail-nav {
 	display: grid;
 	background: $light;
-	padding: $space;
 	z-index: 1;
+	margin: 0 auto 0 -5vw;
+	width: calc(100% + 10vw);
 
 	&--top {
 		position: sticky;
 		top: 0;
-		margin: 0 auto 0 calc(#{$space--small} * -1);
-		width: calc(100% + #{$space});
-
 		.detail-nav__list {
 			place-content: flex-start;
 		}
@@ -159,7 +173,7 @@ header {
 	grid-auto-flow: column;
 	margin: 0 auto;
 	width: 100%;
-	max-width: $content-size;
+	max-width: $content-size-medium;
 }
 
 .detail-nav__link {
@@ -168,6 +182,7 @@ header {
 	display: grid;
 	grid-template-columns: auto 1fr;
 	grid-gap: $space--small;
+	padding: $space--small;
 	text-decoration: none;
 	color: $medium-light;
 
@@ -194,12 +209,12 @@ header {
 	display: grid;
 	grid-gap: $space--xx-large;
 	margin: 0 auto;
-	padding: 0 $space--small;
 	width: 100%;
 }
 
 .page {
 	display: grid;
+	grid-gap: $space--large;
 	margin-bottom: $space--x-large;
 	opacity: 0;
 	animation: fade-in-animation calc(#{$duration} * 2) 1 forwards;
@@ -207,20 +222,18 @@ header {
 
 .works {
 	display: grid;
-	grid-gap: $space--x-large;
-	margin: 0 auto 5vw;
+	grid-gap: $space--large;
+	margin: 0;
 	width: 100%;
-	max-width: $content-size;
+	max-width: $content-size-small;
 
 	@include tablet() {
-		grid-gap: 5vw $space--large;
 		grid-template-columns: 1fr 1fr;
 	}
 }
 
 .works-item {
 	display: grid;
-	grid-gap: $space;
 	margin: 0 auto auto;
 	width: 100%;
 	text-decoration: none;
@@ -228,7 +241,13 @@ header {
 	animation: slide-in-animation $duration 1 forwards;
 
 	@include phablet() {
-		grid-gap: $space--large;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: $space;
+	}
+
+	@include tablet() {
+		grid-template-columns: 1fr;
+		grid-gap: 0;
 	}
 }
 
@@ -243,7 +262,7 @@ header {
 }
 
 .works-thumbnail {
-	@include ratio(2,1);
+	@include ratio(1.5,1);
 	display: grid;
 	position: relative;
 	border-radius: $border-radius;
@@ -266,13 +285,6 @@ header {
 		}
 	}
 
-	@include phablet() {
-		@include ratio(3,1);
-	}
-	@include tablet() {
-		@include ratio(2,1);
-	}
-
 	figure {
 		display: flex;
 		position: absolute;
@@ -283,7 +295,7 @@ header {
 
 		> * {
 			margin: auto;
-			height: 100%;
+			height: 80%; // REVIEW
 			object-fit: cover;
 		}
 	}
@@ -303,22 +315,16 @@ header {
 }
 
 .works-description {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-gap: $space--small;
-	padding: 0 $space;
+	margin: auto 0;
+	padding: $space;
 	transition: opacity $duration $bezier;
-
-	@include phablet() {
-		grid-template-columns: 1fr 1fr;
-	}
 }
 
 .works-title {
 	@include set-font-size(13px);
 	@include regular-text();
 
-	display: grid;
+	display: flex;
 	grid-gap: $space--small;
     place-content: center flex-start;
 	color: $caption;
@@ -349,30 +355,32 @@ header {
 }
 
 .work-detail__cover {
-	@include ratio(1,1);
-
 	display: grid;
-	margin: 0 auto 0 calc(#{$space} * -1);
-	width: calc(100% + #{$space--large});
+	margin: 0 auto 0 -5vw;
+	width: calc(100% + 10vw);
 	overflow: hidden;
 	background: $medium;
 	opacity: 0;
 	animation: fade-in-animation $duration $delay 1 forwards;
 
-	&:before {
-		grid-area: 1 / 1 / 1 / 1;
-	}
+	figure {
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 
-	@include phablet() {
-		@include ratio(2,1);
-	}
-
-	@include desktop() {
-		@include ratio(4,1);
+		> * {
+			margin: auto;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 }
 
 .work-detail__cover-background {
+	@include ratio(3,1);
 	grid-area: 1 / 1 / 1 / 1;
 }
 .work-detail__cover-content {
@@ -397,7 +405,7 @@ header {
 	padding: 0 $space--small;
 	margin: 5vw auto;
 	width: 100%;
-	max-width: $content-size;
+	max-width: $content-size-medium;
 }
 
 .work-detail__title {
@@ -455,7 +463,7 @@ header {
 	margin: 0 auto 5vw;
 	padding: 0 $space;
 	width: 100%;
-	max-width: $content-size;
+	max-width: $content-size-medium;
 	line-height: 1.4;
 
 	.link {
@@ -516,11 +524,8 @@ header {
 .about {
 	display: grid;
 	place-content: flex-start;
-	grid-gap: $space--large;
-	margin: 0 auto 5vw;
-	padding: $space;
 	width: 100%;
-	max-width: $content-size;
+	max-width: $content-size-medium;
 
 	&:before {
 		content: "";
@@ -534,7 +539,7 @@ header {
 .about-p {
 	@include set-font-size(11px);
 
-	max-width: $content-size-medium;
+	max-width: calc(#{$content-size-small} - #{$space--large});
 	letter-spacing: .8px;
 	line-height: 1.6;
 	color: $caption;
@@ -543,21 +548,24 @@ header {
 
 .bulletpoints {
 	display: grid;
-	margin: 0 auto;
 	width: 100%;
-	max-width: $content-size;
+	max-width: $content-size-medium;
 }
 
 .accordion {
-    display: grid;
-    grid-gap: $space--large $space--x-large;
+	display: grid;
     list-style: none;
-    margin: 0;
-	padding: $space;
+	margin: 0;
 
 	@include tablet() {
 		grid-template-columns: 1fr 1fr;
 	}
+}
+
+.accordion-list {
+	display: grid;
+	place-content: flex-start;
+	grid-gap: $space;
 }
 
 .accordion-title {
@@ -574,8 +582,9 @@ header {
 	margin: 0;
 	line-height: 1.8;
 	max-width: $content-size-medium;
-	padding: 0 0 0 calc((#{$icon-size} / 2) + #{$space});
-	border-left: $stroke-size solid $_n30;
+	padding: $space;
+	padding-left: $space--large;
+	border-left: $stroke-size solid $_n20;
 	margin-left: calc(#{$space--small} + #{$space--x-small});
 	color: $caption;
 }
@@ -586,7 +595,6 @@ header {
 
 .accordion__item {
     display: grid;
-    grid-gap: $space--small;
     cursor: pointer;
     position: relative;
     transition: padding $duration 0.1s $bezier;
@@ -603,12 +611,13 @@ header {
 }
 
 .accordion__item_active {
-    padding: 0 0 $icon-size;
+    margin: 0 0 $icon-size;
 }
 
 .accordion__trigger {
     display: grid;
     grid-gap: $space;
+    padding: $space 0;
     grid-auto-flow: column;
 	place-content: center flex-start;
 	margin: 0 0 auto;

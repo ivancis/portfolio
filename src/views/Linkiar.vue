@@ -14,8 +14,23 @@
             </ul>
         </div>
         <div class="work-detail__cover">
-            <div class="work-detail__cover-background linkiar-background"></div>
-
+            <div class="work-detail__cover-background linkiar-background">
+                <!-- <vue-particles
+                    class="linkiar-particles"
+                    color="#dedede"
+                    :particleOpacity="0.5"
+                    :particlesNumber="50"
+                    shapeType="circle"
+                    :particleSize="4"
+                    linesColor="#04a89d"
+                    :linesWidth="1"
+                    :lineLinked="true"
+                    :lineOpacity="0.3"
+                    :linesDistance="200"
+                    :moveSpeed="4"
+                >
+                </vue-particles> -->
+            </div>
             <div class="work-detail__cover-content">
                 <div class="work-detail__logo work-detail__logo--linkiar">
                     <img
@@ -102,4 +117,10 @@
     </div>
 </template>
 
-<script></script>
+<script>
+import Vue from 'vue';
+import VueParticles from 'vue-particles';
+Vue.use(VueParticles);
+
+export default {};
+</script>

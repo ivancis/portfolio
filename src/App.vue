@@ -12,7 +12,7 @@
                     </router-link>
                 </li>
                 <li class="header-item">
-                    <p>Product designer / Developer<br>Málaga, Spain.</p>
+                    <p>Product designer and developer.</p>
                     <span class="contact-links">
                         <a
                             class="header-link link"
@@ -21,21 +21,19 @@
                         >
                             email@ivandb.com
                         </a>
-                        <span>/</span>
+                        <!-- <span>/</span>
                         <a
                             class="header-link link"
                             href="https://www.linkedin.com/in/ivandb/"
                             target="_blank"
                         >
                             LinkedIn
-                        </a>
+                        </a> -->
                     </span>
                 </li>
             </ul>
         </header>
-        <section class="content">
-            <router-view />
-        </section>
+        <router-view />
     </div>
 </template>
 
