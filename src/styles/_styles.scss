@@ -1,103 +1,64 @@
-
-.megalotto-background {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: $_megalotto-gradient;
-}
-
-.megalotto-balls {
-	$_ball-grid__cell: 24;
-	$_ball-grid__col: calc(100% / #{$_ball-grid__cell});
-	$_ball-grid__row: calc(100% / #{$_ball-grid__cell});
-
-	display: grid;
-	grid-template-columns: repeat($_ball-grid__cell, $_ball-grid__col);
-	grid-template-rows: repeat($_ball-grid__cell, $_ball-grid__row);
-	position: relative;
-	top: calc(#{$_ball-grid__col} * -6);
-	left: calc(#{$_ball-grid__row} * -6);
-	width: calc(100% + calc(#{$_ball-grid__row} * 12));
-	height: calc(100% + calc(#{$_ball-grid__col} * 12));
-	overflow: hidden;
-
-}
-.megalotto-ball-item {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	&--1 {
-		grid-area: 1/5/-5/10;
-		justify-content: flex-end;
-	}
-
-	&--2 {
-		grid-area: 1/11/-1/-11;
-		transform: rotate(16deg) scaleX(-1);
-	}
-
-	&--3 {
-		grid-area: -1/-4/4/-8;
-		transform: rotate(24deg) scaleY(-1);
-	}
-}
-
-.megalotto-ball {
-	@include ratio(1,1);
-	width: 100%;
-	fill: url(#megalotto-gradient) $_megalotto-secondary;
-}
-
-.crucijuegos-background {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: 50%;
-	/* background-image: url("../assets/crucijuegos-background.jpg"); */
-	background-color: $_crucijuegos-primary;
-}
-
-.linkiar-background {
-	display: grid;
-	align-items: center;
-	justify-content: center;
-	background-color: $_linkiar-primary;
-	height: 100%;
-}
-
-.linkiar-particles {
-	grid-area: 1/1/1/1;
-    margin: auto;
-	background-color: $_linkiar-primary;
-}
-
-.particles-js-canvas-el {
-  width: auto !important;
-  height: 100% !important;
-}
-
-.modular-doodle {
-	position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-	background-color: $_linkiar-primary;
-}
-
 #app {
 	display: grid;
 	grid-auto-rows: auto 1fr;
-	padding: 10vh 10vw;
+	/* padding: 10vh 10vw; */
 	grid-gap: 5vh;
 	opacity: 0;
 	animation: fade-in-animation $duration 1 forwards;
 	min-height: 100vh;
+}
+
+.test {
+	display: grid;
+	width: 100%;
+	position: relative;
+}
+
+.test-background {
+	/* grid-area: 1/1/1/1;
+	display: grid;
+    overflow: hidden;
+	place-content: center; */
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.test-content {
+	@include ratio(3,1);
+
+	display: grid;
+	width: 100%;
+	max-width: 624px; // REVIEW
+	margin: 0 auto;
+
+	&:before {
+		grid-area: 1/1/1/1;
+	}
+}
+
+.test-content__wrapper {
+	grid-area: 1/1/1/1;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-gap: $space;
+	padding: $space; // gutter
+	padding-right: calc((100% / 3) + #{$space}); // safe space for image + gutter
+	margin: auto 0;
+}
+
+.test-content__image {
+
+}
+.test-content__text {
+
 }
 
 .header {
@@ -155,25 +116,35 @@
 	background: $light;
 	z-index: 1;
 	margin: 0 auto 0 -5vw;
+    padding-left: 5vw;
 	width: calc(100% + 10vw);
 
 	&--top {
 		position: sticky;
 		top: 0;
+		place-content: flex-start;
+	}
+
+	&--bottom {
 		.detail-nav__list {
-			place-content: flex-start;
+			margin: 0 auto;
+
+			.detail-nav__link {
+				margin: 0 auto;
+			}
 		}
 	}
 }
 
 .detail-nav__list {
 	display: grid;
-	grid-gap: $space--x-large;
-	place-content: center;
 	grid-auto-flow: column;
-	margin: 0 auto;
 	width: 100%;
 	max-width: $content-size-medium;
+}
+
+.detail-nav__item {
+	display: grid;
 }
 
 .detail-nav__link {
@@ -225,10 +196,14 @@
 	grid-gap: $space--large;
 	margin: 0;
 	width: 100%;
-	max-width: $content-size-small;
+	max-width: $content-size;
 
 	@include tablet() {
 		grid-template-columns: 1fr 1fr;
+	}
+
+	@include desktop() {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 }
 
@@ -247,7 +222,7 @@
 
 	@include tablet() {
 		grid-template-columns: 1fr;
-		grid-gap: 0;
+		grid-gap: $space--small;
 	}
 }
 
@@ -265,11 +240,9 @@
 	@include ratio(1.5,1);
 	display: grid;
 	position: relative;
-	border-radius: $border-radius;
 	overflow: hidden;
-	border: 1px solid $light;
-	box-shadow: 0px 0px 0px 1px rgba($_medium-light, 0.2);
 	transition: box-shadow $duration $bezier;
+	cursor: pointer;
 
 	&::before {
 		content: "";
@@ -278,8 +251,6 @@
 	}
 
 	&:hover {
-		box-shadow: 0px 0px 0px 1px rgba($_medium-light, 1);
-
 		&::before {
 			opacity: 0.9;
 		}
@@ -292,32 +263,42 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+		pointer-events: none;
 
 		> * {
 			margin: auto;
-			height: 80%; // REVIEW
+			height: 100%;
 			object-fit: cover;
 		}
 	}
 
-	&--linkiar {
-		/* background: red; */
-	}
-	&--megalotto {
-		/* background: orangered; */
-	}
 	&--modular {
-		/* background: orange; */
+		background: $_modular-primary;
 	}
+
+	&--linkiar {
+		background: $_linkiar-primary;
+	}
+
+	&--megalotto {
+		background: $_megalotto-gradient;
+	}
+
 	&--crucijuegos {
-		/* background: gold; */
+		background: $_crucijuegos-primary;
 	}
 }
 
 .works-description {
+	display: grid;
+	grid-gap: $space--small;
 	margin: auto 0;
 	padding: $space;
 	transition: opacity $duration $bezier;
+
+	@include desktop() {
+		padding: $space--small;
+	}
 }
 
 .works-title {
@@ -337,8 +318,11 @@
 	em {
 		@include set-font-size(11px);
 
+		margin: auto 1ch;
 		font-family: $font-family--mono;
 		font-style: normal;
+		vertical-align: middle;
+		line-height: 1;
 		opacity: 0.5;
 	}
 }
@@ -348,10 +332,6 @@
 
 	color: $text;
 	letter-spacing: .8px;
-
-	@include phablet() {
-		text-align: right;
-	}
 }
 
 .work-detail__cover {
@@ -362,31 +342,119 @@
 	background: $medium;
 	opacity: 0;
 	animation: fade-in-animation $duration $delay 1 forwards;
-
-	figure {
-		display: flex;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-
-		> * {
-			margin: auto;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
 }
 
 .work-detail__cover-background {
 	@include ratio(3,1);
-	grid-area: 1 / 1 / 1 / 1;
-}
-.work-detail__cover-content {
+
 	grid-area: 1 / 1 / 1 / 1;
 	display: grid;
+
+	&:before {
+		position: relative;
+		grid-area: 1 / 1 / 1 / 1;
+	}
+
+	&--crucijuegos {
+		background: $_crucijuegos-primary;
+		background-image: url(../src/assets/crucijuegos-background.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-size: auto 100%;
+		filter: blur(4px);
+	}
+
+}
+
+.work-detail__cover-background-element {
+	grid-area: 1 / 1 / 1 / 1;
+
+	display: grid;
 	place-content: center;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+	overflow: hidden;
+
+	&--modular {
+		background: $_modular-primary;
+	}
+
+	&--linkiar {
+		background: $_linkiar-primary;
+	}
+
+	&--megalotto {
+		background: $_megalotto-gradient;
+	}
+
+	&--crucijuegos {
+		background: $_crucijuegos-primary;
+	}
+
+	.particles {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+
+
+	.doodle {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.megalotto-balls {
+	$_ball-grid__cell: 24;
+	$_ball-grid__col: calc(100% / #{$_ball-grid__cell});
+	$_ball-grid__row: calc(100% / #{$_ball-grid__cell});
+
+	display: grid;
+	grid-template-columns: repeat($_ball-grid__cell, $_ball-grid__col);
+	grid-template-rows: repeat($_ball-grid__cell, $_ball-grid__row);
+	position: relative;
+	top: calc(#{$_ball-grid__col} * -6);
+	left: calc(#{$_ball-grid__row} * -6);
+	width: calc(100% + calc(#{$_ball-grid__row} * 12));
+	height: calc(100% + calc(#{$_ball-grid__col} * 12));
+	overflow: hidden;
+
+}
+.megalotto-ball-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&--1 {
+		grid-area: 1/5/-5/10;
+		justify-content: flex-end;
+	}
+
+	&--2 {
+		grid-area: 1/11/-1/-11;
+		transform: rotate(16deg) scaleX(-1);
+	}
+
+	&--3 {
+		grid-area: -1/-4/4/-8;
+		transform: rotate(24deg) scaleY(-1);
+	}
+}
+
+.megalotto-ball {
+	@include ratio(1,1);
+	width: 100%;
+	fill: url(#megalotto-gradient) $_megalotto-secondary;
+}
+
+.work-detail__cover-content {
+	grid-area: 1 / 1 / 1 / 1;
+	margin: auto;
 	z-index: 1;
 }
 
@@ -412,11 +480,6 @@
 	@include set-font-size(16px);
 
 	letter-spacing: .8px;
-	&:before {
-		content: "—";
-		margin-right: $space--small;
-		color: $text;
-	}
 }
 
 .work-detail__description {
@@ -437,7 +500,6 @@
 .work-detail__list-title {
 	@include set-font-size(16px);
 	color: $_n50;
-	display: none;
 }
 
 .work-detail__list-item {
@@ -446,12 +508,10 @@
 	letter-spacing: .4px;
 
 	&:before {
-		content: "";
-		display: inline-block;
-		width: $space--x-small;
-		height: $space--x-small;
-		margin: 0 $space--small $space--xx-small 0;
-		background-color: $medium-light;
+		content: "—";
+		margin-right: $space--small;
+		width: $space;
+		color: $text;
 	}
 }
 
@@ -483,7 +543,7 @@
 .work-detail__gallery {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-gap: $space--small;
+	grid-gap: $space--x-small;
 	position: relative;
 	margin: auto auto $space--x-large;
 	max-width: calc(#{$content-size} + 10vw);
@@ -529,10 +589,10 @@
 
 	&:before {
 		content: "";
-		margin: $space--large auto $space--small 0;
+		margin: $space auto $space--large 0;
 		width: $space--large;
 		height: $stroke-size;
-		background: rgba($_caption, 0.2);
+		background: rgba($_medium-light, 0.2);
 	}
 }
 
@@ -554,8 +614,13 @@
 
 .accordion {
 	display: grid;
+	grid-gap: $space--small;
     list-style: none;
 	margin: 0;
+
+	@include tablet() {
+		grid-gap: $space--large;
+	}
 
 	@include tablet() {
 		grid-template-columns: 1fr 1fr;
@@ -564,8 +629,8 @@
 
 .accordion-list {
 	display: grid;
-	place-content: flex-start;
-	grid-gap: $space;
+	grid-gap: $space--small;
+	margin: 0 0 auto 0;
 }
 
 .accordion-title {
@@ -582,8 +647,7 @@
 	margin: 0;
 	line-height: 1.8;
 	max-width: $content-size-medium;
-	padding: $space;
-	padding-left: $space--large;
+	padding: 0 0 0 calc(#{$space--large} - #{$space--x-small});
 	border-left: $stroke-size solid $_n20;
 	margin-left: calc(#{$space--small} + #{$space--x-small});
 	color: $caption;

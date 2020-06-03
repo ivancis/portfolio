@@ -35,6 +35,11 @@ export default new Router({
             path: '/crucijuegos',
             name: 'crucijuegos',
             component: () => import('./views/Crucijuegos.vue')
+        },
+        {
+            path: '/404',
+            name: '404',
+            template: '<p>Page Not Found</p>'
         }
     ],
     mode: 'history'

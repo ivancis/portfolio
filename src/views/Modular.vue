@@ -14,18 +14,29 @@
             </ul>
         </div>
         <div class="work-detail__cover">
-            <div class="work-detail__cover-background modular-background">
-                <vue-css-doodle class="modular-doodle">
-                    :doodle {
-                        @grid: 200 / 100vmax;
-                    }
+            <div
+                class="
+                    work-detail__cover-background
+                    work-detail__cover-background--modular
+                "
+            >
+                <div
+                    class="
+                        work-detail__cover-background-element
+                        work-detail__cover-background-element--modular
+                    "
+                >
+                    <vue-css-doodle class="doodle">
+                        :doodle {
+                            @grid: 400 / 100vmax;
+                        }
 
-                    @size: 1px calc(141.4% + 1px);
-                    transform: rotate(@p(±45deg));
-                    background: #384162;
-                    margin: auto;
-                    );
-                </vue-css-doodle>
+                        @size: 1px calc(140% + 1px);
+                        transform: rotate(@p(±45deg));
+                        background: #384162;
+                        );
+                    </vue-css-doodle>
+                </div>
             </div>
 
             <div class="work-detail__cover-content">
@@ -38,46 +49,25 @@
             <div class="work-detail__description">
                 <h3 class="work-detail__title">Modular</h3>
                 <p class="work-detail__text">
-                    Modular is an Angular based ERP system that connects all
-                    major departments of, virtually, any given industry in a
-                    single place, keeping in the loop every touchpoint related
-                    to Sales, Clients, C level management, HR, Accounting,
-                    Factory, etc.<br /><br />
-                    Started as an personal project to then turn out to be the
-                    cornerstone of the digital transformation for
-                    <router-link class="link" to="/crucijuegos"
-                        >Crucijuegos</router-link
-                    >.
+                    ERP & CMS system touchpoint for Sales, HR, Accounting and Factory; with an output of management analytics.</br>
+                    Personal project.
                 </p>
                 <ul class="work-detail__list">
                     <h6 class="work-detail__list-title">
-                        Mentionable challenges:
+                        Responsibilities:
                     </h6>
                     <li class="work-detail__list-item">
-                        Build a scalable platform to store and display extensive
-                        amounts of data, with dynamic & interchangeable modules,
-                        following visual cues from a previous, outdated,
-                        software.
+                        Plan and produce a scalable Angular based platform, that stores and display extensive
+                        amounts of data, with dynamic & interchangeable modules.
                     </li>
                     <li class="work-detail__list-item">
-                        Streamline all company processes through digital
-                        transformation: prioritizing Sales, Design and
-                        Manufacturing deparments.
+                        Integration between company areas and processes through digital transformation.
                     </li>
                 </ul>
-                <ul class="work-detail__list">
-                    <h6 class="work-detail__list-title">
-                        Main responsibilities:
-                    </h6>
-                    <li class="work-detail__list-item">
-                        Concept, first-stage UX/UI designer, front-end
-                        developer.
-                    </li>
-                </ul>
-                <span
+                <!-- <span
                     >(This project is running in production and stores sensible
                     data. There isn't a demo URL ready ATM.)</span
-                >
+                > -->
             </div>
         </div>
         <div class="work-detail__gallery-wrapper">
@@ -106,7 +96,9 @@
         </div>
         <div class="work-detail__credits">
             <p><strong>Team:</strong> Cristian Aragon, Iván Díaz Bonansea.</p>
-            <p><strong>Roles:</strong> UX and UI and designer & developer</p>
+            <p>
+                <strong>Roles:</strong>Team lead, UI, UX designer & front-end developer.
+            </p>
         </div>
         <div class="detail-nav detail-nav--bottom">
             <ul class="detail-nav__list">

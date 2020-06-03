@@ -14,22 +14,36 @@
             </ul>
         </div>
         <div class="work-detail__cover">
-            <div class="work-detail__cover-background linkiar-background">
-                <!-- <vue-particles
-                    class="linkiar-particles"
-                    color="#dedede"
-                    :particleOpacity="0.5"
-                    :particlesNumber="50"
-                    shapeType="circle"
-                    :particleSize="4"
-                    linesColor="#04a89d"
-                    :linesWidth="1"
-                    :lineLinked="true"
-                    :lineOpacity="0.3"
-                    :linesDistance="200"
-                    :moveSpeed="4"
+            <div
+                class="
+                    work-detail__cover-background
+                    work-detail__cover-background--linkiar
+                "
+            >
+                <div
+                    class="
+                        work-detail__cover-background-element
+                        work-detail__cover-background-element--linkiar
+                    "
                 >
-                </vue-particles> -->
+                    <vue-particles
+                        class="particles"
+                        color="#dedede"
+                        :particleOpacity="1"
+                        :particlesNumber="80"
+                        shapeType="circle"
+                        :particleSize="1"
+                        linesColor="#04a89d"
+                        :linesWidth="1"
+                        :lineLinked="true"
+                        :lineOpacity="0.5"
+                        :linesDistance="150"
+                        :moveSpeed="3"
+                        :hoverEffect="false"
+                        :clickEffect="false"
+                    >
+                    </vue-particles>
+                </div>
             </div>
             <div class="work-detail__cover-content">
                 <div class="work-detail__logo work-detail__logo--linkiar">
@@ -44,28 +58,26 @@
             <div class="work-detail__description">
                 <h3 class="work-detail__title">Linkiar</h3>
                 <p class="work-detail__text">
-                    Linkiar is a Svelte based SPA tool that aims to say goodbye
-                    to manually comparing product details and other little tasks
-                    that waste huge amounts of time for a specific group of
-                    stock-based supply companies.<br /><br />
+                    Automation data-list tool for a particular purchase model.
                 </p>
                 <ul class="work-detail__list">
                     <h6 class="work-detail__list-title">
-                        Main responsibilities:
+                        Responsibilities:
                     </h6>
-                    <li class="work-detail__list-item">UX wireframes.</li>
                     <li class="work-detail__list-item">
-                        UI design & front-end development.
+                        UX and UI design.
                     </li>
                     <li class="work-detail__list-item">
-                        Feature specification and back-end coordination
-                        (acceptance criteria, UAT).
+                        Front-end development.
+                    </li>
+                    <li class="work-detail__list-item">
+                        Feature specification out of requests, UAC and UAT.
                     </li>
                 </ul>
-                <span
+                <!-- <span
                     >(This project is on a very early stage to share a stable
                     URL.)</span
-                >
+                > -->
             </div>
         </div>
         <div class="work-detail__gallery-wrapper">
@@ -80,14 +92,22 @@
                         <img src="../assets/linkiar_1.jpg" alt="" />
                     </figure>
                 </div>
+                <!-- <div class="work-detail__gallery-item">
+                    <figure>
+                        <img src="../assets/linkiar_3.png" alt="" />
+                    </figure>
+                </div>
+                <div class="work-detail__gallery-item">
+                    <figure>
+                        <img src="../assets/linkiar_4.png" alt="" />
+                    </figure>
+                </div> -->
             </div>
         </div>
         <div class="work-detail__credits">
-            <p>Work created at Crucijuegos</p>
             <p><strong>Team:</strong> Cristian Aragon, Iván Díaz Bonansea.</p>
             <p>
-                <strong>Roles:</strong> Team manager, UI designer, front-end
-                developer.
+                <strong>Roles:</strong>UI, UX designer & front-end developer.
             </p>
         </div>
         <div class="detail-nav detail-nav--bottom">

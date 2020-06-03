@@ -14,16 +14,28 @@
             </ul>
         </div>
         <div class="work-detail__cover">
-            <div class="work-detail__cover-background megalotto-background">
-                <div class="megalotto-balls">
-                    <div class="megalotto-ball-item megalotto-ball-item--1">
-                        <megalotto-ball />
-                    </div>
-                    <div class="megalotto-ball-item megalotto-ball-item--2">
-                        <megalotto-ball />
-                    </div>
-                    <div class="megalotto-ball-item megalotto-ball-item--3">
-                        <megalotto-ball />
+             <div
+                class="
+                    work-detail__cover-background
+                    work-detail__cover-background--megalotto
+                "
+            >
+                <div
+                    class="
+                        work-detail__cover-background-element
+                        work-detail__cover-background-element--megalotto
+                    "
+                >
+                    <div class="megalotto-balls">
+                        <div class="megalotto-ball-item megalotto-ball-item--1">
+                            <megalotto-ball />
+                        </div>
+                        <div class="megalotto-ball-item megalotto-ball-item--2">
+                            <megalotto-ball />
+                        </div>
+                        <div class="megalotto-ball-item megalotto-ball-item--3">
+                            <megalotto-ball />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -40,33 +52,30 @@
             <div class="work-detail__description">
                 <h3 class="work-detail__title">Megalotto</h3>
                 <p class="work-detail__text">
-                    Megalotto.com is an iGaming Vue.js based application, with
-                    offices in Malta and Spain, that aims to deliver a clear,
-                    trustworthy and user-friendly online lottery & casino
-                    experience.
+                    Lottery and casino application.
                 </p>
                 <ul class="work-detail__list">
                     <h6 class="work-detail__list-title">
-                        Main responsibilities:
+                        Responsibilities:
                     </h6>
                     <li class="work-detail__list-item">
-                        Responsible for full UI development, CSS architecture,
-                        interaction design, responsive design, SVG animations,
-                        etc.
+                        Front-end development for VueJS, UI ownership. CSS architecture.
                     </li>
                     <li class="work-detail__list-item">
-                        Enhancement proposals for Megalotto's design system
-                        based on consistency and scalability.
+                        Interaction design, responsive design, SVG animations,
+                        performance optimization.
                     </li>
                     <li class="work-detail__list-item">
-                        Contributions for MagicWand, in house front-end
-                        framework. Encapsulated, fully supported, web
+                        Consistency and scalability contributions to the design system.
+                    </li>
+                    <li class="work-detail__list-item">
+                        Contribution to in house front-end framework of encapsulated, fully supported, web
                         components.
                     </li>
                 </ul>
-                <a href="https://megalotto.com" class="link" target="_blank"
+                <!-- <a href="https://megalotto.com" class="link" target="_blank"
                     >Visit website</a
-                >
+                > -->
             </div>
         </div>
         <div class="work-detail__gallery-wrapper">
@@ -88,7 +97,7 @@
                 </div>
                 <div class="work-detail__gallery-item">
                     <figure>
-                        <img src="../assets/megalotto_4.jpg" alt="" />
+                        <img src="../assets/megalotto_5.jpg" alt="" />
                     </figure>
                 </div>
                 <div
@@ -102,7 +111,7 @@
         </div>
         <div class="work-detail__credits">
             <p>
-                Work created at
+                Created at
                 <a href="https://www.gig.com/" class="link" target="_blank"
                     >GIG</a
                 >

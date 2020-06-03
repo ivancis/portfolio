@@ -15,8 +15,19 @@
         </div>
         <div class="work-detail__cover">
             <div
-                class="work-detail__cover-background crucijuegos-background"
-            ></div>
+                class="
+                    work-detail__cover-background
+                    work-detail__cover-background--crucijuegos
+                "
+            >
+                <!-- <div
+                    class="
+                        work-detail__cover-background-element
+                        work-detail__cover-background-element--crucijuegos
+                    "
+                >
+                </div> -->
+            </div>
 
             <div class="work-detail__cover-content">
                 <div class="work-detail__logo work-detail__logo--crucijuegos">
@@ -31,64 +42,43 @@
             <div class="work-detail__description">
                 <h3 class="work-detail__title">Crucijuegos</h3>
                 <p class="work-detail__text">
-                    Crucijuegos is 30 year old company that designs,
-                    manufactures and distributes heavy duty playgrounds and aqua
-                    parks for public spaces and the general public.<br />They
-                    are focused primarely on the Argentinian market with a
-                    tendency of expansion to Latin American regions.
+                    Company and ecommerce website fors design,
+                    manufacturing and distribution of heavy duty playgrounds.
                 </p>
 
                 <ul class="work-detail__list">
                     <h6 class="work-detail__list-title">
-                        Mentionable challenges:
+                        Responsibilities:
                     </h6>
                     <li class="work-detail__list-item">
-                        Design and develop internal and external digital
-                        products. Some of them with an intended low learning
-                        curve, aimed to non-tech personas.
+                        Development team lead, of 6, during the digital transformation process.
+                        Buy-in gain from stakeholders (peers, executives, investors).
                     </li>
                     <li class="work-detail__list-item">
-                        Organize and coordinate small development team to
-                        achieve MVPs on tight schedules.
-                    </li>
-                </ul>
-
-                <ul class="work-detail__list">
-                    <h6 class="work-detail__list-title">
-                        Main responsibilities:
-                    </h6>
-                    <li class="work-detail__list-item">
-                        Manager of the development team during the digital
-                        transformation process.
+                        UI designer & developer for Angular, Python & Electron based applications.
                     </li>
                     <li class="work-detail__list-item">
-                        UI designer & developer for all web and isolated digital
-                        products (Angular, Python & Electron based
-                        applications).
+                        Performance optimization of existing applications,
+                        through concept and code refactoring.
                     </li>
                     <li class="work-detail__list-item">
-                        Performance optimization of existing applications
-                        through code-refactoring and design adjustments.
-                    </li>
-                    <li class="work-detail__list-item">
-                        Graphic designer with commercial focus: email marketing,
+                        Graphic designer with commercial focus. Sales Presentations, email marketing,
                         social media, brochures, etc.
                     </li>
                     <li class="work-detail__list-item">
-                        External resource coordination (SEO specialist,
-                        photographer, graphic design agency).
+                        External resource coordination (content manager, SEO and advertisement agencies, photographers, etc.).
                     </li>
                     <li class="work-detail__list-item">
-                        Responsible for the IT area to comply with IRAM-ISO
+                        Responsible for compliance with IRAM-ISO
                         regulation.
                     </li>
                 </ul>
-                <a
+                <!-- <a
                     href="https://insumos.crucijuegos.com"
                     class="link"
                     target="_blank"
-                    >Visit commercial website</a
-                >
+                    >Visit main website</a
+                > -->
             </div>
         </div>
         <div class="work-detail__gallery-wrapper">
@@ -105,7 +95,12 @@
                 </div>
                 <div class="work-detail__gallery-item">
                     <figure>
-                        <img src="../assets/crucijuegos_3.jpg" alt="" />
+                        <img src="../assets/crucijuegos_4.jpg" alt="" />
+                    </figure>
+                </div>
+                <div class="work-detail__gallery-item">
+                    <figure>
+                        <img src="../assets/crucijuegos_5.jpg" alt="" />
                     </figure>
                 </div>
                 <div class="work-detail__gallery-item">
@@ -115,25 +110,24 @@
                 </div>
                 <div class="work-detail__gallery-item">
                     <figure>
-                        <img src="../assets/crucijuegos_4.jpg" alt="" />
-                    </figure>
-                </div>
-                <div class="work-detail__gallery-item">
-                    <figure>
-                        <img src="../assets/crucijuegos_5.jpg" alt="" />
+                        <img src="../assets/crucijuegos_3.jpg" alt="" />
                     </figure>
                 </div>
             </div>
         </div>
         <div class="work-detail__credits">
-            <p>Work created at Crucijuegos</p>
+            <p>
+                Created at
+                <a href="https://crucijuegos.com/" class="link" target="_blank"
+                    >Crucijuegos</a
+                >
+            </p>
             <p>
                 <strong>Team:</strong> Cristian Aragon, Pablo Ladreyt, Iván Díaz
                 Bonansea.
             </p>
             <p>
-                <strong>Roles:</strong> Team manager, UI designer, front-end
-                developer.
+                <strong>Roles:</strong>Team lead, UI, UX designer & front-end developer.
             </p>
         </div>
         <div class="detail-nav detail-nav--bottom">

@@ -32,7 +32,8 @@
                     </template>
                     <template slot="accordion-content">
                         <p class="accordion-content">
-                            6 years prototyping applications, from concept to end product. Designs systems, data-input
+                            Years of experience with visual design and wire-framing tools such as Figma, Sketch, Photoshop, Illustrator.
+                            From concept research to working prototype, with sensitivity to user-system interaction.
                         </p>
                     </template>
                 </accordion-item>
@@ -79,7 +80,7 @@
                     </template>
                     <template slot="accordion-content">
                         <p class="accordion-content">
-                            Interaction design student. Experienced in information architecture for, relatively, medium size web applications, feature A/B testing.
+                            Storyboards, user flows, process flows and site maps for, relatively, medium size web applications. Feature A/B testing plan and execution.
                         </p>
                     </template>
                 </accordion-item>
@@ -110,8 +111,8 @@
                     </template>
                     <template slot="accordion-content">
                         <p class="accordion-content">
-                            CSS specialist, performance optimization, crossbroser. Clean code enthusiast.
-                            MDX syntax documentation. Accustomed to CMS and modern JS frameworks.
+                            CSS specialist, design system architecture, performance optimization.
+                            Clean code enthusiast. MDX syntax documentation. Accustomed to CMS and modern JS frameworks.
                         </p>
                     </template>
                 </accordion-item>
@@ -140,7 +141,7 @@
                     </template>
                     <template slot="accordion-content">
                         <p class="accordion-content">
-                            Frequent problem spotter. QA aficionado, manual and automated testing, using Cypress.
+                            Frequent problem spotter. QA aficionado, some experience with Cypress and manual testing.
                         </p>
                     </template>
                 </accordion-item>
@@ -166,7 +167,8 @@
                     </template>
                     <template slot="accordion-content">
                         <p class="accordion-content">
-                            Experience working with waterfall and agile frameworks. ENFJ-T personality.
+                            Experienced with agile methodology and data-informed product development.
+                            Communication and presentation skills; storytelling; ENFJ-T personality.
                         </p>
                     </template>
                 </accordion-item>

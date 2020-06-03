@@ -1,9 +1,9 @@
 <template>
-    <div class="page page--home">
-        <works></works>
-        <about></about>
-        <bulletpoints></bulletpoints>
-    </div>
+        <div class="page page--home">
+            <works></works>
+            <about></about>
+            <bulletpoints></bulletpoints>
+        </div>
 </template>
 
 <script>

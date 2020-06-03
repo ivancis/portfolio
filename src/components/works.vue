@@ -20,7 +20,7 @@
                     </router-link>
                     <em>(2020)</em>
                 </div>
-                <span class="works-subtitle">UI, UX design & development</span>
+                <span class="works-subtitle">UI, UX design & front-end development</span>
             </div>
         </div>
         <div class="works-item">
@@ -49,7 +49,7 @@
         <div class="works-item">
             <router-link
                 class="works-thumbnail works-thumbnail--modular"
-                style="--works-thumbnail-color: #3c3c61;"
+                style="--works-thumbnail-color: #171c30;"
                 to="/modular"
             >
                 <figure>
@@ -66,7 +66,7 @@
                     </router-link>
                     <em>(2019)</em>
                 </div>
-                <span class="works-subtitle">UI, UX design & development</span>
+                <span class="works-subtitle">UI, UX design & front-end development</span>
             </div>
         </div>
         <div class="works-item">
@@ -89,7 +89,7 @@
                     </router-link>
                     <em>(2018)</em>
                 </div>
-                <span class="works-subtitle">UI, UX design & development</span>
+                <span class="works-subtitle">UI, UX design & front-end development</span>
             </div>
         </div>
     </section>
