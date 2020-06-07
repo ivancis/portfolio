@@ -1,4 +1,5 @@
 
+$_garp-primary: #01391C;
 $_linkiar-primary: #05052D;
 $_modular-primary: #171c30;
 $_crucijuegos-primary: #0a3666;
@@ -93,7 +94,7 @@ $_n10: #fafbfc;
 $_n0: #ffffff;
 
 // default colors
-$_primary: $_b400;
+$_primary: #1c00fb;
 $_secondary: $_t400;
 $_tertiary: $_n900;
 $_background: $_n30;
@@ -205,7 +206,7 @@ $gradient-3: var(--gradient-3, #{$_gradient-3});
 // text color
 // ---------------------------------------------------------------------------------------------------------------------
 $_text: $_medium;
-$_caption: $_medium-dark;
+$_caption: #393546;
 $_header: #383838;
 
 $text: var(--text, #{$_text});
@@ -290,6 +291,7 @@ $space--xxx-small--negative: var(--space--xxx-small--negative, #{$_space--xxx-sm
 $_default-width: 290px;
 $_default-width-large: 360px;
 $_content-size: 968px;
+$_content-size-large: 1400px;
 $_content-size-medium: 768px;
 $_content-size-small: 440px;
 $_top-navigation-height: 56px;
@@ -304,6 +306,7 @@ $_stroke-size: 2px;
 
 $default-width: var(--default-width, #{$_default-width});
 $default-width-large: var(--default-width-large, #{$_default-width-large});
+$content-size-large: var(--content-size-large, #{$_content-size-large});
 $content-size: var(--content-size, #{$_content-size});
 $content-size-medium: var(--content-size-medium, #{$_content-size-medium});
 $content-size-small: var(--content-size-small, #{$_content-size-small});

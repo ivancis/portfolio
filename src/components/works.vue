@@ -25,6 +25,29 @@
         </div>
         <div class="works-item">
             <router-link
+                class="works-thumbnail works-thumbnail--garp"
+                style="--works-thumbnail-color: #01391C;"
+                to="/Garp"
+            >
+                <figure>
+                    <!-- <img src="../assets/Garp_thumbnail.svg" alt="Garp" /> -->
+                </figure>
+            </router-link>
+            <div class="works-description">
+                <div class="works-title">
+                    <router-link
+                        class="link"
+                        to="/garp"
+                    >
+                        Garp
+                    </router-link>
+                    <em>(2020)</em>
+                </div>
+                <span class="works-subtitle">UI, UX design</span>
+            </div>
+        </div>
+        <div class="works-item">
+            <router-link
                 class="works-thumbnail works-thumbnail--megalotto"
                 style="--works-thumbnail-color: #f8464e;"
                 to="/megalotto"
@@ -41,7 +64,7 @@
                     >
                         Megalotto
                     </router-link>
-                    <em>(2020)</em>
+                    <em>(2019)</em>
                 </div>
                 <span class="works-subtitle">Front-end development</span>
             </div>
@@ -64,7 +87,7 @@
                     >
                         Modular
                     </router-link>
-                    <em>(2019)</em>
+                    <em>(2018)</em>
                 </div>
                 <span class="works-subtitle">UI, UX design & front-end development</span>
             </div>

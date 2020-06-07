@@ -2,13 +2,27 @@
     <div class="page page--work-detail">
         <div class="detail-nav detail-nav--top">
             <ul class="detail-nav__list">
+                <li class="detail-nav__item detail-nav__item--left">
+                    <router-link class="detail-nav__link" to="/">
+                        <svg class="detail-nav__link-icon" viewBox="0 0 24 24">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        </svg>
+                    </router-link>
+                </li>
                 <li class="detail-nav__item">
                     <router-link class="detail-nav__link" to="/">
                         <svg class="detail-nav__link-icon" viewBox="0 0 24 24">
                             <line x1="19" y1="12" x2="5" y2="12"></line>
                             <polyline points="12 19 5 12 12 5"></polyline>
                         </svg>
-                        <span class="detail-nav__link-label link">Go back</span>
+                    </router-link>
+                </li>
+                <li class="detail-nav__item">
+                    <router-link class="detail-nav__link" to="/">
+                        <svg class="detail-nav__link-icon" viewBox="0 0 24 24">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
                     </router-link>
                 </li>
             </ul>
@@ -59,14 +73,14 @@
                         Responsibilities:
                     </h6>
                     <li class="work-detail__list-item">
-                        Front-end development for VueJS, UI ownership. CSS architecture.
+                        Front-end development in VueJS. UI ownership, CSS architecture.
                     </li>
                     <li class="work-detail__list-item">
                         Interaction design, responsive design, SVG animations,
                         performance optimization.
                     </li>
                     <li class="work-detail__list-item">
-                        Consistency and scalability contributions to the design system.
+                        Consistency and scalability contributions to design system.
                     </li>
                     <li class="work-detail__list-item">
                         Contribution to in house front-end framework of encapsulated, fully supported, web
@@ -100,9 +114,7 @@
                         <img src="../assets/megalotto_5.jpg" alt="" />
                     </figure>
                 </div>
-                <div
-                    class="work-detail__gallery-item work-detail__gallery-item--full"
-                >
+                <div class="work-detail__gallery-item">
                     <figure>
                         <img src="../assets/megalotto_3.jpg" alt="" />
                     </figure>
@@ -117,34 +129,10 @@
                 >
             </p>
             <p>
-                <strong>Team:</strong> Adam Rojek, Marcos Duque, Juanjo Reina,
-                Elin Storelid, Antonio Serrano, Iván Díaz Bonansea ...
+                <strong>Team:</strong> Adam, Marcos, Juanjo,
+                Elin, Antonio, Iván ...
             </p>
             <p><strong>Role:</strong> Front-end developer, UI specialist.</p>
-        </div>
-        <div class="detail-nav detail-nav--bottom">
-            <ul class="detail-nav__list">
-                <li class="detail-nav__item">
-                    <router-link class="detail-nav__link" to="/linkiar">
-                        <svg class="detail-nav__link-icon" viewBox="0 0 24 24">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                        <span class="detail-nav__link-label link"
-                            >Previous project</span
-                        >
-                    </router-link>
-                </li>
-                <li class="detail-nav__item">
-                    <router-link class="detail-nav__link" to="/modular">
-                        <span class="detail-nav__link-label link"
-                            >Next project</span
-                        >
-                        <svg class="detail-nav__link-icon" viewBox="0 0 24 24">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </router-link>
-                </li>
-            </ul>
         </div>
     </div>
 </template>

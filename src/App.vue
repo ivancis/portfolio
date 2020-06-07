@@ -1,23 +1,5 @@
 <template>
     <div id="app">
-        <div class="test">
-            <div class="test-background">
-                <img
-                    class="test-background-asset"
-                    src="../src/assets/Eurojackpot.jpg"
-                />
-            </div>
-            <div class="test-content">
-                <div class="test-content__wrapper">
-                    <div class="test-content__image">hello image</div>
-                    <div class="test-content__text">
-                        <h1>Hello 1</h1>
-                        <h2>Hello 2</h2>
-                        <h3>Hello 3</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
         <header class="header">
             <ul class="header-list">
                 <li class="header-item">

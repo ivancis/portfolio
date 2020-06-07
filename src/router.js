@@ -37,6 +37,11 @@ export default new Router({
             component: () => import('./views/Crucijuegos.vue')
         },
         {
+            path: '/garp',
+            name: 'garp',
+            component: () => import('./views/Garp.vue')
+        },
+        {
             path: '/404',
             name: '404',
             template: '<p>Page Not Found</p>'

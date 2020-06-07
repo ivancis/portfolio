@@ -80,7 +80,7 @@
                     </template>
                     <template slot="accordion-content">
                         <p class="accordion-content">
-                            Storyboards, user flows, process flows and site maps for, relatively, medium size web applications. Feature A/B testing plan and execution.
+                            Storyboards, user and process flows, site maps for, relatively, medium size web applications, feature & flow A/B testing.
                         </p>
                     </template>
                 </accordion-item>
@@ -112,7 +112,7 @@
                     <template slot="accordion-content">
                         <p class="accordion-content">
                             CSS specialist, design system architecture, performance optimization.
-                            Clean code enthusiast. MDX syntax documentation. Accustomed to CMS and modern JS frameworks.
+                            Clean code enthusiast. MDX syntax documentation. Accustomed to CMS and modern day JS frameworks.
                         </p>
                     </template>
                 </accordion-item>
@@ -167,8 +167,7 @@
                     </template>
                     <template slot="accordion-content">
                         <p class="accordion-content">
-                            Experienced with agile methodology and data-informed product development.
-                            Communication and presentation skills; storytelling; ENFJ-T personality.
+                            Experienced with agile development. Valid communication and presentation skills. ENFJ-T personality.
                         </p>
                     </template>
                 </accordion-item>

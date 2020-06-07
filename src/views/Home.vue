@@ -1,8 +1,8 @@
 <template>
         <div class="page page--home">
             <works></works>
-            <about></about>
             <bulletpoints></bulletpoints>
+            <!-- <about></about> -->
         </div>
 </template>
 

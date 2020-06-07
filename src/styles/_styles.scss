@@ -1,76 +1,17 @@
 #app {
 	display: grid;
 	grid-auto-rows: auto 1fr;
-	/* padding: 10vh 10vw; */
+	padding: 10vh 10vw;
 	grid-gap: 5vh;
 	opacity: 0;
 	animation: fade-in-animation $duration 1 forwards;
 	min-height: 100vh;
 }
 
-.test {
-	display: grid;
-	width: 100%;
-	position: relative;
-}
-
-.test-background {
-	/* grid-area: 1/1/1/1;
-	display: grid;
-    overflow: hidden;
-	place-content: center; */
-	position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    img {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-    }
-}
-
-.test-content {
-	@include ratio(3,1);
-
-	display: grid;
-	width: 100%;
-	max-width: 624px; // REVIEW
-	margin: 0 auto;
-
-	&:before {
-		grid-area: 1/1/1/1;
-	}
-}
-
-.test-content__wrapper {
-	grid-area: 1/1/1/1;
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-gap: $space;
-	padding: $space; // gutter
-	padding-right: calc((100% / 3) + #{$space}); // safe space for image + gutter
-	margin: auto 0;
-}
-
-.test-content__image {
-
-}
-.test-content__text {
-
-}
-
 .header {
 	display: grid;
-	grid-template-columns: 1fr;
-	grid-gap: $space--large;
 	width: 100%;
 	max-width: $content-size-medium;
-
-	@include phablet() {
-		grid-template-columns: 1fr 1fr;
-	}
 }
 
 .header-title {
@@ -84,7 +25,14 @@
 .header-list {
 	display: grid;
 	grid-gap: $space--small;
+	grid-template-columns: 1fr;
+
+	@include phablet() {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: $space--large;
+	}
 }
+
 .header-item {
 	display: grid;
 	grid-gap: $space;
@@ -113,52 +61,39 @@
 
 .detail-nav {
 	display: grid;
+	width: 100%;
 	background: $light;
 	z-index: 1;
-	margin: 0 auto 0 -5vw;
-    padding-left: 5vw;
-	width: calc(100% + 10vw);
 
 	&--top {
 		position: sticky;
 		top: 0;
-		place-content: flex-start;
-	}
-
-	&--bottom {
-		.detail-nav__list {
-			margin: 0 auto;
-
-			.detail-nav__link {
-				margin: 0 auto;
-			}
-		}
 	}
 }
 
 .detail-nav__list {
-	display: grid;
-	grid-auto-flow: column;
+	display: flex;
 	width: 100%;
-	max-width: $content-size-medium;
 }
 
 .detail-nav__item {
 	display: grid;
+	grid-gap: $space--small;
+	margin-right: 0;
+
+	&--left {
+		margin-left: 0;
+    	margin-right: auto;
+	}
 }
 
 .detail-nav__link {
-	@include set-font-size(12px);
-
 	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-gap: $space--small;
-	padding: $space--small;
-	text-decoration: none;
-	color: $medium-light;
+	padding: $space;
+	color: $caption;
 
-	.link {
-		color: $medium-light;
+	&:hover {
+		color: $primary;
 	}
 }
 
@@ -173,7 +108,8 @@
 }
 
 .detail-nav__link-label {
-	margin: auto;
+	@include set-font-size(12px);
+	color: $medium-light;
 }
 
 .content {
@@ -196,14 +132,16 @@
 	grid-gap: $space--large;
 	margin: 0;
 	width: 100%;
-	max-width: $content-size;
+	max-width: $content-size-medium;
 
 	@include tablet() {
 		grid-template-columns: 1fr 1fr;
+		max-width: 600px; // REVIEW
 	}
 
 	@include desktop() {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		max-width: $content-size-medium;
 	}
 }
 
@@ -272,8 +210,12 @@
 		}
 	}
 
-	&--modular {
+	/* &--modular {
 		background: $_modular-primary;
+	}
+
+	&--garp {
+		background: $_garp-primary;
 	}
 
 	&--linkiar {
@@ -286,7 +228,7 @@
 
 	&--crucijuegos {
 		background: $_crucijuegos-primary;
-	}
+	} */
 }
 
 .works-description {
@@ -336,8 +278,8 @@
 
 .work-detail__cover {
 	display: grid;
-	margin: 0 auto 0 -5vw;
-	width: calc(100% + 10vw);
+	margin: 0 auto;
+	width: 100%;
 	overflow: hidden;
 	background: $medium;
 	opacity: 0;
@@ -345,7 +287,7 @@
 }
 
 .work-detail__cover-background {
-	@include ratio(3,1);
+	@include ratio(4,1);
 
 	grid-area: 1 / 1 / 1 / 1;
 	display: grid;
@@ -355,15 +297,13 @@
 		grid-area: 1 / 1 / 1 / 1;
 	}
 
-	&--crucijuegos {
-		background: $_crucijuegos-primary;
-		background-image: url(../src/assets/crucijuegos-background.jpg);
-		background-size: cover;
-		background-attachment: fixed;
-		background-size: auto 100%;
-		filter: blur(4px);
+	&--garp {
+		background: $_garp-primary;
 	}
 
+	&--crucijuegos {
+		background: $_crucijuegos-primary;
+	}
 }
 
 .work-detail__cover-background-element {
@@ -394,9 +334,9 @@
 
 	.particles {
 		position: absolute;
-		left: 0;
-		top: 0;
 		width: 100%;
+		height: 100%;
+		margin: auto;
 	}
 
 
@@ -471,25 +411,33 @@
 	display: grid;
 	grid-gap: $space--x-large;
 	padding: 0 $space--small;
-	margin: 5vw auto;
+	margin: 2.5vw auto 5vw;
 	width: 100%;
 	max-width: $content-size-medium;
+}
+
+
+.work-detail__description {
+	display: grid;
+	grid-gap: $space--large;
+	justify-items: flex-start;
+	width: 100%;
+	max-width: $content-size;
 }
 
 .work-detail__title {
 	@include set-font-size(16px);
 
 	letter-spacing: .8px;
+	display: none;
 }
 
-.work-detail__description {
-	@include set-font-size(14px);
-	display: grid;
-	grid-gap: $space--large;
-	justify-items: flex-start;
+.work-detail__text {
+	@include set-font-size(16px);
+
+	color: $text;
 	line-height: 1.6;
-	width: 100%;
-	max-width: $content-size-medium;
+	letter-spacing: .4px;
 }
 
 .work-detail__list {
@@ -499,13 +447,14 @@
 
 .work-detail__list-title {
 	@include set-font-size(16px);
-	color: $_n50;
+	display: none;
 }
 
 .work-detail__list-item {
 	@include set-font-size(12px);
 	color: $text;
 	letter-spacing: .4px;
+	line-height: 1.6;
 
 	&:before {
 		content: "—";
@@ -524,7 +473,10 @@
 	padding: 0 $space;
 	width: 100%;
 	max-width: $content-size-medium;
+	letter-spacing: .4px;
 	line-height: 1.4;
+	text-align: center;
+	color: $text;
 
 	.link {
 		text-decoration: underline;
@@ -543,10 +495,11 @@
 .work-detail__gallery {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-gap: $space--x-small;
+	grid-gap: $space--small;
 	position: relative;
 	margin: auto auto $space--x-large;
-	max-width: calc(#{$content-size} + 10vw);
+	width: 100%;
+	max-width: $content-size-large;
 }
 
 .work-detail__gallery-item {
@@ -557,9 +510,24 @@
 	grid-column: span 12;
 	overflow: hidden;
 	border-radius: $space--x-small;
+	opacity: 0;
+	animation: fade-in-animation $duration $delay 1 forwards;
 
 	@include tablet {
 		grid-column: span 6;
+	}
+
+	&--animated {
+		background-position: 50%;
+		background-size: 100% auto;
+		background-position: 50% 50%;
+		border: 1px dashed orange;
+
+		figure {
+			img {
+				position: relative;
+			}
+		}
 	}
 
 	&--full {
@@ -572,6 +540,12 @@
 
 	figure {
 		grid-area: 1 / 1 / 1 / 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
 		display: grid;
 
 		img {
@@ -581,9 +555,45 @@
 	}
 }
 
+.animation-strip {
+	display: grid;
+}
+.animated-strip {
+	@include ratio(2,1);
+	background: url(../src/assets/garp_1.jpg) repeat-x;
+	height: 560px;
+	width: 5076px;
+	animation: slide 60s linear infinite;
+}
+
+@keyframes slide{
+0%{
+	transform: translate3d(0, 0, 0);
+}
+100%{
+	transform: translate3d(-1692px, 0, 0);
+}
+}
+
 .about {
 	display: grid;
 	place-content: flex-start;
+	width: 100%;
+	max-width: $content-size-medium;
+}
+
+.about-p {
+	@include set-font-size(11px);
+
+	max-width: calc(#{$content-size-small} - #{$space--x-large});
+	letter-spacing: 1px;
+	line-height: 1.6;
+	color: $caption;
+}
+
+
+.bulletpoints {
+	display: grid;
 	width: 100%;
 	max-width: $content-size-medium;
 
@@ -594,22 +604,6 @@
 		height: $stroke-size;
 		background: rgba($_medium-light, 0.2);
 	}
-}
-
-.about-p {
-	@include set-font-size(11px);
-
-	max-width: calc(#{$content-size-small} - #{$space--large});
-	letter-spacing: .8px;
-	line-height: 1.6;
-	color: $caption;
-}
-
-
-.bulletpoints {
-	display: grid;
-	width: 100%;
-	max-width: $content-size-medium;
 }
 
 .accordion {
@@ -651,6 +645,7 @@
 	border-left: $stroke-size solid $_n20;
 	margin-left: calc(#{$space--small} + #{$space--x-small});
 	color: $caption;
+	letter-spacing: .4px;
 }
 
 .accordion-item {
@@ -675,7 +670,11 @@
 }
 
 .accordion__item_active {
-    margin: 0 0 $icon-size;
+	margin: 0 0 $icon-size;
+
+	.accordion__trigger {
+		color: $primary;
+	}
 }
 
 .accordion__trigger {
@@ -695,12 +694,12 @@
 .accordion-leave-active {
     will-change: height, opacity;
     transition: height $duration $bezier, opacity $duration $bezier;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .accordion-enter,
 .accordion-leave-to {
-    height: 0 !important;
+	height: 0 !important;
     opacity: 0;
 }
 
@@ -965,5 +964,14 @@
 
 	30%, 45%, 80%, 95% {
 		stroke-dashoffset:0;
+	}
+}
+
+@keyframes marquee-v-animation {
+	0%{
+		background-position: -50% 100%;
+	}
+	100%{
+		background-position: 0% 100%;
 	}
 }
