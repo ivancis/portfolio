@@ -10,7 +10,7 @@
                     </router-link>
                 </li>
                 <li class="detail-nav__item">
-                    <router-link class="detail-nav__link" to="/">
+                    <router-link class="detail-nav__link" to="/megalotto">
                         <svg class="detail-nav__link-icon" viewBox="0 0 24 24">
                             <line x1="19" y1="12" x2="5" y2="12"></line>
                             <polyline points="12 19 5 12 12 5"></polyline>
@@ -18,7 +18,7 @@
                     </router-link>
                 </li>
                 <li class="detail-nav__item">
-                    <router-link class="detail-nav__link" to="/">
+                    <router-link class="detail-nav__link" to="/crucijuegos">
                         <svg class="detail-nav__link-icon" viewBox="0 0 24 24">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>

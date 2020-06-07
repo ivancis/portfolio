@@ -30,7 +30,7 @@
                 to="/Garp"
             >
                 <figure>
-                    <!-- <img src="../assets/Garp_thumbnail.svg" alt="Garp" /> -->
+                    <img src="../assets/garp_thumbnail.svg" alt="Garp" />
                 </figure>
             </router-link>
             <div class="works-description">

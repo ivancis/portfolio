@@ -10,7 +10,7 @@
                     </router-link>
                 </li>
                 <li class="detail-nav__item">
-                    <router-link class="detail-nav__link" to="/">
+                    <router-link class="detail-nav__link" to="/linkiar">
                         <svg class="detail-nav__link-icon" viewBox="0 0 24 24">
                             <line x1="19" y1="12" x2="5" y2="12"></line>
                             <polyline points="12 19 5 12 12 5"></polyline>
@@ -18,7 +18,7 @@
                     </router-link>
                 </li>
                 <li class="detail-nav__item">
-                    <router-link class="detail-nav__link" to="/">
+                    <router-link class="detail-nav__link" to="/megalotto">
                         <svg class="detail-nav__link-icon" viewBox="0 0 24 24">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
@@ -44,11 +44,11 @@
             </div>
 
             <div class="work-detail__cover-content">
-                <div class="work-detail__logo work-detail__logo--crucijuegos">
-                    <!-- <img
-                        src="../assets/crucijuegos_thumbnail.svg"
-                        alt="Crucijuegos"
-                    /> -->
+                <div class="work-detail__logo work-detail__logo--garp">
+                    <img
+                        src="../assets/garp_thumbnail.svg"
+                        alt="Garp"
+                    />
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
             <div class="work-detail__description">
                 <h3 class="work-detail__title">Garp</h3>
                 <p class="work-detail__text">
-                    Hello garp.
+                    Categorized calculations app.
                 </p>
 
                 <ul class="work-detail__list">
@@ -64,7 +64,10 @@
                         Responsibilities:
                     </h6>
                     <li class="work-detail__list-item">
-                        Garp.
+                        Concept exploration
+                    </li>
+                    <li class="work-detail__list-item">
+                        Introduction to Flutter.
                     </li>
                 </ul>
             </div>
